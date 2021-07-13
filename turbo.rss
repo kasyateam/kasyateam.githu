@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:yandex="http://news.yandex.ru" xmlns:media="http://search.yahoo.com/mrss/" xmlns:turbo="http://turbo.yandex.ru" version="2.0">
+    <channel>
+        <title>Kasya Team</title>
+        <link>http://kasyateam.ga/</link>
+        <description>Независимая студия разработки web дизайна и web структур</description>
+        <language>ru</language>
+        <turbo:analytics></turbo:analytics>
+        <turbo:adNetwork></turbo:adNetwork>
+        <item turbo="true">
+            <turbo:extendedHtml>true</turbo:extendedHtml>
+            <link>http://www.example.com/category/sub-category/page1.html</link>
+            <turbo:source></turbo:source>
+            <turbo:topic></turbo:topic>
+            <pubDate>Tue, 4 Jun 2021 14:15:00 +0600</pubDate>
+            <author>Александр Каурцев</author>
+            <metrics>
+                <yandex schema_identifier="Идентификатор">
+                    <breadcrumblist>
+                        <breadcrumb url="https://kasyateam.ga/" text="Главная"/>
+                        <breadcrumb url="https://kasyateam.ga/feed/" text="Новости"/>
+                    </breadcrumblist>
+                </yandex>
+            </metrics>
+            <yandex:related></yandex:related>
+            <turbo:content>
+                <![CDATA[
+<header>
+  <h1>Kasya Team</h1>
+  <figure>
+    <img src="https://kasyateam.ga/kasya.png" />
+  </figure>
+  <h2>Введение</h2>
+  <menu>
+    <a href="https://kasyateam.ga/main.html">Главная</a>
+  </menu>
+</header>
+<h3>Скоро...</h3>]]>
+            </turbo:content>
+        </item>
+        <item turbo="false">
+            ...
+            <turbo:content>
+                <![CDATA[            ]]>
+            </turbo:content>
+        </item>
+        ...
+    </channel>
+</rss>

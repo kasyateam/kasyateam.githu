@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://kasyateam.ga/"/>
+    <link rel="icon" href="./assets/img/kasya.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Kasya - Независимая студия по изучению нейронных сетей. На ваш вопрос может ответить бот. Если не нашли ответ, то спросите у разработчиков"/>
+    <meta name="keywords" content="кася, кася тим, касятим, кася апп, Kasya Team, Kasya Develop, Kasya Apps, Kasya, Alexsandr Kaurcev, Kasya Editor, K-Script, K Script, Kasya поддержка, Поддержка Kasya"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="assets/kasyateam/js/kasya.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/cmd/dist/jquery.convform.css">
+    <title>Kasya | Поддержка</title>
+    <link href="assets/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="assets/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+    <link href="assets/plugin/et-line/style.css" rel="stylesheet">
+    <link href="assets/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/color/default.css" rel="stylesheet" id="color_theme">
+    <script src="assets/kasyateam/js/kasya.js"></script>
+</head>
+
+<body style="background: #D6D6D6">
+  <div id="loading" class="loader-wrapper theme-g-bg">
+
+    <div class="center">
+
+      <div class="d d1"></div>
+      <div class="d d2"></div>
+      <div class="d d3"></div> 
+      <div class="d d4"></div>  
+      <div class="d d5"></div>
+    </div>
+  </div>
+
+  <header class="header header-01" style="background: transparent">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#"><img src="assets/img/kasya.png" width=20%><span class="logo">| Support</span></a>
+  </header>
+  
+	<section id="demo" style="background: #D6D6D6">
+	    <div class="vertical-align">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-sm-6 col-sm-offset-3 col-xs-offset-0">
+	                    <div class="card no-border">
+	                        <div id="chat">
+	                            <form action="" method="GET" class="hidden">
+	                                <select data-conv-question="Доброе пожаловать в поддержку!|Мы рады вам! У вас есть вопросы?" name="first-question">
+	                                    <option value="begin">Задать вопрос</option>
+	                                </select>
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+  <footer class="footer theme-g-bg">
+    <section class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 sm-m-15px-tb">
+            <h4 class="font-alt">О нас</h4>
+            <p class="footer-text">Kasya Team - Web-студия Александра Каурцева</p>
+            <ul class="social-icons">
+              <li><a class="vk" href="https://vk.com/kasyateam" target="_blank"><i class="fab fa-vk"></i></a></li>
+            </ul>
+          </div>
+
+           <div class="col-md-5 col-lg-5 sm-m-15px-tb">
+            <h4 class="font-alt">Ссылки</h4>
+            <div class="d-flex justify-content-around">
+              <ul class="fot-link">
+                <li><a href="/link.html?patreon" target="_blank">Patreon</a></li>
+                <li><a href="/link.html?vk" target="_blank" onclick="open()">Разработчик</a></li>
+              </ul>
+              <ul class="fot-link">
+                <li><a href="/link.html?search" target="_blank" onclick="open()">Kasya | Search</a></li>
+                <li><a href="/main.html">на главную</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-lg-3 sm-m-15px-tb">
+            <h4 class="font-alt">Наши локации</h4>
+            <p>Россия, Санкт-Петербург</p>
+            <p>Россия, Омск</p>
+          </div>
+
+        </div>
+        
+        <div class="footer-copy">
+          <div class="row">
+            <div class="col-12">
+              <p>Kasya Team <span id="country">...</span></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>
+  </footer>
+	<script type="text/javascript" src="assets/cmd/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="assets/cmd/dist/autosize.min.js"></script>
+	<script type="text/javascript" src="assets/cmd/dist/jquery.convform.js"></script>
+
+	<script>
+		jQuery(function($){
+			var count = 0;
+			var convForm = $('#chat').convform({eventList:{onInputSubmit: function(convState, ready) {
+				//здесь вы отправляете ответ своему API, получаете результаты и строите следующий вопрос
+                                //когда все будет готово, вызовите обратный вызов 'ready' (передается как второй параметр)
+		        if(convState.current.answer.value==='end') {
+		            convState.current.next = false;
+		            window.location.href = 'main.html'
+					//имитация случайного времени отклика (100-600 мс)
+					setTimeout(ready, Math.random()*500+100);
+		        } else if (convState.current.answer.value==='begin') {
+		          {
+		          convState.current.next = convState.newState({
+		          type: 'select',
+		          name: 'dynamic-question-'+count,
+		          questions: ['Какой раздел Вас интересует?'],
+		          answers: [
+		          {text: 'Kasya Team', value: 'team'},
+		          {text: 'Kasya Apps', value: 'apps'},
+		          {text: 'Kasya Develop', value: 'dev'},
+		          {text: 'Kasya Search', value: 'search'},
+		          {text: 'Kasya ID', value: 'kasyaid'},
+		          {text: 'За мной следят?', value: 'lol'},
+		          {text: 'Вопрос решен', value: 'end'}
+		          ]
+		          });
+		         
+		          setTimeout(ready, Math.random()*500+100);
+		          }
+		        }else if (convState.current.answer.value==='team') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Kasya Team - группа разработчиков в назависимой студии разработчиков Kasya. Разработчик, создатель и ведущий программист- Александр Каурцев (Вайлюк-Каурцев)'],
+		        answers: [
+		        {text: 'Связаться', value: 'open-tw'},
+		        {text: 'В начало', value: 'begin'},
+		        {text: 'Вопрос решен', value: 'end'}
+		        ]
+		        });
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        
+		        else if (convState.current.answer.value==='apps') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Kasya Apps - наша игровая площадка. В данный момент она находится в стадии разработки. Если вы один из разработчиков, то вы можете опубликовать свои игры или программы. Но перед этим вы должны получить статус "Kasya Developer". Обратиться исключительно в наше сообщество в ВКонтакте'],
+		        answers: [
+		        {text: 'Kasya Develop', value: 'dev'},
+		        {text: 'Kasya Team в ВКонтакте', value: 'open-vk'},
+		        {text: 'Вопрос решен', value: 'end'}
+		        ]
+		        });
+		       
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        else if (convState.current.answer.value==='lol') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Фактически- нет. Мы не следим за вами. Но нам интересно то, что вы используете в Kasya. Вот это мы сохраняем. По нынешней Политике Конфиденциальности, в пункте 3 прописано всё, что именно может быть сохранено у нас.'],
+		        answers: [
+		        {text: 'Вопрос решен', value: 'begin'}
+ 	          ]
+		        });
+		       
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        
+		        else if (convState.current.answer.value==='dev') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Kasya Develop - ничто иное, как сообщество разработчиков, которые получили статус "Kasya Developer". В Kasya apps есть несколько разделов: "Приложения", "Игры", "Прочее" и игры с онлайн запуском. Первые 3 раздела не имеют особых требований, за исключением отсутствия вредоносного ПО. А для того, чтобы пользователи могли играть через Kasya Launcher в онлайн формате, то вам необходимо делать игру на основе WEB технологии. Так же, ваш проект проверяется на наличие вредоносного ПО. Если всё хорошо, то ваша игра появляется в списке игр.'],
+		        answers: [
+		        {text: 'Kasya Apps', value: 'apps'},
+		        {text: 'Kasya Develop', value: 'dev'},
+		        {text: 'В начало', value: 'begin'},
+		        {text: 'Вопрос решен', value: 'end'}
+		        ]
+		        });
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        else if (convState.current.answer.value==='search') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Kasya Search - наша поисковая система, основанная на технологии Google. Мы используем индексирование Google и из этого создаем поисковую систему. Так же, мы можем внести отдельные результаты при поиске. Если вы ходите, чтобы ваш сайт/онлайн проект высвечивался при поиске, то напишите исключительно разработчику в Twitter. Обратите внимание на то, что мы исключительно за безопасный поиск.'],
+		        answers: [
+		        {text: 'Написать в Twitter', value: 'open-tw'},
+		        {text: 'Перейти в Kasya | Search', value: 'open-sh'},
+		        {text: 'В начало', value: 'begin'},
+		        {text: 'Вопрос решен', value: 'end'}
+		        ]
+		        });
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        else if (convState.current.answer.value==='kasyaid') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['<b><a href="/kasya-id.html">Статья о Kasya ID</a></b><br/>Это персонализированный ключ в виде одного аккаунта в экосистеме Kasya. Создав один аккаунт, вы сможете получить полный доступ ко всем предоставляемым нами сервисам. Для создания ключа, используется электронная почта и пароль.Учтите, что мы можем удалить ваш аккаунт, если он выглядит подозрительно. Но перед этим, он будет заморожен.'],
+		        answers: [
+		        {text: 'Сбросить пароль', value: 'kasyaid-resed'},
+		        {text: 'Удалить аккаунт', value: 'kasyaid-delete'},
+		        {text: 'В начало', value: 'begin'},
+		        {text: 'Вопрос решен', value: 'end'}
+		        ]
+		        });
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        else if (convState.current.answer.value==='kasyaid-resed') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Если вы забыли пароль, НО еще имеете доступ к панели Kasya ID, что встроена в каждое приложение нашей сисемы, то можете прямо сейчас сделать сброс. На вашу электронную почту будет отправлена сброс-ссылка, где вы сможете поменять пароль. Бывает, когда вам нужно войти в свой Kasya ID, а доступа к панели нет. В таких случаях мы лично сбрасываем пароль. Вам придется написать либо разработчику в Твиттер или на наше сообщество ВКонтакте.'],
+		        answers: [
+		        {text: 'Сообщество Kasya Team', value: 'open-vk'},
+		        {text: 'Твиттер разработчика', value: 'open-tw'},
+		        {text: 'В начало', value: 'begin'},
+		        {text: 'Вопрос решен', value: 'end'}
+		        ]
+		        });
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        else if (convState.current.answer.value==='kasyaid-delete') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Вам придется написать либо разработчику в Твиттер или на наше сообщество ВКонтакте.'],
+		        answers: [
+		        {text: 'Сообщество Kasya Team', value: 'open-vk'},
+		        {text: 'Твиттер разработчика', value: 'open-tw'},
+		        {text: 'В начало', value: 'begin'},
+		        {text: 'Вопрос решен', value: 'end'}
+		        ]
+		        });
+		        setTimeout(ready, Math.random()*500+100);
+		        }
+		        }
+		        else if (convState.current.answer.value==='open-vk') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Секунду, сейчас Вы будете перенаправлены...'],
+		        });
+		        function open() { 
+		        window.location.href = '/link.html?vkteam';
+		        }
+		        setTimeout(ready, 100); 
+		        setTimeout(open, 3000);
+		        }
+		        }
+		        else if (convState.current.answer.value==='open-tw') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Секунду, сейчас Вы будете перенаправлены...'],
+		        });
+		        function open() {
+		        window.location.href = '/link.html?twitter';
+		        }
+		        setTimeout(ready, 100);
+		        setTimeout(open, 3000);
+		        }
+		        }
+		        else if (convState.current.answer.value==='open-sh') {
+		        {
+		        convState.current.next = convState.newState({
+		        type: 'select',
+		        name: 'dynamic-question-'+count,
+		        questions: ['Секунду, сейчас Вы будете перенаправлены...'],
+		        });
+		        function open() {
+		        window.location.href = '/link.html?search';
+		        }
+		        setTimeout(ready, 100);
+		        setTimeout(open, 3000);
+		        }
+		        }
+		        else {
+		            convState.current.next = convState.newState({
+		                type: 'select',
+		                name: 'dynamic-question-'+count,
+		                questions: ['Судя по всему, прошлый ответ нет объяснения. ('+convState.current.answer.text+')'],
+		                answers: [
+		                    {text: 'Сначала', value: 'begin'},
+		                    {text: 'Окончить диалог', value: 'end'}
+		                ]
+		            });
+					//эмуляция случайного времени отклика (100-600 мс)
+					setTimeout(ready, Math.random()*500+100);
+		        }
+		        count++;
+		    }}});
+		});
+	</script>
+	
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="assets/plugin/bootstrap/js/popper.min.js"></script>
+  <script src="assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="assets/plugin/particles/particles.min.js"></script>
+  <script src="assets/plugin/particles/particles-app.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
