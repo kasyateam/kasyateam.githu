@@ -68,7 +68,7 @@
 		background:#ffffff;
 	}
 
-#cookie_notification{
+.cookie_notification{
   display: none;
   justify-content: space-between;
   align-items: flex-end;
@@ -84,7 +84,7 @@
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
 }
 
-#cookie_notification p{
+.cookie_notification p{
   margin: 0;
   font-size: 0.7rem;
   text-align: left;
