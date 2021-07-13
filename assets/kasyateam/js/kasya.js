@@ -22,12 +22,6 @@ var glap = '2no.co'
 document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/169ax7.js"></'+glop+'>')
 //Kasya Security
 a = this["\x65\x76\x61\x6C"];
-if (window.location.hostname !== "kasyateam"){
-  a(document.write('У вас обнаружен Proxy! Мы не позволяем работать с ним.'))
-}
-else {
- alert('ok') 
-}
 function checkCookies(){
     let cookieDate = localStorage.getItem('cookieDate');
     let cookieNotification = document.getElementById('cookie_notification');
