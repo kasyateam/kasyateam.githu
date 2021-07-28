@@ -1,0 +1,66 @@
+/* Классик */
+body{
+  background: #fff;
+}
+
+/* Сами новости */
+.panelka{
+  padding: 8px;
+  margin: 8px;
+  border-radius: 20px;
+  background: #8048f8;
+  color: #fff;  
+}
+
+.zagolovok{
+  border-top-left-radius: 12px; 
+  border-top-right-radius: 12px;
+  background: #fff;
+  color:#000;
+  font-size: 20px; 
+  margin: 0px;
+  padding: 8px;
+}
+
+.foll{
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px; 
+  background: #fff; 
+  color: #000; 
+  margin: 0px; 
+  padding: 8px;
+}
+
+.logo{
+  background:#fff;
+  border-radius: 10px;
+  width: 10%
+}
+
+/* Обновления*/
+.panelka-upd{
+  padding: 8px;
+  margin: 8px;
+  border-radius: 20px;
+  background: #8048f8;
+  color: #fff;  
+}
+
+.zagolovok-upd{
+  border-top-left-radius: 12px; 
+  border-top-right-radius: 12px;
+  background: #1de9b6;
+  color:#000;
+  font-size: 20px; 
+  margin: 0px;
+  padding: 8px;
+}
+
+.foll-upd{
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px; 
+  background: #1de9b6; 
+  color: #000; 
+  margin: 0px; 
+  padding: 8px;
+}
