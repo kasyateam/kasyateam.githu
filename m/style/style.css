@@ -21,7 +21,11 @@ body{
   margin: 0px;
   padding: 8px;
 }
-
+.art{
+margin: 4px;
+border-radius: 20px;
+padding: 2px;
+}
 .foll{
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px; 
