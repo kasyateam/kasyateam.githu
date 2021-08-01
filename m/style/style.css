@@ -23,11 +23,11 @@ body{
 }
 .art{
 width: 100%;
-border-radius: 20px;
+border-radius: 5px;
 }
 .art-box{
   margin: 0px; 
-  padding: 0px;
+  padding-top: 8px;
 }
 .foll{
   border-bottom-left-radius: 12px;
