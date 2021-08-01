@@ -1,6 +1,13 @@
 /* Классик */
 body{
-  background: #fff;
+  background: #8048f8;
+  color: #fff;
+  margin: 0px;
+  padding: 4px;
+}
+.main {
+  background: #8048f8;
+  margin: 0px;
 }
 
 /* Сами новости */
@@ -21,14 +28,7 @@ body{
   margin: 0px;
   padding: 8px;
 }
-.art{
-width: 100%;
-border-radius: 5px;
-}
-.art-box{
-  margin: 0px; 
-  padding-top: 8px;
-}
+
 .foll{
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px; 
@@ -70,4 +70,33 @@ border-radius: 5px;
   color: #000; 
   margin: 0px; 
   padding: 8px;
+}
+.but {
+  background: #fff;
+  color: #8048f8;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 20px;
+  text-decoration: none; 
+}
+p {
+  line-height: 20px;
+  text-align: left;
+}
+pre {
+  background: #202020;
+  color:#FFA000;
+  text-align: left;
+  border: 2px;
+  border-color: #AB00FF;
+  padding: 8px;
+  width: auto;
+  border-radius: 10px;
+}
+.result {
+  background:#fff;
+  color:#000;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 10px;
 }
