@@ -22,9 +22,12 @@ body{
   padding: 8px;
 }
 .art{
-margin: 4px;
+width: 100%;
 border-radius: 20px;
-padding: 2px;
+}
+.art-box{
+  margin: 0px; 
+  padding: 0px;
 }
 .foll{
   border-bottom-left-radius: 12px;
