@@ -18,6 +18,14 @@ body{
   background: #8048f8;
   color: #fff;  
 }
+.art{
+width: 100%;
+border-radius: 5px;
+}
+.art-box{
+  margin: 0px; 
+  padding-top: 8px;
+}
 
 .zagolovok{
   border-top-left-radius: 12px; 
