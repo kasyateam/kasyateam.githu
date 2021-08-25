@@ -1,0 +1,254 @@
+body {
+  background: #212121;
+  color:#fff;
+  font-size: 15pt;
+  margin: 0px;
+  box-sizing: border-box;
+}
+main{
+ width: 95%;
+ max-width: 400px;
+ margin-right: auto;
+ margin-left: auto;
+ text-align: left;
+ padding: 10px;
+}
+hr {
+  background: #AEAEAE;
+  border: 1px #AEAEAE solid;
+  border-radius: 50px;
+  width: 92%;
+  margin-bottom: 20px;
+}
+nav{
+  font-size:20pt;
+  font-weight: 700;
+  padding: 8px;
+}
+.form {
+  width: 95%;
+  margin-top: 10px;
+}
+.form-name{
+  color:#AEAEAE;
+  margin-bottom: 2px;
+}
+input{
+  background: #363636;
+  outline: none;
+  border: 2px #AEAEAE solid;
+  padding: 10px;
+  border-radius: 10px;
+  color:#fff;
+  font-size: 15pt;
+  width: 100%;
+  margin-bottom: 10px
+}
+.checkbox {
+  width: auto;;
+}
+.radio {
+  width: auto;
+}
+.info{
+  background: #7038f2;
+  color:#fff;
+  padding: 8px;
+  border-radius:10px;
+  margin: 8px;
+}
+h3{
+  margin: 2px;
+}
+p{
+  font-size: 10pt;
+  margin: 2px;
+}
+button {
+  background: #8048f8;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color:#fff;
+  font-size: 15pt;
+  margin: 10px;
+  width: 95%;
+}
+.save {
+position: absolute;
+margin: 0px;
+left: 50%;
+bottom: 0px;
+transform: translate(-50%, -50%);
+max-width: 450px;
+}
+a{
+  color: #8048f8;
+  text-decoration: none;
+  font-weight: 700;
+}
+select{
+   background: #363636;
+   outline: none;
+   border: 2px #AEAEAE solid;
+   padding: 10px;
+   border-radius: 10px;
+   color:#fff;
+   font-size: 15pt;
+   width: 100%;
+   box-sizing: border-box;
+ } 
+textarea{
+background: #363636;
+outline: none;
+border: 2px #AEAEAE solid;
+padding: 10px;
+border-radius: 10px;
+color:#fff;
+font-size: 15pt;
+width: 100%;
+margin-bottom: 10px
+}
+
+  .main{
+    padding: 70px 10px 10px 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+  }
+    .header {
+     background: #363636;
+     border-bottom-left-radius: 10px; 
+     border-bottom-right-radius: 10px; 
+     font-weight: 700;
+     box-sizing: border-box; 
+     position: fixed;
+     top: 0px; 
+     left: 0px;
+     padding: 10px;
+     width: 100%;
+    }
+    .header-text {
+    font-size: 15pt;
+    margin-bottom: 5px;
+    }
+    .header-info{
+     font-size: 10pt;
+     background: #8048f8;
+     padding: 5px; 
+     border-radius: 5px; 
+     color: #fff;
+    }
+    .post{
+    padding: 20px; 
+    background: #363636; 
+    border-radius: 10px; 
+    margin-bottom: 10px;
+    }
+    .post-avtor{
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-size: 13pt;
+    color:#8048f8;
+    }
+    .post-info{
+     padding-bottom: 10px;
+     font-size: 10pt
+    }
+    .post-time{
+      color: #AEAEAE; 
+      font-size: 8pt; 
+      width: 100%;
+      text-align: right;
+      padding-right: 10px
+    }
+    .end{
+      width: 100%;
+      text-align: center;
+      color: #AEAEAE;
+      padding-top: 0px;
+      font-size: 10pt;
+    }
+
+
+
+
+
+/* ..........*/
+
+
+
+
+/* Классик */
+.main {
+  zoom: 0.8;
+}
+table{
+  border: 4px white solid;
+  border-radius: 10px;
+  padding: 5px;
+}
+td {
+  border: 1px white solid;
+  border-radius: 2px;
+  padding: 5px;
+}
+span {
+  background: #42445A;
+  color: #fff;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px;
+}
+.panel{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  margin: 10px;
+  background: #42445A;
+  padding: 10px;
+  border-radius: 10px;
+  opacity: 0.5;
+}
+/* Сами новости */
+.but {
+  color: #8048f8;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 20px;
+  text-decoration: none; 
+}
+pre {
+  background: #202020;
+  color:#FFA000;
+  text-align: left;
+  border: 2px;
+  border-color: #AB00FF;
+  padding: 8px;
+  width: auto;
+  border-radius: 10px;
+  font-size: 8px;
+}
+code {
+  background: #202020;
+  color: #FFA000;
+  text-align: left;
+  border: 2px;
+  border-color: #AB00FF;
+  padding: 8px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.result {
+  background:#fff;
+  color:#000;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 10px;
+}
+img {
+  width: 100%
+}
