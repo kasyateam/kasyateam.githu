@@ -211,11 +211,13 @@ table{
   border: 4px white solid;
   border-radius: 10px;
   padding: 5px;
+box-sizing: border-box;
 }
 td {
   border: 1px white solid;
   border-radius: 2px;
   padding: 5px;
+box-sizing: border-box;
 }
 span {
   background: #42445A;
@@ -223,6 +225,7 @@ span {
   border-radius: 20px;
   padding: 5px;
   margin: 5px;
+box-sizing: border-box;
 }
 .panel{
   position: fixed;
@@ -233,6 +236,7 @@ span {
   padding: 10px;
   border-radius: 10px;
   opacity: 0.5;
+box-sizing: border-box;
 }
 /* Сами новости */
 .but {
@@ -270,7 +274,10 @@ code {
   margin: 8px;
   padding: 8px;
   border-radius: 10px;
+box-sizing: border-box;
 }
 img {
-  width: 100%
+  width: 100%;
+box-sizing: border-box;
+
 }
