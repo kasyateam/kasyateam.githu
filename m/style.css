@@ -12,6 +12,7 @@ main{
  margin-left: auto;
  text-align: left;
  padding: 10px;
+box-sizing: border-box;
 }
 hr {
   background: #AEAEAE;
@@ -19,19 +20,23 @@ hr {
   border-radius: 50px;
   width: 92%;
   margin-bottom: 20px;
+box-sizing: border-box;
 }
 nav{
   font-size:20pt;
   font-weight: 700;
   padding: 8px;
+box-sizing: border-box;
 }
 .form {
   width: 95%;
   margin-top: 10px;
+box-sizing: border-box;
 }
 .form-name{
   color:#AEAEAE;
   margin-bottom: 2px;
+box-sizing: border-box;
 }
 input{
   background: #363636;
@@ -43,12 +48,15 @@ input{
   font-size: 15pt;
   width: 100%;
   margin-bottom: 10px
+box-sizing: border-box;
 }
 .checkbox {
-  width: auto;;
+  width: auto;
+box-sizing: border-box;
 }
 .radio {
   width: auto;
+box-sizing: border-box;
 }
 .info{
   background: #7038f2;
@@ -56,13 +64,16 @@ input{
   padding: 8px;
   border-radius:10px;
   margin: 8px;
+box-sizing: border-box;
 }
 h3{
   margin: 2px;
+box-sizing: border-box;
 }
 p{
   font-size: 10pt;
   margin: 2px;
+box-sizing: border-box;
 }
 button {
   background: #8048f8;
@@ -74,6 +85,7 @@ button {
   font-size: 15pt;
   margin: 10px;
   width: 95%;
+box-sizing: border-box;
 }
 .save {
 position: absolute;
@@ -82,11 +94,13 @@ left: 50%;
 bottom: 0px;
 transform: translate(-50%, -50%);
 max-width: 450px;
+box-sizing: border-box;
 }
 a{
   color: #8048f8;
   text-decoration: none;
   font-weight: 700;
+box-sizing: border-box;
 }
 select{
    background: #363636;
@@ -109,6 +123,7 @@ color:#fff;
 font-size: 15pt;
 width: 100%;
 margin-bottom: 10px
+box-sizing: border-box;
 }
 
   .main{
@@ -117,6 +132,7 @@ margin-bottom: 10px
     margin-left: auto;
     margin-right: auto;
     max-width: 450px;
+box-sizing: border-box;
   }
     .header {
      background: #363636;
@@ -129,10 +145,12 @@ margin-bottom: 10px
      left: 0px;
      padding: 10px;
      width: 100%;
+box-sizing: border-box;
     }
     .header-text {
     font-size: 15pt;
     margin-bottom: 5px;
+box-sizing: border-box;
     }
     .header-info{
      font-size: 10pt;
@@ -140,29 +158,34 @@ margin-bottom: 10px
      padding: 5px; 
      border-radius: 5px; 
      color: #fff;
+box-sizing: border-box;
     }
     .post{
     padding: 20px; 
     background: #363636; 
     border-radius: 10px; 
     margin-bottom: 10px;
+box-sizing: border-box;
     }
     .post-avtor{
     font-weight: 700;
     padding-bottom: 10px;
     font-size: 13pt;
     color:#8048f8;
+box-sizing: border-box;
     }
     .post-info{
      padding-bottom: 10px;
-     font-size: 10pt
+     font-size: 10pt;
+box-sizing: border-box;
     }
     .post-time{
       color: #AEAEAE; 
       font-size: 8pt; 
       width: 100%;
       text-align: right;
-      padding-right: 10px
+      padding-right: 10px;
+box-sizing: border-box;
     }
     .end{
       width: 100%;
@@ -170,6 +193,7 @@ margin-bottom: 10px
       color: #AEAEAE;
       padding-top: 0px;
       font-size: 10pt;
+box-sizing: border-box;
     }
 
 
@@ -182,8 +206,6 @@ margin-bottom: 10px
 
 
 /* Классик */
-.main {
-  zoom: 0.8;
 }
 table{
   border: 4px white solid;
