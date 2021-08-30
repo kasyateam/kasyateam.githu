@@ -1,4 +1,11 @@
+@font-face {
+  font-family: "font";
+  src: url("./comfortaa.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 body {
+  font-family: "font";
   background: #212121;
   color:#fff;
   font-size: 15pt;
