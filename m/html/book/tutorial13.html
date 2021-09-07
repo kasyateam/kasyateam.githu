@@ -1,1 +1,225 @@
-<!DOCTYPE html><html lang="ru"><head>    <meta charset="utf-8" />    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />    <link rel="stylesheet" href="/style-1.css"></head><body><div id="main"><div class="header">  <p class="header-text">HTML</p>  <a href="#" class="header-info">Kasya Team</a></div><h1>HTML формы</h1><p>HTML формы могут содержать такие элементы ввода как:</p><p> - Текстовые поля</p><p> - Флажки</p><p> - Радио-кнопки</p><p> - Кнопки отправления и др.</p><p>Формы также могут содержать списки выбора, многострочные текстовые поля, метки и др.</p><p>Для того, чтобы создать форму в HTML используется элемент <b>&lt;form&gt;</b>.</p><pre>&lt;form>&lt;p>Введите ваше имя:&lt;/p>&lt;input type="text" />&lt;p>Введите пароль: &lt;/p>&lt;input type="password" />&lt;/form></pre><div>Результат работы кода:</div><div class="result"><form><p>Введите ваше имя:</p><input class="none" type="text" /><p>Введите пароль: </p><input type="password" /></form></div><h1>Элементы ввода</h1><p>Элементы ввода используются для приема пользовательских данных.</p><p>Элементы ввода сильно отличаются друг от друга в зависимости от значения атрибута type.</p><h2>Текстовое поле</h2><p><b>&lt;input type=&quot;text&quot; /&gt;</b> определяет однострочное текстовое поле, в которое пользователь может вводить различную информацию.</p><pre>&lt;form>&lt;p> Введите ФИО в поля ниже: &lt;/p>Имя: &lt;input type="text" name="firstname" />&lt;/form></pre><div>Результат работы кода:</div><div class="result"><form><p> Введите ФИО в поля ниже: </p><p>Имя: <input type="text" name="firstname" /></p></form></div><p><b>Обратите внимание:</b> по умолчанию текстовое поле вмещает 20 знаков.</p><h2>Поле пароля</h2><p><b>&lt;input type=&quot;password&quot; /&gt;</b> определяет поле для ввода пароля. Содержимое вводимое в данное поле закрывается черными кружками позволяя вводить пароли даже в присутствии посторонних.</p><pre>&lt;form>Введите пароль: &lt;input type="password" name="pass" />&lt;/form></pre><div>Результат работы кода:</div><div class="result"><form><p>Введите пароль:<input type="password" name="pass" /></p></form></div><h2>Флажок</h2><p><b>&lt;input type=&quot;checkbox&quot; /&gt;</b> определяет флажок. Флажки позволяют пользователям выбирать несколько пунктов с предварительно заполненной информацией из группы.</p><pre>&lt;form>&lt;p>Как вы относитесь к полетам в космос?&lt;/p>&lt;input type="checkbox" name="space" value="1" />Положительно, всегда хотел полететь в космос&lt;br />&lt;input type="checkbox" name="space" value="2" />Безразлично, никогда не думал об этом &lt;br />&lt;input type="checkbox" name="space" value="3" />Отритцательно&lt;br />&lt;/form></pre><div>Результат работы кода:</div><div class="result"><form><p>Как вы относитесь к полетам в космос?</p><input type="checkbox" name="space" value="1" />Положительно, всегда хотел полететь в космос<br /><input type="checkbox" name="space" value="2" />Безразлично, никогда не думал об этом <br /><input type="checkbox" name="space" value="3" />Отритцательно<br /></form></div><h2>Радио - кнопка</h2><p><b>&lt;input type=&quot;radio&quot; /&gt;</b> определяет радио кнопку. Радио кнопки позволяют пользователям выбрать только один пункт с предварительно заполненной информацией из группы.</p><p><b>Обратите внимание:</b> радио-кнопки называются так потому что их поведение напоминает поведение кнопок старых радио, у которых только одна кнопка могла быть нажата одновременно.</p><pre>&lt;form>&lt;p> Укажите Ваш пол: &lt;/p>&lt;input type="radio" name="s" value="m" /> Мужской&lt;br />&lt;input type="radio" name="s" value="f" /> Женский&lt;/form></pre><div>Результат работы кода:</div><div class="result"><form><p> Укажите Ваш пол: </p><input type="radio" name="s" value="m" /> Мужской<br /><input type="radio" name="s" value="f" /> Женский</form></div><h2>Кнопка отправления</h2><p><b>&lt;input type=&quot;submit&quot; /&gt;</b> определяет кнопку отправления. После нажатия на данную кнопку данные введенные пользователем будут отправлены на сервер.</p><p>Адрес, на который будут пересылаться данные формы указывается в атрибуте тега <b>form - action</b>. Если данный атрибут отсутствует данные будут отправлены на текущую страницу.</p><p><b>Обратите внимание:</b> обработка данных полученных сервером в результате отправки форм будет производиться с помощью серверных языков (таких как PHP, Ruby или Python) и в будущем мы выпустим курс по ним.</p><pre>&lt;form name="input" action="form.php" method="get">Введите Ваше имя: &lt;input type="text" name="name" />&lt;input type="submit" value="Отправить" />&lt;/form></pre><div>Результат работы кода:</div><div class="result"><form name="input" method="get">Введите Ваше имя: <input type="text" name="name" /><input type="submit" value="Отправить" /></form></div><h1>Выпадающий список</h1><p>Для создания выпадающих списков используется тег <b>&lt;select&gt;</b>, а элементы выпадающего списка определяются с помощью тега <b>&lt;option&gt;</b>.</p><p><b>Обратите внимание:</b> пользователи не любят вводить данные вручную, поэтому если Вы можете заменить обычное текстовое поля выпадающим списком, радио кнопками, или флажками обязательно сделайте это.</p><pre>&lt;p> Выберите ваш пол &lt;/p>&lt;form>&lt;select name="sex" >&lt;option value="m"> Мужской &lt;/option>&lt;option value="f"> Женский &lt;/option>&lt;/select>&lt;/form></pre><div>Результат работы кода:</div><div class="result"><p> Выберите ваш пол </p><form><select name="sex" ><option value="m"> Мужской </option><option value="f"> Женский </option></select></form></div><p>С помощью атрибута <b>multiple</b> Вы можете указать, что в выпадающем списке могут быть выбраны одновременно несколько элементов.</p><pre>...&lt;select name='sex' multiple='multiple'>...&lt;/select>...</pre><div class="result"><p> Выберите ваш пол </p><form><select name="sex" multiple='multiple'><option value="m"> Мужской </option><option value="f"> Женский </option></select></form></div></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" href="http://kasyateam.github.io/m/kmp/style-1.css">
+</head>
+<body>
+<div id="main">
+<div class="header">
+  <p class="header-text">HTML</p>
+  <a href="#" class="header-info">Kasya Team</a>
+</div>
+<h1>
+HTML формы
+</h1>
+
+<p>HTML формы могут содержать такие элементы ввода как:</p>
+<p> - Текстовые поля</p>
+<p> - Флажки</p>
+<p> - Радио-кнопки</p>
+<p> - Кнопки отправления и др.</p>
+<p>Формы также могут содержать списки выбора, многострочные текстовые поля, метки и др.</p>
+<p>Для того, чтобы создать форму в HTML используется элемент <b>&lt;form&gt;</b>.</p>
+
+<pre>
+&lt;form>
+&lt;p>Введите ваше имя:&lt;/p>
+&lt;input type="text" />
+&lt;p>Введите пароль: &lt;/p>
+&lt;input type="password" />
+&lt;/form>
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<form>
+<p>Введите ваше имя:</p>
+<input class="none" type="text" />
+<p>Введите пароль: </p>
+<input type="password" />
+</form>
+</div>
+
+<h1>
+Элементы ввода
+</h1>
+
+<p>Элементы ввода используются для приема пользовательских данных.</p>
+<p>Элементы ввода сильно отличаются друг от друга в зависимости от значения атрибута type.</p>
+
+<h2>Текстовое поле</h2>
+
+<p><b>&lt;input type=&quot;text&quot; /&gt;</b> определяет однострочное текстовое поле, в которое пользователь может вводить различную информацию.</p>
+
+<pre>
+&lt;form>
+&lt;p> Введите ФИО в поля ниже: &lt;/p>
+Имя: &lt;input type="text" name="firstname" />
+&lt;/form>
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<form>
+<p> Введите ФИО в поля ниже: </p>
+<p>Имя: <input type="text" name="firstname" /></p>
+</form>
+</div>
+
+<p><b>Обратите внимание:</b> по умолчанию текстовое поле вмещает 20 знаков.</p>
+
+<h2>Поле пароля</h2>
+
+<p><b>&lt;input type=&quot;password&quot; /&gt;</b> определяет поле для ввода пароля. Содержимое вводимое в данное поле закрывается черными кружками позволяя вводить пароли даже в присутствии посторонних.</p>
+
+<pre>
+&lt;form>
+Введите пароль: 
+&lt;input type="password" name="pass" />
+&lt;/form>
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<form>
+<p>Введите пароль:
+<input type="password" name="pass" /></p>
+</form>
+</div>
+
+<h2>Флажок</h2>
+
+<p><b>&lt;input type=&quot;checkbox&quot; /&gt;</b> определяет флажок. Флажки позволяют пользователям выбирать несколько пунктов с предварительно заполненной информацией из группы.</p>
+
+<pre>
+&lt;form>
+&lt;p>Как вы относитесь к полетам в космос?&lt;/p>
+&lt;input type="checkbox" name="space" value="1" />
+Положительно, всегда хотел полететь в космос&lt;br />
+&lt;input type="checkbox" name="space" value="2" />
+Безразлично, никогда не думал об этом &lt;br />
+&lt;input type="checkbox" name="space" value="3" />
+Отритцательно&lt;br />
+&lt;/form>
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<form>
+<p>Как вы относитесь к полетам в космос?</p>
+<input type="checkbox" name="space" value="1" />
+Положительно, всегда хотел полететь в космос<br />
+<input type="checkbox" name="space" value="2" />
+Безразлично, никогда не думал об этом <br />
+<input type="checkbox" name="space" value="3" />
+Отритцательно<br />
+</form>
+</div>
+
+<h2>Радио - кнопка</h2>
+
+<p><b>&lt;input type=&quot;radio&quot; /&gt;</b> определяет радио кнопку. Радио кнопки позволяют пользователям выбрать только один пункт с предварительно заполненной информацией из группы.</p>
+<p><b>Обратите внимание:</b> радио-кнопки называются так потому что их поведение напоминает поведение кнопок старых радио, у которых только одна кнопка могла быть нажата одновременно.</p>
+
+<pre>
+&lt;form>
+&lt;p> Укажите Ваш пол: &lt;/p>
+&lt;input type="radio" name="s" value="m" /> Мужской
+&lt;br />
+&lt;input type="radio" name="s" value="f" /> Женский
+&lt;/form>
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<form>
+<p> Укажите Ваш пол: </p>
+<input type="radio" name="s" value="m" /> Мужской
+<br />
+<input type="radio" name="s" value="f" /> Женский
+</form>
+</div>
+
+<h2>Кнопка отправления</h2>
+
+<p><b>&lt;input type=&quot;submit&quot; /&gt;</b> определяет кнопку отправления. После нажатия на данную кнопку данные введенные пользователем будут отправлены на сервер.</p>
+<p>Адрес, на который будут пересылаться данные формы указывается в атрибуте тега <b>form - action</b>. Если данный атрибут отсутствует данные будут отправлены на текущую страницу.</p>
+<p><b>Обратите внимание:</b> обработка данных полученных сервером в результате отправки форм будет производиться с помощью серверных языков (таких как PHP, Ruby или Python) и в будущем мы выпустим курс по ним.</p>
+
+<pre>
+&lt;form name="input" action="form.php" method="get">
+Введите Ваше имя: &lt;input type="text" name="name" />
+&lt;input type="submit" value="Отправить" />
+&lt;/form>
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<form name="input" method="get">
+Введите Ваше имя: <input type="text" name="name" />
+<input type="submit" value="Отправить" />
+</form>
+</div>
+
+<h1>
+Выпадающий список
+</h1>
+
+<p>Для создания выпадающих списков используется тег <b>&lt;select&gt;</b>, а элементы выпадающего списка определяются с помощью тега <b>&lt;option&gt;</b>.</p>
+<p><b>Обратите внимание:</b> пользователи не любят вводить данные вручную, поэтому если Вы можете заменить обычное текстовое поля выпадающим списком, радио кнопками, или флажками обязательно сделайте это.</p>
+
+<pre>
+&lt;p> Выберите ваш пол &lt;/p>
+
+&lt;form>
+&lt;select name="sex" >
+&lt;option value="m"> Мужской &lt;/option>
+&lt;option value="f"> Женский &lt;/option>
+&lt;/select>
+&lt;/form>
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<p> Выберите ваш пол </p>
+
+<form>
+<select name="sex" >
+<option value="m"> Мужской </option>
+<option value="f"> Женский </option>
+</select>
+</form>
+</div>
+
+<p>С помощью атрибута <b>multiple</b> Вы можете указать, что в выпадающем списке могут быть выбраны одновременно несколько элементов.</p>
+
+<pre>
+...
+&lt;select name='sex' multiple='multiple'>
+...
+&lt;/select>
+...
+</pre>
+
+<div class="result">
+<p> Выберите ваш пол </p>
+
+<form>
+<select name="sex" multiple='multiple'>
+<option value="m"> Мужской </option>
+<option value="f"> Женский </option>
+</select>
+</form>
+</div>
+
+</body>
+</html>
