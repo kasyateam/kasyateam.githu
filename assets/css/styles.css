@@ -25,6 +25,12 @@ Table of contents
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 
+@font-face {
+  font-family: "font";
+  src: url("./comfortaa.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 .loader-wrapper {
   position: fixed;
@@ -159,7 +165,7 @@ button.learn-more {
   background: transparent;
   padding: 0;
   font-size: inherit;
-  font-family: inherit;
+  font-family: "font";
   width: 12rem;
   height: auto;
 }
@@ -249,10 +255,12 @@ button.learn-more:hover .button-text {
 
 .m-btn-white:hover {
   color: #fff;
-  -webkit-transform: translateY(-7px);
-     -moz-transform: translateY(-7px);
-       -o-transform: translateY(-7px);
-          transform: translateY(-7px);
+  box-shadow: 0 0 10px rgba(128, 72, 248, 0.5); 
+  background: #8048f8;
+  -webkit-transform: translateY(-2px);
+     -moz-transform: translateY(-2px);
+       -o-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 .m-btn-theme {
@@ -276,10 +284,12 @@ button.learn-more:hover .button-text {
 
 .m-btn-theme:hover {
   color: #fff;
-  -webkit-transform: translateY(-7px);
-     -moz-transform: translateY(-7px);
-       -o-transform: translateY(-7px);
-          transform: translateY(-7px);
+  box-shadow: 0 0 10px rgba(128, 72, 248, 0.5); 
+  background: #8048f8;
+  -webkit-transform: translateY(-2px);
+     -moz-transform: translateY(-2px);
+       -o-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 
@@ -382,13 +392,14 @@ button.learn-more:hover .button-text {
 -----------------------------------*/
 .header-01 .navbar-toggler {
   outline: none;
+
 }
 .header-01 .navbar-toggler span {
   display: block;
   width: 22px;
   height: 2px;
   border-radius: 1px;
-  background: #000000;
+  background: #fff;
 }
 .header-01 .navbar-toggler span + span {
     margin-top: 4px;
@@ -407,14 +418,12 @@ button.learn-more:hover .button-text {
   left: 0;
   right: 0;
   z-index: 8;
-  padding: 30px 0 30px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5)
+  padding: 20px 0 20px;
+  box-shadow: 0 0 10px rgba(128, 72, 248, 1); 
 }
 .header-01 .navbar-brand {
-  font-weight: 600;
-  color: #000000;
+  font-weight: 200;
+  color: #fff;
 }
 .header-01 .navbar {
   padding: 0;
@@ -425,11 +434,12 @@ button.learn-more:hover .button-text {
 .header-01 .navbar-nav .nav-link {
     float: left;
     padding: 11px 0;
-    color: #000;
+    color: #fff;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 2px;
     position: relative;
+    
 }
 .header-01 .navbar-nav .nav-link:after {
   content: "";
@@ -438,19 +448,16 @@ button.learn-more:hover .button-text {
   left: 0;
   height: 3px;
   width: 0;
-  background: #000;
+  background: #fff;
   transition: ease all 0.3s;
 }
 .header-01 .navbar-nav .nav-link.active:after {
   width: 100%;
 }
 
-.header-01 .navbar-nav .nav-link-btn {
-  
-}
 .fixed-header.header-01 {
   padding: 18px 0;
-  background: #000;
+  background: #fff;
 }
 
 @media (max-width: 991px){
@@ -585,23 +592,6 @@ button.learn-more:hover .button-text {
   background: url(../img/server.gif) no-repeat scroll left top;
   height: 100%;
   z-index: 2;
-}
-
-.home-banner:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 30%;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: skew(16deg, -28deg);
-     -moz-transform: skew(39deg, -38deg);
-      -ms-transform: skew(39deg, -38deg);
-          transform: skew(39deg, -38deg);
-  opacity: 1;
-  z-index: 0;
-  box-shadow: 6px 13px 0px -1px rgba(177, 72, 253, 0.28), 30px 12px 0px -1px rgba(164,77,252, 0.16), 56px 13px 0px -1px rgba(142,61,252, 0.16);
 }
 
 .home-banner .particles-js-canvas-el {
@@ -1230,9 +1220,7 @@ button.learn-more:hover .button-text {
 -----------------------------------*/
 .footer {
   position: relative;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.7)
+  box-shadow: 0 0 10px rgba(128, 72, 248, 1); 
 }
 .footer .container {
   position: relative;
@@ -3670,3 +3658,87 @@ button.learn-more:hover .button-text {
   .sm-p-25-b {padding-bottom: 25%;}
   .sm-p-25-half-b {padding-bottom: 25.5%;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Кастом*/
+::selection {
+  background-color:#8048f8;
+  background-color: #212121;
+}
+::-moz-selection {
+  background-color:#8048f8;
+  background-color: #212121;
+}
+.tab-style-1 .nav .nav-item a,
+.more-btn:hover,
+.more-btn:focus,
+.more-btn:active,
+.theme-color {
+  color:#212121;
+  color: #fff;
+}
+
+
+
+.theme-after-bg:after,
+.btn-theme,
+.theme-bg {
+  background-color: #212121;
+}
+
+.feature-box-01:after,
+.feature-box:hover,
+.btn-theme {
+	border-color:#8048f8;
+}
+.fixed-header.header-01{
+  background-color: #212121;
+  
+}
+
+.tab-style-1,
+.owl-dots .owl-dot.active,
+.m-btn-theme, 
+.title-section h2:after,
+.m-btn-white:hover,
+.theme-after:after,
+.theme-g-bg{
+  background-color: #212121;
+  background: -webkit-linear-gradient(to right, #212121, #212121);
+  background: linear-gradient(to right, #212121, #212121);
+}
+
+
+/*Reverce*/
+.m-btn-theme:hover{
+  background: #8048f8;
+  background: -webkit-linear-gradient(to right, #262734, #8048f8);
+  background: transparent;
+  border-color: #8048f8;
+  border: 10px;
+  color: #ffffff;
+}
+
+.m-btn-theme:hover,
+.m-btn-white:hover {
+  box-shadow: 0 0 10px rgba(128, 72, 248, 0.5); 
+  background: #8048f8;
+}
+.header	{
+  background-color: #212121;
+  color: #fff;
+	}
