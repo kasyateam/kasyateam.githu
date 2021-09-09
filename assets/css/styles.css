@@ -569,6 +569,7 @@ button.learn-more:hover .button-text {
   position: relative;
   min-height: 600px;
   overflow: hidden;
+  box-shadow: 0 0 10px rgba(128, 72, 248, 1); 
 }
 .home-banner .full-screen {
   min-height: 600px;
