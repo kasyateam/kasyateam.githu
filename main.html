@@ -18,6 +18,7 @@
   <link href="assets/css/styles.css" rel="stylesheet">
   <link href="assets/css/color/default.css" rel="stylesheet" id="color_theme">
   <script src="assets/kasyateam/js/kasya.js"></script>
+  <script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>  
   <script async src="assets/kasyateam/js/VPN.js"></script>
 </head>
 
@@ -45,10 +46,11 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="navbarHeader">
           <ul class="navbar-nav ml-auto">
-            <li><a class="nav-link active" href="#home">Главная</a></li>
+            <!--<li><a class="nav-link active" href="#home">Главная</a></li>
             <li><a class="nav-link" href="#features">Основные функции</a></li>
             <li><a class="nav-link" href="#KScript">K-Script Editor</a></li>
-            <li><p><a class="nav-link" href="#">Kasya Apps</a></p></details></li>
+            <li><p><a class="nav-link" href="#">Kasya Apps</a></p></details></li>-->
+            <li><a class="nav-link-btn m-btn-white" href="http://kaurcev.kasyateam.ga" >Kaurcev</a></li>
           </ul>
         </div>
       </nav>  
@@ -65,133 +67,37 @@
               <span>Независимая студия разработки web дизайна, web структур</span>
               <h1 class="font-alt">Kasya Team | Kasya</h1>
               <p>Сейчас занимаемся разработкой нейронной сети</p>
-              <a class="m-btn-white" style="margin-bottom: 5%" href="/search.html">Поисковая система</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="features" class="feature-section section grey-bg">
-      <div class="container">
-        <div class="row justify-content-center title-section m-60px-b sm-m-40px-b">
-          <div class="col-md-8 col-lg-5 text-center">
-            <h2 class="font-alt">Добро пожаловать</h2>
-            <p>Здравствуйте! Мы рады знать, что вы читаете это приветствие! Наш проект направлен на создание примитивной нейронной сети, а так же простой разработки структур на web технологиях</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="feature-box sm-m-30px-b">
-              <div class="f-icon"><i class="icon-genius theme-color"></i></div>
-              <h4 class="m-25px-t">Kasya | Nero</h4>
-              <p>Примитивная неросеть</p>
-              <a class="more-btn" href="/kasya">Подробнее<i class="ti-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div id="proxy" class="col-md-4">
-            <div class="feature-box sm-m-30px-b">
-              <div class="f-icon"><i class="icon-key theme-color"></i></div>
-              <h4 class="m-25px-t">Kasya | Search</h4>
-              <p>Поисковая система</p>
-              <a class="more-btn" href="/search">Подробнее<i class="ti-arrow-right"></i></a>
-            </div>
-          </div>
-
-
-          <div class="col-md-4">
-            <div class="feature-box sm-m-30px-b">
-              <div class="f-icon"><i class="icon-mobile theme-color"></i></div>
-              <h4>Kasya | k.feed</h4>
-              <p>Наше приложение </p>
-              <a class="more-btn" href="/k-feed">Скачать<i class="ti-arrow-right"></i></a>
-            </div>
-            
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="feature-section section grey-bg">
-      <div class="container">
-        <div class="row justify-content-center title-section m-60px-b sm-m-40px-b">
-          <div class="col-md-8 col-lg-5 text-center">
-            <h2 class="font-alt">Kонкретно по Kasya</h2>
-          </div>
-        </div>
-        <div class="row">
-
-          <div class="col-md-4">
-            <div class="feature-box sm-m-30px-b">
-              <div class="f-icon"><i class="icon-recycle theme-color"></i></div>
-              <h4>Поддержка</h4>
-              <p>Можете спросить у бота </p>
-              <a class="more-btn" href="/support">Перейти <i class="ti-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="feature-box sm-m-30px-b">
-              <div class="f-icon"><i class="icon-twitter theme-color"></i></div>
-              <h4>Разработчик</h4>
-              <p>Связаться</p>
-              <a class="more-btn" href="./link?twitter" target="_blank" >Перейти <i class="ti-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="feature-box sm-m-30px-b">
-              <div class="f-icon"><i class="icon-edit theme-color"></i></div>
-              <h4>Kasya | Script Edit</h4>
-              <p>Текстовый редактор </p>
-              <a class="more-btn" href="#KScript">Перейти<i class="ti-arrow-right"></i></a>
-            </div>
-            
-        </div>
-      </div>
-    </section>
-    
-    <section class="overview-section section grey-bg">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <div class="std-box p-50px-l md-p-0px-l sm-m-30px-t">
-              <div class="title-section  m-20px-b">
-                <h2 class="font-alt left">K.Feed</h2>
-              </div>
-              <p class="m-30px-b">Наше приложение для того, чтобы быть в курсе новостей</p>
-              <a href="/k-feed.html" class="m-btn-theme">Скачать</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="KScript" class="overview-section section">
+    <section class="overview-section section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="std-box p-50px-r md-p-0px-r sm-m-30px-b">
               <div class="title-section  m-20px-b">
-                <h2 class="font-alt left">Kasya | Script Editor</h2>
+                <h2 class="font-alt left">Обновление Kasya 1.2</h2>
               </div>
               <p></p>
 
-              <p class="m-30px-b">Наш редактор кода для HTML, CSS и JavaScript</p>
-              <a href="#" class="m-btn-theme">Скоро</a>
+              <p class="m-30px-b">Мы запустили новое обновление для Kasya. Обновление касается K.FeeD. Скоро мы доделаем Kasya Search.</p>
+              <a href="/kasya.html" class="m-btn-theme">Скачать K.Feed 1.2</a>
             </div> 
           </div> 
 
           <div class="col-md-6">
-            <img class="img-shadow" src="assets/img/k-script.png" title="" alt="Kasya Script">
+            <img class="img-shadow" src="assets/img/mysql.png" title="" alt="Kasya Feed (K.Feed)">
           </div> 
 
         </div> 
       </div> 
     </section>
-  </main>
 
+
+  </main>
   <footer class="footer theme-g-bg">
     <section class="footer-section">
       <div class="container">
@@ -200,7 +106,7 @@
             <h4 class="font-alt">О нас</h4>
             <p class="footer-text">Kasya Team - Web-студия Александра Каурцева</p>
             <ul class="social-icons">
-              <li><a class="vk" href="/link?vk" target="_blank"><i class="fab fa-vk"></i></a></li>
+              <li><a class="vk" href="https://vk.com/kasyateam" target="_blank"><i class="fab fa-vk"></i></a></li>
             </ul>
           </div>
 
@@ -208,12 +114,12 @@
             <h4 class="font-alt">Ссылки</h4>
             <div class="d-flex justify-content-around">
               <ul class="fot-link">
-                <li><a href="/link?patreon" target="_blank">Patreon</a></li>
-                <li><a href="/link?vk" target="_blank" onclick="open()">Разработчик</a></li>
+                <li><a href="/link.html?patreon" target="_blank">Patreon</a></li>
+                <li><a href="/link.html?vk" target="_blank" onclick="open()">Разработчик</a></li>
               </ul>
               <ul class="fot-link">
-                <li><a href="/link?search" target="_blank" onclick="open()">Kasya | Search</a></li>
-                <li><a href="/support">Поддержка</a></li>
+                <li><a href="/link.html?search" target="_blank" onclick="open()">Kasya | Search</a></li>
+                <li><a href="/support.html">Поддержка</a></li>
               </ul>
             </div>
           </div>
