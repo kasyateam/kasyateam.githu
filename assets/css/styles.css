@@ -392,6 +392,7 @@ button.learn-more:hover .button-text {
 -----------------------------------*/
 .header-01 .navbar-toggler {
   outline: none;
+  font-family: 'Quicksand', sans-serif;
 
 }
 .header-01 .navbar-toggler span {
@@ -422,7 +423,7 @@ button.learn-more:hover .button-text {
   box-shadow: 0 0 10px rgba(128, 72, 248, 1); 
 }
 .header-01 .navbar-brand {
-  font-weight: 200;
+  font-weight: 600;
   color: #fff;
 }
 .header-01 .navbar {
@@ -439,7 +440,6 @@ button.learn-more:hover .button-text {
     font-size: 14px;
     letter-spacing: 2px;
     position: relative;
-    
 }
 .header-01 .navbar-nav .nav-link:after {
   content: "";
