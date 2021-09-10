@@ -1,4 +1,4 @@
-//Kasya. Время работы
+/*Kasya. Время работы
 var date = new Date(); 
       var hour = date.getUTCHours();
       if (hour>=18 && hour<19) online = "online";
