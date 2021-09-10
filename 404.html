@@ -34,21 +34,67 @@
   </div>
   
   <main>
-    <section id="home" class="home-banner theme-after theme-bg">
+    <section style="position:static; top: 0px; left: 0px; height: 100%;" id="home" class="home-banner theme-after theme-bg">
       <div class="container">
         <div class="row full-screen align-items-center">""
           <div class="col-md-6">
             <div class="home-left sm-m-100px-t">
               <span>Ошибка</span>
               <h1 class="font-alt">404</h1>
-              <p>Данной страницы не существует или она была перемещена</p>
-              <a class="m-btn-white" style="margin-bottom: 5%" href="/main">На главную</a>
+              <p>Данной страницы больше не существует или она была перемещена</p>
+              <a class="m-btn-white" style="margin-bottom: 5%" href="/main.html">На главную</a>
             </div>
           </div>
         </div>
       </div>
     </section>
   </main>
+  
+
+  <footer style="box-shadow: 0 0 0px rgba(128, 72, 248, 0); " class="footer theme-g-bg">
+    <section class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 sm-m-15px-tb">
+            <h4 class="font-alt">О нас</h4>
+            <p class="footer-text">Kasya Team - Web-студия Александра Каурцева</p>
+            <ul class="social-icons">
+              <li><a class="vk" href="https://vk.com/kasyateam" target="_blank"><i class="fab fa-vk"></i></a></li>
+            </ul>
+          </div>
+
+           <div class="col-md-5 col-lg-5 sm-m-15px-tb">
+            <h4 class="font-alt">Ссылки</h4>
+            <div class="d-flex justify-content-around">
+              <ul class="fot-link">
+                <li><a href="/link.html?patreon" target="_blank">Patreon</a></li>
+                <li><a href="/link.html?vk" target="_blank" onclick="open()">Разработчик</a></li>
+              </ul>
+              <ul class="fot-link">
+                <li><a href="/link.html?search" target="_blank" onclick="open()">Kasya | Search</a></li>
+                <li><a href="/support.html">Поддержка</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-lg-3 sm-m-15px-tb">
+            <h4 class="font-alt">Наши локации</h4>
+            <p>Россия, Санкт-Петербург</p>
+            <p>Россия, Омск</p>
+          </div>
+
+        </div>
+        
+        <div class="footer-copy">
+          <div class="row">
+            <div class="col-12">
+              <p>Kasya Team <span id="country">...</span></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </section>
+  </footer>
 
   <script src="assets/js/jquery-3.2.1.min.js"></script>
   <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
