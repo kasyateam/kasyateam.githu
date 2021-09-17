@@ -1,4 +1,7 @@
-User-agent: *
+User-Agent: *
+Disallow: /js
+Disallow: /css
+Disallow: /images/
+Disallow: /kasyateam/
 Disallow: /m/
-Disallow: /feed/
-Sitemap: sitemap.xml
+Host: kasyateam.ga
