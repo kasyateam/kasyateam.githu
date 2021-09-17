@@ -1,58 +1,53 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://kasyateam.ga/</loc>
-	<lastmod>2021-07-13T22:47:31+01:00</lastmod>
-	<priority>1.0</priority>
+	<lastmod>2021-09-17T07:03:13+01:00</lastmod>
+	<priority>2.0</priority>
 </url>
 <url>
 	<loc>https://kasyateam.ga/main</loc>
-	<lastmod>2021-07-13T22:47:31+01:00</lastmod>
+	<lastmod>2021-09-17T07:03:13+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://kasyateam.ga/privacy</loc>
+	<lastmod>2021-09-17T07:03:15+01:00</lastmod>
+	<priority>1.5</priority>
+</url>
+<url>
+	<loc>https://kasyateam.ga/link?vk</loc>
+	<lastmod>2021-09-17T07:03:16+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://kasyateam.ga/link?patreon</loc>
+	<lastmod>2021-09-17T07:03:16+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://kasyateam.ga/link?search</loc>
+	<lastmod>2021-09-17T07:03:16+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://kasyateam.ga/support</loc>
-	<lastmod>2021-07-13T22:47:37+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://kasyateam.ga/search.html</loc>
-	<lastmod>2021-07-13T22:47:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://kasyateam.ga/kasya</loc>
-	<lastmod>2021-07-13T22:47:36+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://kasyateam.ga/search</loc>
-	<lastmod>2021-07-13T22:47:36+01:00</lastmod>
+	<lastmod>2021-09-17T07:03:16+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://kasyateam.ga/k-feed</loc>
-	<lastmod>2021-07-13T22:47:36+01:00</lastmod>
+	<lastmod>2021-09-17T07:03:16+01:00</lastmod>
+	<priority>1.9</priority>
+</url>
+<url>
+	<loc>https://kasyateam.ga/link.html?vk</loc>
+	<lastmod>2021-09-17T07:03:17+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://kasyateam.ga/link?twitter</loc>
-	<lastmod>2021-07-13T22:47:37+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://kasyateam.ga/k-feed.html</loc>
-	<lastmod>2021-07-13T22:47:37+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://kasyateam.ga/index.html</loc>
-	<lastmod>2021-07-13T22:47:37+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://kasyateam.ga/support.html</loc>
-	<lastmod>2021-07-13T22:47:38+01:00</lastmod>
+	<loc>https://kasyateam.ga/support</loc>
+	<lastmod>2021-09-17T07:03:17+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 </urlset>
