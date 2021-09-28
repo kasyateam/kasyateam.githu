@@ -4,7 +4,11 @@
     font-style: normal;
     font-weight: normal;
   }
-  
+html{
+  padding: 10px;
+padding-top:5%;
+
+}
   body {
   font-family: "font";
   background: #212121;
@@ -15,7 +19,6 @@
   margin-right: auto;
   margin-left: auto;
   text-align: left;
-  padding: 10px;
   box-sizing: border-box;
 }
 
