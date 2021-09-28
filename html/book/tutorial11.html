@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+<body>
+<div id="main">
+<div class="header">
+  <p class="header-text">HTML</p>
+  <a href="#" class="header-info">Kasya Team</a>
+</div>
+<h1>
+Создание таблиц
+</h1>
+
+<p>Таблицы в HTML определяются с помощью тега <b>&lt;table&gt;</b>.</p>
+<p>Тег <b>&lt;tr&gt;</b> позволяет создать в таблице строку, а тег <b>&lt;td&gt;</b> добавить в эту строку ячейку с данными.</p>
+<p>По умолчанию таблицы отображаются без границ. Для того, чтобы отобразить границу необходимо использовать атрибут <b>border="1"</b>.</p>
+<p><b>Обратите внимание:</b> в ячейках таблиц может располагаться не только обычный текст, но и картинки, ссылки и другие таблицы.</p>
+
+<pre>
+&lt;table border="1">
+&lt;tr&gt;
+&lt;td&gt;Россия&lt;/td&gt;
+&lt;td&gt;141&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;США&lt;/td&gt;
+&lt;td&gt;309&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Китай&lt;/td&gt;
+&lt;td&gt;1338&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Великобритания&lt;/td&gt;
+&lt;td&gt;61&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<table border="1">
+<tr>
+<td>Россия</td>
+<td>141</td>
+</tr>
+<tr>
+<td>США</td>
+<td>309</td>
+</tr>
+<tr>
+<td>Китай</td>
+<td>1338</td>
+</tr>
+<tr>
+<td>Великобритания</td>
+<td>61</td>
+</tr>
+</table>
+</div>
+
+<h1>
+Табличные заголовки
+</h1>
+
+<p>С помощью тега <b>&lt;th&gt;</b> Вы можете создать табличный заголовок. Текст элемента <b>th</b> центрируется и выделяется жирным шрифтом.</p>
+
+<pre>
+&lt;table border='1'>
+&lt;tr&gt;
+&lt;th&gt;Заголовок 1&lt;/th&gt;
+&lt;th&gt;Заголовок 2&lt;/th&gt;
+&lt;th&gt;Заголовок 3&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ячейка 1&lt;/td&gt;
+&lt;td&gt;Ячейка 2&lt;/td&gt;
+&lt;td&gt;Ячейка 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ячейка 4&lt;/td&gt;
+&lt;td&gt;Ячейка 5&lt;/td&gt;
+&lt;td&gt;Ячейка 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<table border='1'>
+<tr>
+<th><b>Заголовок 1</b></th>
+<th><b>Заголовок 2</b></th>
+<th><b>Заголовок 3</b></th>
+</tr>
+<tr>
+<td>Ячейка 1</td>
+<td>Ячейка 2</td>
+<td>Ячейка 3</td>
+</tr>
+<tr>
+<td>Ячейка 4</td>
+<td>Ячейка 5</td>
+<td>Ячейка 6</td>
+</tr>
+</table>
+</div>
+
+<h1>
+Растягивание ячеек
+</h1>
+
+<p>С помощью атрибута <b>colspan</b> Вы можете указать на сколько столбцов должна быть растянута указанная ячейка.</p>
+
+<pre>
+&lt;table border='1'>
+&lt;tr&gt;
+&lt;td&gt; Ячейка 1 &lt;/td&gt;
+&lt;td&gt; Ячейка 2 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan="2">Ячейка на 2 столбца&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<table border="1">
+<tr>
+<td> Ячейка 1 </td>
+<td> Ячейка 2 </td>
+</tr>
+<tr>
+<td colspan="2">Ячейка на 2 столбца </td>
+</tr>
+</table>
+</div>
+
+<p>С помощью атрибута <b>rowspan</b> Вы можете указать на сколько строк должна быть растянута указанная ячейка.</p>
+
+<pre>
+&lt;table border="1">
+&lt;tr&gt;
+&lt;td rowspan="2">Ячейка на две строки&lt;/td&gt;
+&lt;td&gt; Ячейка 2 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt; Ячейка 3 &lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<div class="result">
+<table border="1">
+<tr>
+<td rowspan="2"> Ячейка на две строки </td>
+<td> Ячейка 2 </td>
+</tr>
+<tr>
+<td> Ячейка 3 </td>
+</tr>
+</table>
+</div>
+</body>
+</html>

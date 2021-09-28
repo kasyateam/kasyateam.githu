@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+    <div class="header">
+      <p class="header-text">HTML5</p>
+      <a href="#" class="header-info">HTML5 Аудио</a>
+    </div>
+ 
+<h1 id="title">
+HTML5 Аудио
+</h1>
+
+<p>С помощью нового HTML5 элемента <b>&lt;audio&gt;</b> Вы можете добавить на Ваш веб-сайт музыкальный трек или подкаст с помощью обычного разметочного тега.</p>
+<p><b>Обратите внимание:</b> поддержку аудио имеют следующие браузеры: Internet Explorer 9+, Opera 10.50+, Firefox 3.5+, Chrome 3.0+, Safari 3.0+.</p>
+<p>Атрибут src тега <b>&lt;audio&gt;</b> позволяет указать путь к аудио файлу, а атрибут controls добавляет кнопки управления.</p>
+
+<pre>&lt;audio src="ghost_k-stop.ogv" controls='controls'>
+&lt;/audio></pre>
+
+<p>Результат кода:</p>
+<div class="result">
+<audio src="ghost_k-stop.ogv" controls='controls'></audio>
+</div>
+<p>В предыдущем примере используется только формат Ogg, поэтому пример будет работать только в Firefox, Opera и Chrome.</p>
+<p>Для того, чтобы файл нормально проигрывался в Safari и Internet Explorer необходимо добавить также файл в формате MP3.</p>
+<p>С помощью элемента <b>&lt;source&gt;</b> Вы можете предоставить несколько источников в разных форматах для воспроизведения.</p>
+<p>Браузер будет использовать первый поддерживаемый им формат.</p>
+<p>Текст находящийся в содержимом элемента будет отображен в случае если
+браузер пользователя не поддерживает элемент audio.</p>
+
+<pre>
+&lt;audio controls="controls">
+&lt;source src=&quot;ghost_k-stop.ogv&quot; type=&quot;audio/ogg&quot; /&gt;
+&lt;source src=&quot;ghost_k-stop.mp3&quot; type=&quot;audio/mpeg&quot; /&gt;
+Данный текст будет выведен если 
+браузер пользователя не поддерживает элемент audio.
+</audio> 
+</pre>
+
+<p>С помощью атрибута <b>autoplay</b> Вы можете заставить трек автоматически проигрываться после загрузки страницы.</p>
+
+<pre>
+&lt;audio autoplay='autoplay'>
+...
+&lt;/audio>
+</pre>
+</body>
+</html>

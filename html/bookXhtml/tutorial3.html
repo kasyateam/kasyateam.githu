@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+    <div class="header">
+      <p class="header-text">XHTML</p>
+      <a href="#" class="header-info">Структура XHTML</a>
+    </div>
+ 
+
+<h1 id="title">
+Структура XHTML
+</h1>
+
+<p>Любой XHTML-файл состоит из четырех разделов — &lt;!DOCTYPE&gt;, контейнера &lt;html&gt;, заголовка (&lt;head&gt;) и тела документа (&lt;body&gt;).</p>
+<p>Последние два элемента перекочевали из HTML и ничем не отличаются от своего родоначальника.</p>
+
+<p>Элемент &lt;!DOCTYPE&gt; сообщает браузеру о типе текущего документа и как его интерпретировать.</p>
+<p>Различают три типа документа по спецификации XHTML 1.0:</p>
+<p>1. Strict (Строгий);</p>
+<p>2. Transitional (Переходный);</p>
+<p>3. Frameset (С фреймами).</p>
+<p><b>Обратите внимание:</b> элемент &lt;!DOCTYPE&gt; хотя и обязателен, но не является непосредственной частью XHTML-документа, поэтому для него закрывающего тега не требуется.</p>
+
+<h1 id="title">
+XHTML 1.0 Strict
+</h1>
+
+<p>Используется в том случае, если в документе идет четкое разделение оформления и содержания.</p>
+<p>При этом код веб-страницы содержит только теги разметки, а сам вид элементов задается через стили.</p>
+
+<pre style="font-size: 5px" class="brush: csharp;">
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; 
+&quot;http://www.w3.org/TR/xhtml1/DTD/ xhtml1-strict.dtd&quot;&gt;
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&#x9;&lt;head&gt;
+&#x9;&#x9;&lt;title&gt;&Pcy;&rcy;&icy;&mcy;&iecy;&rcy; &scy;&tcy;&rcy;&ocy;&gcy;&ocy;&gcy;&ocy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&lt;/title&gt;
+&#x9;&#x9;&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+&#x9;&lt;/head&gt;
+&#x9;
+&#x9;&lt;body&gt;
+&#x9;&#x9;&lt;p&gt;...&lt;/p&gt;
+&#x9;&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+// Приношу извинения за косяк с разметкой. Данная строка не влезла. Поэтому тут перенос
+
+<h1>
+XHTML 1.0 Transitional
+</h1>
+
+<p>Обычно применяется, когда правило разделения оформления и содержания выполняется не в полной мере.</p>
+<p>В этом случае допускается в коде документа использовать теги физического проектирования (например, тег <b>&lt;tt&gt;</b>) и лишь частично стили.</p>
+<p>В примере показан вид тега &lt;!DOCTYPE&gt; для подобных документов.</p>
+
+<pre style="font-size: 10px">
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;
+http://www.w3.org /TR/xhtml1/DTD/ xhtml1-transitional.dtd&quot;&gt;
+</pre>
+// Приношу извинения за косяк с разметкой. Данная строка не влезла. Поэтому тут перенос
+
+<h1 id="title">
+XHTML 1.0 Frameset
+</h1>
+
+<p>Применяется, когда окно браузера делится на два или более фрейма.</p>
+
+<pre style="font-size: 10px">
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Frameset//EN&quot; &quot;
+http://www.w3.org /TR/xhtml1/DTD/ xhtml1-frameset.dtd&quot;&gt;
+</pre>
+// Приношу извинения за косяк с разметкой. Данная строка не влезла. Поэтому тут перенос
+
+<h1>
+Контейнер HTML
+</h1>
+
+<p>Тег &lt;html&gt; выступает главным контейнером, в котором хранятся все остальные элементы, и в коде он должен идти сразу же после &lt;!DOCTYPE&gt;.</p>
+<p>В &lt;html&gt; требуется указывать обязательный атрибут xmlns со значением http://www.w3.org/1999/xhtml.</p>
+<p>Он определяет пространство имен — так называется набор имен всех элементов и атрибутов, чтобы обеспечить их уникальность в пределах XHTML-документа.</p>
+
+<h1>
+Кодировка документа
+</h1>
+
+<p>В HTML кодировка документа задается с помощью тега &lt;meta&gt; расположенного внутри контейнера &lt;head&gt;.</p>
+<p>В XHTML же кодировка может задаваться двумя путями: аналогично HTML и с помощью команды &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;, она должна располагаться в первой строке кода, перед &lt;!DOCTYPE&gt;.</p>
+<p>В данном случае UTF-8 обозначает кодировку текущего документа.</p>
+<p>В примере ниже показано, как устанавливать кодировку подобным способом.</p>
+
+<pre style="font-size: 6px">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;windows-1251&quot;?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org /TR/xhtml1/DTD/ xhtml1-strict.dtd&quot;&gt;
+
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&#x9;...
+&lt;/html&gt;
+</pre>
+
+<p>В данном примере кодировка установлена как windows-1251.</p>
+//// Переносов не должно быть!!!///
+</body>
+</html>

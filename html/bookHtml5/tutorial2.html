@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+    <div class="header">
+      <p class="header-text">HTML5</p>
+      <a href="#" class="header-info">HTML5 Видео</a>
+    </div>
+ <h1>
+HTML5 Видео
+</h1>
+
+<p>Одна минута видео иногда может рассказать пользователям больше, чем десятки страниц текста.</p>
+<p>HTML5 вводит специальный тег <b>&lt;video&gt;</b> позволяющий встраивать в веб-страницы видео файлы.</p>
+<p><b>Обратите внимание:</b> поддержку видео имеют браузеры: Internet Explorer 9+, Opera 10.50+, Firefox 3.5+, Chrome 3.0+, Safari 3.1+.</p>
+<p>Атрибут src тега <b>&lt;video&gt;</b> позволяет указать путь к видео файлу, который будет воспроизведен.</p>
+<p>Атрибут controls отображает в плеере кнопки управления видео, a атрибуты height (высота) и width (ширина) задают размеры плеера.</p>
+
+<pre>
+&lt;video src="mountvideo.ogv" width='300' height='200' controls='controls'>&lt;/video>
+</pre>
+
+<p>Видео из предыдущего примера будет нормально проигрываться только в браузерах Opera, Firefox и Chrome. Это происходит из-за того, что в данный момент разные браузеры поддерживают разные форматы.</p>
+<p>Opera и Firefox поддерживают формат Ogg (с видео кодеком Theora и аудио кодеком Vorbis) и WebM (с видео кодеком VP8 и аудио кодеком Vorbis), а Internet Explorer и Safari поддерживают MPEG4 (с видео кодеком H.264 и аудио кодеком AAC).</p>
+<p>Браузер Chrome имеет поддержку <b>всех перечисленных форматов</b>.</p>
+<p>Таким образом для того, чтобы видео нормально воспроизводилось во всех браузерах необходимо добавить источники в формате Ogg и MPEG4 (или WebM и MPEG4).</p>
+<p>С помощью тега <b>&lt;source&gt;</b> Вы можете предоставить несколько источников видео в разных форматах для воспроизведения. Браузер будет использовать первый поддерживаемый им формат.</p>
+
+<pre>
+&lt;video width="300" height="200" controls="controls">
+&lt;source src=&quot;mountvideo.ogv&quot; type=&quot;video/ogg&quot; /&gt;
+&lt;source src=&quot;mountvideo.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;source src=&quot;mountvideo.webm&quot; type=&quot;video/webm&quot; /&gt;
+&lt;/video> 
+</pre>
+
+<p><b>Обратите внимание:</b> с помощью атрибута type Вы должны указать mime-тип видео файла. Видео в формате ogg должно иметь тип 'video/ogg', mp4 - 'video/mp4', а webm - 'video/webm'.</p>
+
+<h1>
+Поддержка старых браузеров
+</h1>
+
+<p>Текст помещенный в содержимое элемента video будет отображен в случае если браузер пользователя не поддерживает тег видео.</p>
+
+<pre>
+&lt;video src='video.ogv' width="100" height="50" controls="controls">
+Ваш браузер не поддерживает элемент video.&lt;/video> 
+</pre>
+
+<h1>
+Конвертация видео в форматы поддерживаемые HTML5
+</h1>
+
+<p>Для быстрой конвертации видео в необходимые форматы (Ogg, MPEG4 и WebM) мы можем порекомендовать бесплатную программу <b>Miro Video Converter</b>.</p>
+
+</body>
+</html>

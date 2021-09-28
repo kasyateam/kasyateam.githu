@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+<body>
+<div id="main">
+<div class="header">
+  <p class="header-text">HTML</p>
+  <a href="#" class="header-info">Kasya Team</a>
+</div>
+<h1>
+HTML фреймы
+</h1>
+
+<p><b>Обратите внимание:</b> фреймы на данный момент считаются устаревшей технологией и не будут поддерживаться в HTML5 (это относится только к обычным фреймам, строковые фреймы рассмотренные далее в данной главе не считаются устаревшими). Не используйте обычные фреймы в своих проектах!</p>
+<p>В одном окне браузера может быть отображено несколько веб-страниц, которые в данном случае будут называться фреймами.</p>
+<p>С помощью HTML тега <b>&lt;frameset&gt;</b> Вы можете описать как будут располагаться фреймы в окне браузера.</p>
+<p>Тег <b>&lt;frame&gt;</b> описывает один отдельный фрейм. В его атрибуте <b>src</b> должен указываться адрес документа, который будет отображен в данном фрейме.</p>
+
+<pre>
+&lt;html&gt;
+&#x9;&lt;frameset cols=&quot;25%,50%,25%&quot;&gt;
+&#x9;&lt;frame src=&quot;fr_a.html&quot; /&gt;
+&#x9;&lt;frame src=&quot;fr_b.html&quot; /&gt;
+&#x9;&lt;frame src=&quot;fr_c.html&quot; /&gt;
+&#x9;&lt;/frameset&gt;
+&lt;/html&gt;
+</pre>
+
+<h1>
+Размер фреймов
+</h1>
+
+<p>Размеры фреймов устанавливаются с помощью атрибутов тега <b>&lt;frameset&gt;</b>. Размеры могут задаваться в пикселях (px) и процентах (%).</p>
+<p>С помощью атрибута <b>rows</b> Вы можете установить высоту фрейма. Размеры для отдельных фреймов должны отделяться запятой.</p>
+
+<pre>
+&lt;frameset rows=&quot;35%,35%,30%&quot;&gt;
+&#x9;&lt;frame src=&quot;fr_&scy;.html&quot; /&gt;
+&lt;/frameset&gt;
+</pre>
+
+<p>С помощью атрибута <b>cols</b> Вы можете задать ширину отдельного фрейма.</p>
+
+<pre>
+&lt;frameset cols=&quot;25%,75%&quot;&gt;
+&#x9;&lt;frame src=&quot;fr_a.html&quot; /&gt;
+&lt;/frameset&gt;
+</pre>
+
+<p><b>Обратите внимание:</b> фрейм по умолчанию имеет видимую границу это значит, что пользователь может изменять его размер перетаскивая границу. Чтобы запретить перетаскивание границ Вы можете добавить атрибут <b>noresize</b> со значением <b>"noresize"</b> к тегу &lt;frame&gt;.</p>
+
+<h1>
+Что делать, если браузер пользователя не поддерживает фреймы?
+</h1>
+
+<p>Если браузер пользователя не поддерживает фреймы Вы должны использовать тег <b>&lt;noframes&gt;</b>. Значение этого тега будет отображено только тем пользователям браузер которых не может отобразить фреймы.</p>
+
+<pre>
+&lt;frameset cols=&quot;25%,75%&quot;&gt;
+&#x9;&lt;frame src=&quot;fr_a.html&quot; /&gt;
+&lt;/frameset&gt;
+
+&lt;noframes&gt;
+&#x9;&lt;body&gt;
+&lt;p&gt;&Vcy;&acy;&shcy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy; &ncy;&iecy; &pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&icy;&vcy;&acy;&iecy;&tcy; &fcy;&rcy;&iecy;&jcy;&mcy;&ycy;.&lt;/p&gt;
+&#x9;&lt;/body&gt;
+&lt;/noframes&gt;
+</pre>
+
+<p><b>Обратите внимание:</b> При использовании тега noframe Вы должны указывать тег body как показано в примере выше.</p>
+
+<h1>
+Строковые фреймы
+</h1>
+
+<p>С помощью тега <b>&lt;iframe&gt;</b> Вы можете вставить фрейм в любое место обычного HTML документа.</p>
+<p>Данный тег часто используют для отображения рекламы на сайтах.</p>
+<p>Ширина строкового фрейма задается с помощью атрибута width, а высоту с помощью атрибута height.</p>
+
+<pre>
+&lt;iframe src='fr_a.html' width='400' height='150'>
+&lt;/iframe>
+&lt;iframe src='fr_b.html' width='700' height='250'>
+&lt;/iframe>
+</pre>
+
+<p><b>Обратите внимание:</b> если браузер пользователя не сможет отобразить строковый фрейм он просто его пропустит.</p>
+
+</body>
+</html>

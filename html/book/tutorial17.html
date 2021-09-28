@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+<body>
+<div id="main">
+<div class="header">
+  <p class="header-text">HTML</p>
+  <a href="#" class="header-info">Kasya Team</a>
+</div>
+<h1 id="title">
+Элемент script
+</h1>
+
+<p>HTML тег <b>&lt;script&gt;</b> используется для определения скриптов выполняющихся на стороне клиента. JavaScript является самым популярным языком программирования этого типа.</p>
+<p>JavaScript используется для создания веб-приложений и динамических сайтов способных взаимодействовать с пользователем.</p>
+<p>Тег script может либо содержать непосредственно код скрипта, либо ссылаться на внешний скриптовый файл через атрибут src.</p>
+<p>Обратите внимание: в HTML5 атрибут type стал необязательным.</p>
+
+<pre class="brush: csharp;">
+&lt;p&gt;&Ncy;&acy;&zhcy;&mcy;&icy;&tcy;&iecy; &ncy;&acy; &kcy;&ncy;&ocy;&pcy;&kcy;&ucy; &ncy;&icy;&zhcy;&iecy;&lt;/p&gt;
+
+&lt;input type=&apos;button&apos; value=&apos;&Ncy;&acy;&zhcy;&mcy;&icy;&tcy;&iecy; &ncy;&acy; &mcy;&iecy;&ncy;&yacy;&apos; 
+onclick=&apos;showMessage()&apos; /&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+&#x9;function showMessage()
+&#x9;{
+&#x9;&#x9;alert(&apos;&Vcy;&ycy; &ncy;&acy;&zhcy;&acy;&lcy;&icy; &ncy;&acy; &kcy;&ncy;&ocy;&pcy;&kcy;&ucy;.&apos;)
+&#x9;}
+&lt;/script&gt;
+</pre>
+
+<p>Результат:</p>
+<div class="result">
+<p>Нажмите на кнопку ниже</p>
+
+<input type='button' value='Нажмите на меня' 
+onclick='showMessage()' />
+
+<script type="text/javascript">
+function showMessage()
+{
+alert('Вы нажали на кнопку.')
+}
+</script>
+</div>
+<p>В следующем примере элемент <b>&lt;script&gt;</b> ссылается на внешний скриптовый файл выводящий сообщение "Привет, привет!":</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot; src=&quot;hello.js&quot;&gt;
+&lt;/script&gt;
+</pre>
+
+<h1>
+Элемент noscript
+</h1>
+
+<p>Тег <b>&lt;noscript&gt;</b> используется для отображения альтернативного текста пользователям, браузер которых не поддерживает JavaScript.</p>
+
+<pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+&#x9;document.write(&quot;&lt;p&gt;&Pcy;&rcy;&icy;&vcy;&iecy;&tcy;, &pcy;&rcy;&icy;&vcy;&iecy;&tcy;!&lt;/p&gt;&quot;)
+&lt;/script&gt;
+
+&lt;noscript&gt;
+&#x9;&lt;p&gt;JavaScript не поддерживается&lt;/p&gt;
+&lt;/noscript&gt;
+</pre>
+
+<p><b>Обратите внимание:</b> узнать больше о JavaScript Вы можете в нашем JavaScript курсе (рекомендуем переходить к изучению JavaScript только после изучения HTML).</p>
+</body>
+</html>
