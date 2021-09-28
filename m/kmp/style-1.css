@@ -6,12 +6,16 @@
   }
   
   body {
-    font-family: "font";
+  font-family: "font";
   background: #212121;
   color: #fff;
   font-size: 15pt;
-  margin-top: 80px;
-  margin-bottom: 20px;
+  width: 98%;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  padding: 10px;
   box-sizing: border-box;
 }
 
