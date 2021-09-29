@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Объект Location
+</h1>
+
+<p>С помощью объекта location Вы можете узнать любую информацию о URL текущего документа.</p>
+
+<h1 id="title">
+Свойства
+</h1>
+
+<p>Свойство href хранит URL текущего документа целиком.</p>
+
+<pre class="brush: csharp;">
+document.write(location.href);
+</pre>
+
+<p>С помощью свойства pathname Вы можете узнать путь к загруженному документу.</p>
+
+<pre class="brush: csharp;">
+document.write(location.pathname);
+</pre>
+
+<p>Свойство host содержит имя домена загруженного документа.</p>
+
+<pre class="brush: csharp;">
+document.write(location.host);
+</pre>
+
+<h1 id="title">
+Методы
+</h1>
+
+<p>С помощью метода assign() Вы можете загрузить новый документ в данное окно браузера (изменить текущий URL на желаемый).</p>
+
+<pre class="brush: csharp;">
+//После нажатия на кнопку будет загружена главная страница нашего сайта
+function newdoc ()
+{
+   location.assign('http://www.wisdomweb.ru');
+}
+
+&lt;input type='button' value='Загрузить главную страницу' onclick='newdoc()' /&gt;
+</pre>
+
+<p>Обратите внимание: полный перечень свойств и методов данного объекта Вы можете найти в нашем JavaScript справочнике.</p>
+
+</body>
+</html>

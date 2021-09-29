@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main"><!-- ПОЧАТОК -->
+
+<h1 id="title">
+Методы взаимодействия
+</h1>
+
+<p>С помощью методов взаимодействия Вы можете создавать элементы, которые можно перетаскивать мышкой, которые могут изменять размер, которые можно сортировать и которые можно выделять мышкой.</p>
+
+<h1 id="title">
+Перетаскиваемые элементы
+</h1>
+
+<p>С помощью метода draggable Вы можете сделать выбранный элемент перетаскиваемым.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+$("селектор").draggable({опция1:значение1, опцияN:значениеN})
+</pre>
+
+<p>С помощью опций, которые передаются методу draggable Вы можете настраивать дополнительные аспекты поведения перетаскиваемых элементов.</p>
+<p>Всем перетаскиваемым элементам назначается класс <b>ui-draggable</b> и дополнительно класс <b>ui-draggable-dragging</b> во время перетаскивания.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("div").draggable();
+});
+</pre>
+
+<p>С помощью опции axis Вы можете определить направление оси, по которой можно перетаскивать элемент.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#drag1").draggable({axis:"x"});
+$("#drag2").draggable({axis:"y"});
+});
+</pre>
+
+<p>С помощью опции <b>cursor</b> Вы можете задать вид, который будет принимать указатель мыши во время перетаскивания элемента.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#drag1").draggable({cursor:"move"});
+$("#drag2").draggable({cursor:"help"});
+});
+</pre>
+
+<p>С помощью опции <b>helper</b> Вы можете определить вид элемента-помощника.</p>
+<p>Элемент-помощник отображается во время перетаскивания элемента.</p>
+<p>По умолчанию во время перетаскивания отображается сам перетаскиваемый элемент.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#drag1").draggable({helper:"clone"});
+$("#drag2").draggable({helper:function(event){return $("&lt;div&gt;Я элемент помощник.&lt;/div&gt;")}});
+});
+</pre>
+
+<p>Опция <b>revert</b> определяет будет ли элемент возвращаться на изначальную позицию после завершения перетаскивания.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#drag1").draggable({revert:true});
+});
+</pre>
+
+<h1 id="title">
+Области для перетаскиваемых элементов
+</h1>
+
+<p>С помощью метода droppable Вы можете определить область, в которую можно переместить перетаскиваемый элемент.</p>
+<p>Синтаксис</p>
+
+<pre class="brush: csharp;">
+$("селектор").droppable({опция1:значение1, опцияN:значениеN})
+</pre>
+
+<p>С помощью опций, которые передаются методу droppable Вы можете настраивать дополнительные аспекты поведения области для перетаскиваемых элементов.</p>
+<p>Код функции переданный, в опции drop выполнится, когда перетаскиваемый элемент будет перетащен в область и отпущен.</p>
+<p>Код функции переданный, в опции over выполнится, когда перетаскиваемый элемент будет заведен в границы области.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#drag1").draggable({stack:"#drop1"});
+
+$("#drop1").droppable({
+over:function()
+{
+$("#drag1").css("background-color","#d7fa99");
+$("#drop1").css("background-color","#d7fa99");
+},
+drop:function()
+{
+$("#drag1").css("display","none");
+$("#drop1").css("background-color","#c4f66f");
+$("#drop1").html("Перемещение завершено успешно.");
+alert("Вы перетащили элемент с id=drag1 в область с id=drop1.");
+}
+});
+});
+</pre>
+
+<p>С помощью опции <b>accept</b> Вы можете указать элементы, которые будут приниматься областью.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#drag1").draggable({stack:"#drop1"});
+$("#drag2").draggable({stack:"#drop1",revert:true});
+
+$("#drop1").droppable({
+accept:"#drag1",
+over:function()
+{
+$("#drag1").css("background-color","#d7fa99");
+$("#drop1").css("background-color","#d7fa99");
+},
+drop:function()
+{
+$("#drag1").css("display","none");
+$("#drop1").css("background-color","#c4f66f");
+$("#drop1").html("Перемещение завершено успешно.");
+}
+});
+});
+</pre>
+
+<h1 id="title">
+Растягиваемые элементы
+</h1>
+
+<p>С помощью метода <b>resizable</b> Вы можете сделать элементы растягиваемыми.</p>
+<p>Синтаксис</p>
+
+<pre class="brush: csharp;">
+$("селектор").resizable({опция1:значение1, опцияN:значениеN})
+</pre>
+
+<p>С помощью опций, которые передаются методу resizable Вы можете настраивать дополнительные аспекты поведения растягиваемых элементов.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#resize1").resizable();
+});
+</pre>
+
+<p>Если опция <b>animate</b> имеет значение true размер элемента будет изменятся анимировано.</p>
+<p>С помощью опции <b>helper</b> Вы можете задать вид помощника, с помощью которого пользователь будет узнавать о текущем размере окна во время растягивания.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#resize1").resizable({animate:true,helper:"ui-state-highlight"});
+});
+</pre>
+
+<h1 id="title">
+Выделяемые элементы
+</h1>
+
+<p>С помощью метода <b>selectable</b> Вы можете превратить группу элементов в список выбора.</p>
+<p>Синтаксис</p>
+
+<pre class="brush: csharp;">
+$("селектор").selectable({опция1:значение1, опцияN:значениеN})
+</pre>
+
+<p>С помощью опций, которые передаются методу <b>selectable</b> Вы можете настраивать дополнительные аспекты поведения выделяемых элементов.</p>
+<p>С помощью классов <b>.ui-selecting</b> и <b>.ui-selected</b> Вы можете настроить оформление выбираемых и выбранных элементы.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#select1").selectable();
+});
+</pre>
+
+<h1 id="title">
+Сортируемые элементы
+</h1>
+
+<p>С помощью метода <b>sortable</b> Вы можете сделать элементы списка сортируемыми.</p>
+<p>Синтаксис</p>
+
+<pre class="brush: csharp;">
+$("селектор").sortable({опция1:значение1, опцияN:значениеN})
+</pre>
+
+<p>С помощью опций, которые передаются методу sortable Вы можете настраивать дополнительные аспекты поведения сортируемых списков.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#sort1").sortable();
+});
+</pre>
+
+<p>Вы можете связать два сортируемых списка.</p>
+<p>Элементы одного связанного списка можно перемещать в другой связанный список.</p>
+<p>Для того, чтобы воспользоваться этой возможностью необходимо задать связываемым спискам одинаковый класс и указать его в опции <b>connectWith</b>.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#sort1,#sort2").sortable({connectWith:".connect"});
+});
+</pre>
+
+<p><b>Обратите внимание:</b> узнать больше о методах взаимодействия Вы можете в jQuery UI справочнике.</p>
+</body>
+</html>
+

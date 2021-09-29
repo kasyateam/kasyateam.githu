@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+События
+</h1>
+
+<p>События - это функции, которые могут быть привязаны к элементам HTML страниц.</p>
+<p>Код событий выполнится только после того, как произойдет их активирующее действие. Разные типы событий имеют разные активирующие действия.</p>
+<p>Примеры активирующих действий JavaScript:</p>
+<p>- Щелчок мыши (событие onclick);</p>
+<p>- Нажатие клавиши (onkeypress);</p>
+<p>- Отправление формы (onsubmit);</p>
+<p>- Наведение курсора мыши на элемент (onmouseover) или выведение курсора мыши за пределы границ элемента (onmouseout);</p>
+<p>- Полная загрузка страницы или картинки (onload);</p>
+<p>- Изменение содержимого элемента, например содержимого текстового поля формы (onchange).</p>
+
+<h1 id="title">
+Событие onсlick
+</h1>
+
+<p>Код события onclick будет выполнен после того, как пользователь щелкнет на элемент, к которому привязано это событие.</p>
+
+<pre class="brush: csharp;">
+function messageShow()
+{
+   document.write('Вы нажали на кнопку!');
+}
+</pre>
+
+<h1 id="title">
+Событие onload
+</h1>
+
+<p>Код события onload будет выполнен при полной загрузке страницы.</p>
+
+<pre class="brush: csharp;">
+function messageShow()
+{
+   alert('Страница была загружена!');
+}
+</pre>
+
+<h1 id="title">
+События onmouseover и onmouseout
+</h1>
+
+<p>События onmouseover и onmouseout часто используются, чтобы создать "анимированные" кнопки.</p>
+<p>Код события onmouseover будет выполнен, когда на элемент, к которому привязано событие, будет наведен курсор мыши.</p>
+<p>Код события onmouseout будет выполнен при выведении курсора мыши за пределы элемента.</p>
+
+<pre class="brush: csharp;">
+function textchange()
+{
+   document.getElementById('mes').style.backgroundColor='green';
+}
+
+function textreturn()
+{
+   document.getElementById('mes').style.color='white';
+   document.getElementById('mes').style.backgroundColor='blue';
+}
+</pre>
+</body>
+</html>

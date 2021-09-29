@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Выполнение кода по расписанию.
+</h1>
+
+<p>В JavaScript код может выполняться по расписанию например, Вы можете задать, чтобы код функции начал выполняться только через 30 секунд после ее вызова.</p>
+<p>Для выполнения кода по расписанию в JavaScript предусмотрено два специальных метода:</p>
+<p>setTimeout(код,промежуток_времени) позволяет выполнить код через заданный промежуток_времени один раз.</p>
+
+<pre class="brush: csharp;">
+&lt;body onload=&apos;start()&apos;&gt;
+&#x9;&lt;script type=text/javascript &gt;
+//Зададим функцию start, которая будет вызвана после полной загрузки документа
+function start()
+{
+   //Создадим переменную с текстом, который будет выведен на страницу
+   txt='Данный текст будет отображен через 3 секунды после полной загрузки документа.';
+   
+   //Выведем на страницу текст через 3 секунды после загрузки документа
+   setTimeout('document.write(txt)',3000);
+}
+&#x9;&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+<p>setInterval(код,промежуток_времени) позволяет выполнять код через заданный промежуток_времени бесконечное количество раз.</p>
+
+<pre class="brush: csharp;">
+&lt;body onload=&apos;start()&apos;&gt;
+&lt;p id=&apos;text1&apos;&gt;Здесь будет отображено текущее время&lt;/p&gt; 
+
+&lt;script type=text/javascript &gt;
+//Зададим функцию time, которая будет выводить текущее время в абзац 
+//с id=text1
+function time()
+{
+   //Определим текущее время
+   var dat = new Date();
+   var hour=dat.getHours();
+   var min=dat.getMinutes();
+   var sec=dat.getSeconds();
+   tim=hour+':'+min+':'+sec;
+   
+   //Выведем текущее время в абзац с id=text1
+   document.getElementById('text1').innerHTML=tim;
+}
+
+/* Функция start будет запущена после полной загрузки документа
+и будет вызывать функцию time через каждую секунду */
+function start()
+{
+   id=setInterval('time()',1000);
+}
+&#x9;&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+<h1 id="title">
+Остановка кода вызванного по расписанию
+</h1>
+
+<p>Методы setTimeout() и setInterval() после их запуска возвращают идентификатор вызова.</p>
+<p>Используя этот идентификатор и методы clearTimeout() и clearInterval() Вы можете остановить выполнение кода вызванного по расписанию.</p>
+<p>С помощью clearTimeout(идентификатор_вызова) Вы можете остановить выполнение кода вызванного методом setTimeout().</p>
+
+<pre class="brush: csharp;">
+&lt;body onload=&apos;time()&apos;&gt;
+&lt;p id=&apos;text1&apos;&gt;Здесь будет отображено время&lt;/p&gt;
+
+&lt;input type=button value='Стоп' onclick=&apos;stop()&apos; /&gt;
+
+&lt;script type=text/javascript &gt; 
+/* Зададим функцию time, которая будет вызывается после полной загрузки документа 
+и будет выводить текущее время в абзац с id=text1 */
+function time()
+{
+   //Определим текущее время
+   var dat = new Date();
+   var hour=dat.getHours();
+   var min=dat.getMinutes();
+   var sec=dat.getSeconds();
+   tim=hour+':'+min+':'+sec;
+   
+   //Выведем текущее время в абзац с id=text1
+   document.getElementById('text1').innerHTML=tim;
+   
+   /* Вызовем данную функцию снова через 1 секунду и сохраним идентификатор вызова в переменную id */
+   id=setTimeout('time()',1000);
+}
+
+// С помощью функции stop Вы можете остановить выполнение кода 
+function stop()
+{
+   //Остановим функцию с помощью идентификатора id
+   clearTimeout(id);
+}
+&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+<p>С помощью clearInterval(идентификатор_вызова) Вы можете остановить выполнение кода вызванного методом setInterval().</p>
+
+<pre class="brush: csharp;">
+&lt;body onload=&apos;start()&apos;&gt;
+&lt;p id=&apos;text1&apos;&gt;Здесь будет отображено время&lt;/p&gt;
+
+&lt;input type=button value='Стоп' onclick='stop()' /&gt;
+
+&lt;script type=text/javascript &gt; 
+/* Зададим функцию time которая будет вызывается после полной загрузки
+документа
+и будет выводить текущее время в абзац с id=text1 */
+function time()
+{
+   //Определим текущее время
+   var dat = new Date();
+   var hour=dat.getHours();
+   var min=dat.getMinutes();
+   var sec=dat.getSeconds();
+   tim=hour+':'+min+':'+sec;
+   
+   //Выведем текущее время в абзац с id=text1
+   document.getElementById('text1').innerHTML=tim;
+}
+
+/* Функция start будет вызвана после полной загрузки страницы
+и будет вызывать функцию time() каждую секунду */
+function start()
+{
+   /* Вызываем функцию time каждую секунду сохраняя при этом идентификатор вызова в переменную id */
+   id=setInterval('time()',1000);
+
+}
+
+/* С помощью функции stop Вы можете остановить выполнение кода */
+function stop()
+{
+   //Используя идентификатор вызова остановим функцию
+   clearInterval(id);
+}
+&#x9;&lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+</body>
+</html>

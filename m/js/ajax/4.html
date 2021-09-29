@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Состояния готовности сервера
+</h1>
+
+<p>С помощью свойства readyState Вы можете узнать состояние готовности сервера.</p>
+<p>Сервер может находится в 5 состояниях готовности:</p>
+<p>0. Запрос не инициализирован;</p>
+<p>1. Установлено подключение к серверу;</p>
+<p>2. Запрос получен;</p>
+<p>3. Обработка запроса;</p>
+<p>4. Обработка запроса закончена и ответ готов.</p>
+<p>Во время обработки запроса свойство readyState поочередно принимает значения от 0 до 4.</p>
+
+<pre class="brush: csharp;">
+var xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+if (xhttp.readyState==0)
+document.getElementById('rs0').style.display='block';
+
+if (xhttp.readyState==1)
+document.getElementById('rs1').style.display='block';
+
+if (xhttp.readyState==2)
+document.getElementById('rs2').style.display='block';
+
+if (xhttp.readyState==3)
+document.getElementById('rs3').style.display='block';
+
+if (xhttp.readyState==4)
+{
+document.getElementById('rs4').style.display='block';
+document.getElementById('result').innerHTML=xhttp.responseText;
+}
+}
+
+xhttp.open('GET','state.php',true);
+xhttp.send();
+</pre>
+
+<h1 id="title">
+Свойство status
+</h1>
+
+<p>С помощью свойства status Вы можете узнать код ответа на Ваш запрос.</p>
+<p>Код 200 означает - запрос обработан успешно, код 404 означает - страница не существует.</p>
+
+<pre class="brush: csharp;">
+function requestBad()
+{
+var xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+document.getElementById('result').innerHTML=xhttp.status;
+}
+
+   xhttp.open('GET','nepage',true);
+   xhttp.send();
+}
+
+function requestGood()
+{
+
+var xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+document.getElementById('result').innerHTML=xhttp.status;
+}
+
+   xhttp.open('GET','test.xml',true);
+   xhttp.send();
+}
+</pre>
+
+<p><b>Обратите внимание:</b> содержимое данного свойства доступно только для чтения.</p>
+
+<h1 id="title">
+Событие onreadystatechange
+</h1>
+
+<p>Событие onreadystatechange выполняет код при изменении содержимого свойства readyState (т.е. во время успешного запроса код функции выполняется 4 раза).</p>
+<p>Для того, чтобы корректно обработать ответ сервера необходимо добавить проверку условия <b>if (XMLHttpRequest.readyState==4 && XMLHttpRequest.status==200)&gt;</b> и только после этого получать и обрабатывать соответствующие данные.</p>
+
+<pre class="brush: csharp;">
+var xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+   if (xhttp.readyState==0)
+   {
+      document.getElementById('rs0').style.display='block';
+      document.getElementById('res0').innerHTML=responseText; 
+   }  
+
+   if (xhttp.readyState==1)
+   {
+      document.getElementById('rs1').style.display='block';
+      document.getElementById('res1').innerHTML=responseText; 
+   }
+
+   if (xhttp.readyState==2)
+   {
+      document.getElementById('rs2').style.display='block';
+      document.getElementById('res2').innerHTML=responseText;
+   }
+
+   if (xhttp.readyState==3)
+   {
+      document.getElementById('rs3').style.display='block';
+      document.getElementById('res3').innerHTML=responseText;
+   }
+
+   if (xhttp.readyState==4)
+   {
+      document.getElementById('rs4').style.display='block';
+      document.getElementById('res4').innerHTML=xhttp.responseText;
+   }
+}
+
+xhttp.open('GET','state.php',true);
+xhttp.send();
+</pre>
+
+<h1 id="title">
+Принятие ответа сервера
+</h1>
+
+<p>Для того, чтобы принять ответ сервера используйте свойства объекта XMLHttpRequest responseText и responseXML.</p>
+
+<table>
+<tr>
+<th>Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>responseText</td>
+<td>Хранит ответ сервера как строку символов.</td>
+</tr>
+<tr>
+<td>responseXML</td>
+<td>Хранит ответ сервера как XML файл.</td>
+</tr>
+</table>
+
+<h1 id="title">
+Свойство responseText
+</h1>
+
+<p>Если запрошенные у сервера данные не являются XML данными, то для считывания ответа сервера используйте свойство responseText.</p>
+
+<pre class="brush: csharp;">
+xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+if (xhttp.readyState==4 && xhttp.status==200)
+document.getElementById("ajax").innerHTML=xhttp.responseText;
+}
+
+xhttp.open("GET","testfile.txt",true);
+xhttp.send();
+</pre>
+
+<h1 id="title">
+Свойство responseXML
+</h1>
+
+<p>Если Вы ожидаете получить от сервера XML данные используйте для считывания ответа сервера свойство responseXML.</p>
+
+<pre class="brush: csharp;">
+xhttp=new XMLHttpRequest();
+xhttp.onreadystatechange=function()
+{
+if (xhttp.readyState==4 && xhttp.status==200)
+{
+var text ="Содержимое первого тега name в XML файле: "
+var r=xhttp.responseXML;
+document.getElementById('ajax').innerHTML=text+r.getElementsByTagName('name')[0].childNodes[0].nodeValue;
+    var dep=r.getElementsByTagName('dept');
+    var cont="Содержимое всех тегов dept в XML файле: &lt;br /&gt;";
+
+for (var i=0;i < dep.length;i++)
+{
+    cont+=(i+1)+". "+dep[i].childNodes[0].nodeValue+" руб.&lt;br /&gt;";
+}
+
+document.getElementById('ajax1').innerHTML=cont;
+}
+}
+
+xhttp.open("GET","test.xml",true);
+xhttp.send();
+</pre>
+</body>
+</html>

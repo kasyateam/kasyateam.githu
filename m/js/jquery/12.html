@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main"><!-- ПОЧАТОК -->
+
+<h1 id="title">
+Виджет tabs
+</h1>
+
+<p>Виджет tabs как и виджет accordion используется для группировки информации на странице с целью экономии места.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+// 1. Создаем шаблон:
+&lt;div id=&quot;tabs&quot;&gt;
+// 1.1. Определяем заголовки вкладок
+&lt;ul&gt;
+&#x9;&lt;li&gt;&lt;a href=&quot;#tabs-1&quot;&gt;Вкладка 1&lt;/a&gt;&lt;/li&gt;
+&#x9;&lt;li&gt;&lt;a href=&quot;#tabs-2&quot;&gt;Вкладка 2&lt;/a&gt;&lt;/li&gt;
+&#x9;&lt;li&gt;&lt;a href=&quot;#tabs-3&quot;&gt;Вкладка 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+/* 1.2. Определяем содержимое вкладок (значение атрибута href заголовков и значение атрибута id содержимого должно совпадать) */
+&lt;div id=&quot;tabs-1&quot;&gt;
+&lt;p&gt;Содержимое вкладки 1&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;tabs-2&quot;&gt;
+&lt;p&gt;Содержимое вкладки 2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;tabs-3&quot;&gt;
+&lt;p&gt;Содержимое вкладки 3.&lt;/p&gt;
+&#x9;&lt;/div&gt;
+&lt;/div&gt;
+
+// 2. Превращаем шаблон в группу вкладок:
+$("#tabs").tabs({опция1:значение1, опцияN:значениеN});
+</pre>
+
+<p>Пример:</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#tabs").tabs();
+});
+</pre>
+
+<h1 id="title">
+Диалоговые окна
+</h1>
+
+<p>С помощью метода dialog Вы можете превратить выбранный элемент в диалоговое окно.</p>
+<p>Диалоговое окно отображается поверх текста страницы и содержит заголовок и поле с содержимым.</p>
+<p>Диалоговое окно можно перетаскивать, растягивать и закрывать с помощью иконки "х" в верхнем правом углу окна.</p>
+<p>Если содержимое превышает размеры диалогового окна, то полоса прокрутки будет автоматически отображена.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+/* 1. Сгруппируем элементы: */
+&lt;div id=&quot;dialog&quot; title=&quot;&Zcy;&acy;&gcy;&ocy;&lcy;&ocy;&vcy;&ocy;&kcy; &dcy;&icy;&acy;&lcy;&ocy;&gcy;&ocy;&vcy;&ocy;&gcy;&ocy; &ocy;&kcy;&ncy;&acy;&quot;&gt;
+&lt;p&gt;Содержимое окна.&lt;/p&gt;
+&lt;/div&gt;
+
+// 2. Превратим сгруппированные элементы в диалоговое окно:
+$( "#dialog" ).dialog({опция1:значение1, опцияN:значениеN});
+</pre>
+
+<p>Пример:</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#dialog1").dialog();
+});
+</pre>
+
+<p>С помощью опции width и height Вы можете устанавливать высоту и ширину диалоговых окон.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#dialog1").dialog({width:400,height:300});
+});
+</pre>
+
+<p>Опция modal позволяет сделать диалоговое окно модальным.</p>
+<p>Модальные окна используются для привлечения дополнительного внимания со стороны пользователей.</p>
+<p>Пока открыто модальное окно пользователь не может взаимодействовать с другими элементами страницы.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#dialog1").dialog({modal:true,height:200,width:330});
+});
+</pre>
+
+<p>Опция autoOpen устанавливает должно ли окно быть открыто автоматически после создания (значение true) или нет (значение false).</p>
+<p>С помощью метода open Вы можете открыть, а с помощью метода close закрыть модальное диалоговое окно.</p>
+<p>С помощью опции buttons Вы можете добавлять кнопки в диалоговые окна.</p>
+<p>Кнопки определяются в следующем формате: {Название_Кнопки : function(){Код который выполниться после нажатия на кнопку}}.</p>
+<p>Обратите внимание: в одно диалоговое окно может быть добавлено несколько кнопок.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#dialog1").dialog({autoOpen:false,buttons:
+{
+OK:function()
+{
+$(this).dialog("close");
+alert("Вы нажали ОК");
+}
+}
+});
+
+$("#dialog2").dialog({autoOpen:false,buttons:
+{
+OK:function()
+{
+$(this).dialog("close");
+alert("Вы нажали ОК");
+},
+Отмена:function()
+{
+$(this).dialog("close");
+alert("Вы нажали Отмена");
+}
+}
+});
+
+$("#but1").click(function()
+{
+$("#dialog1").dialog("open");
+});
+
+$("#but2").click(function()
+{
+$("#dialog2").dialog("open");
+});
+});
+</pre>
+
+<h1 id="title">
+Виджет progressbar
+</h1>
+
+<p>С помощью виджета progressbar Вы можете отобразить полосу загрузки, которая будет информировать пользователя о состоянии выполнения какого-либо процесса.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+/* 1. Создадим элемент: */
+&lt;div id=&quot;progressbar&quot;&gt;&lt;/div&gt;
+
+// 2. Превратим созданный элемент в полосу загрузки:
+$("#progressbar" ).progressbar();
+</pre>
+
+<p>С помощью опции value Вы можете установить процент заполнения виджета progressbar.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#progressbar").progressbar({value:40});
+});
+</pre>
+
+<h1 id="title">
+Виджет slider
+</h1>
+
+<p>С помощью виджета slider Вы можете превратить выбранный элемент в ползунок.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+// 1. Создадим элемент:
+&lt;div id=&quot;slider&quot;&gt;&lt;/div&gt;
+
+// 2. Превратим созданный элемент в ползунок:
+$("#slider").slider();
+</pre>
+
+<p>Пример:</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#slider").slider();
+});
+</pre>
+
+<p><b>Обратите внимание:</b> узнать больше о виджетах Вы можете в jQuery UI справочнике.</p>
+</body>
+</html>
+

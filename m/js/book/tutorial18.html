@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Вставка специальных символов
+</h1>
+
+<p>Где могут использоваться специальные символы? Предположим мы хотим вывести окно оповещения, в тексте которого есть переводы строки.</p>
+<p>Мы не можем использовать внутри alert() тег <br> (и другие теги HTML), но в JS есть специальный символ \n позволяющий переводить текст на новую строку.</p>
+
+<pre class="brush: csharp;">
+alert('Сообщение\n с переводами\nстроки');
+</pre>
+
+<p>В таблице ниже содержатся специальные символы, которые присутствуют в JavaScript:</p>
+
+<table>
+<tr>
+<th>Код</th>
+<th>Пояснение</th>
+</tr>
+<tr>
+<td>\n</td>
+<td>Перевод строки</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>Обратный слэш</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>Табуляция</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>Одиночная кавычка</td>
+</tr>
+<tr>
+<td>\"</td>
+<td>Двойная кавычка</td>
+</tr>
+<tr>
+<td>\&</td>
+<td>Амперсанд</td>
+</tr>
+</table>
+
+<pre class="brush: csharp;">
+alert('Сообщение содержащее амперсанд \& обратный слэш \\ и кавычку \' ');
+</pre>
+
+    <p>Результат выполнения кода:</p>
+
+    <span id="jsResultCode" ontouchstart="return true;" onclick="alert('Сообщение содержащее амперсанд \& обратный слэш \\ и кавычку \'');">Выполнить код</span>
+
+</body>
+</html>

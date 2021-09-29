@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+JavaScript операторы сравнения
+</h1>
+
+<p>Операторы сравнения позволяют производить над переменными и значениями различные операции сравнения.</p>
+<p>В результате выполнения таких операций в зависимости от исхода возвращается true (истина) или false (ложь).</p>
+
+<pre class="brush: csharp;">
+//Произведем сравнение чисел 7 и 10
+document.write(7==10) // Выведет false так как числа не равны
+
+//Теперь произведем сравнение чисел 10 и 10
+document.write(10==10) // Выведет true так как числа равны
+</pre>
+
+<p>В таблице ниже перечислены доступные в JavaScript операторы сравнения (предположим, что x=7):</p>
+
+<table>
+<tr>
+<th>Оператор</th>
+<th>Описание</th>
+<th>Пример</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td>==</td>
+<td>Проверяет переменные или значения на равенство.</td>
+<td style="text-align: right;">x==7</td>
+<td style="text-align: right;">true</td>
+</tr>
+<tr>
+<td>===</td>
+<td>Проверяет переменные или значения на равенство учитывая тип переменной</td>
+<td style="text-align: right;">x===7<br /><br />x==="7"</td>
+<td style="text-align: right;">true<br /><br />false</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Проверяет различаются ли переменные или значения</td>
+<td style="text-align: right;">x!=9</td>
+<td style="text-align: right;">true</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>Проверяет больше ли переменная или значение стоящее слева, чем стоящее справа</td>
+<td style="text-align: right;">x>13</td>
+<td style="text-align: right;">false</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Проверяет меньше ли переменная или значение стоящее слева, чем стоящее справа</td>
+<td style="text-align: right;">x&lt;13</td>
+<td style="text-align: right;">true</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>Проверяет является ли переменная или значение стоящее слева большим или равным стоящему справа</td>
+<td style="text-align: right;">x&gt;=13<br /><br />x&gt;=7</td>
+<td style="text-align: right;">false<br /><br />true</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>Проверяет является ли переменная или значение стоящее слева меньшим или равным стоящему справа</td>
+<td style="text-align: right;">x&lt;=13<br /><br />x&lt;=7</td>
+<td style="text-align: right;">true<br /><br />true</td>
+</tr>
+</table>
+
+<p>Операторы сравнения в основном используются в условных конструкциях.</p>
+<p><b>Обратите внимание:</b> условные конструкции будут подробно рассмотрены в следующих главах данного учебника.</p>
+
+<pre class="brush: csharp;">
+//Запишем число 10 в переменную a
+var a=10;
+
+//Запишем число 7 в переменную b
+var b=7;
+
+//Проверим совпадают ли числа
+if (a==b)
+{
+   //Если числа совпадают выведем "Числа совпадают"
+   document.write("Числа совпадают");
+}
+else
+{
+   //Если числа не совпадают выведем "Числа не совпадают"
+   document.write("Числа не совпадают");
+}
+</pre>
+
+<h1 id="title">
+Логические операторы
+</h1>
+
+<p>Логические операторы используются для связки нескольких операторов сравнения.</p>
+<p>В таблице ниже приведены логические операторы доступные в JavaScript (предположим, что x=2, а y=9):</p>
+
+<table>
+<tr>
+<th>Оператор</th>
+<th>Описание</th>
+<th>Пример</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td>&&</td>
+<td>И</td>
+<td style="text-align: right;">(x==2 && y==9)</td>
+<td style="text-align: right;">true</td>
+</tr>
+<tr>
+<td>||</td>
+<td>ИЛИ</td>
+<td style="text-align: right;">(x==2 || y==8)</td>
+<td style="text-align: right;">true</td>
+</tr>
+<tr>
+<td>!</td>
+<td>НЕ</td>
+<td style="text-align: right;">!(x==3)</td>
+<td style="text-align: right;">true</td>
+</tr>
+</table>
+
+</body>
+</html>
+

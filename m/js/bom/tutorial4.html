@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+<h1 id="title">
+Объект History
+</h1>
+
+<p>Объект History содержит список URL которые были посещены в данном окне браузера.</p>
+<p>С помощью свойства length Вы можете узнать количество посещенных URL хранящихся в списке.</p>
+
+<pre class="brush: csharp;">
+//Выведем количество посещенных в данном окне браузера URL
+document.write(history.length);
+</pre>
+
+<p>Вы можете перемещаться по списку посещенных URL с помощью метода go(смещение).</p>
+<p>Например, с помощью go(2) Вы можете переместится на два URL вперед, а go(-3) переместит Вас на три URL назад.</p>
+
+<pre class="brush: csharp;">
+function bc2()
+{
+   window.history.go(-2);
+}
+</pre>
+
+<p>Полный список свойств и методов данных объектов Вы можете найти в нашем JavaScript Справочнике - Объект screen и JavaScript Справочнике - Объект history.</p>
+
+</body>
+</html>

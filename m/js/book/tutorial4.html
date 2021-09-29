@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+JavaScript команды
+</h1>
+
+<p>С помощью JavaScript команд Вы можете "общаться" с браузером.</p>
+<p>Например с помощью команды document.write('Привет!'); Вы можете сообщить браузеру, что хотите вывести на страницу текст "Привет!".</p>
+<p>Точка с запятой сообщает браузеру о конце команды.</p>
+<p><b>Обратите внимание:</b> в JavaScript необязательно явно указывать точку запятой после каждой команды, так как браузер автоматически подставит ее если следующая команда будет написана на новой строке.</p>
+<p>В отличие от HTML JavaScript чувствителен к регистру букв.</p>
+<p>Всегда обращайте внимание на регистр букв при наборе команд в JavaScript.</p>
+
+<pre style="font-size: 8px"  class="brush: csharp;">
+document.wrITE("&lt;hr /&gt;&lt;b&gt;Поздравляем, Вы исправили ошибку! &lt;/b&gt;");
+</pre>
+
+    <p>Результат выполнения кода:</p>
+
+    <span id="jsResultCode" ontouchstart="return true;" onclick="document.getElementById('par1').innerHTML='<hr /><b>Поздравляем, Вы исправили ошибку!</b>';">Выполнить код</span>
+    <p class="result" id="par1"></p>
+
+<h1 id="title">
+JavaScript код
+</h1>
+
+<p>JavaScript код является последовательностью JavaScript команд.</p>
+<p>Команды исполняются браузером сверху вниз.</p>
+<p>Следующий пример выводит два абзаца, написанных жирным и курсивным текстом, на страницу:</p>
+
+<pre style="font-size: 8px" class="brush: csharp;">
+document.write("&lt;p&gt;&lt;b&gt;Это абзац написанный жирным шрифтом.&lt;/b&gt;&lt;/p&gt;");
+document.write("&lt;p&gt;&lt;i&gt;Это абзац написанный курсивным шрифтом.&lt;/i&gt;&lt;/p&gt;");
+</pre>
+
+    <p>Результат выполнения кода:</p>
+
+    <span id="jsResultCode" ontouchstart="return true;" onclick="document.getElementById('par2').innerHTML='<b>Это абзац написанный жирным шрифтом.</b><br /><br /><i>Это абзац написанный курсивным шрифтом.</i>';">Выполнить код</span>
+    <p class="result" id="par2"></p>
+
+<h1 id="title">
+JavaScript блоки команд
+</h1>
+
+<p>JavaScript команды могут объединяться в блоки.</p>
+<p>Обычно блоки используют при определении функций, создании циклов и в некоторых других случаях, которые будут рассмотрены далее в данном учебнике.</p>
+<p>Начало блока команд обозначается открывающейся фигурной скобкой {, а конец закрывающейся }.</p>
+<p>Пример использования блоков:</p>
+
+<pre style="font-size: 8px"  class="brush: csharp;">
+function mesg()
+{
+  document.write("&lt;p&gt;&lt;b&gt;Это абзац написанный жирным шрифтом.&lt;/b&gt;&lt;/p&gt;");
+  document.write("&lt;p&gt;&lt;i&gt;Это абзац написанный курсивным шрифтом.&lt;/i&gt;&lt;/p&gt;");
+}
+</pre>
+
+    <p>Результат выполнения кода:</p>
+
+    <span id="jsResultCode" ontouchstart="return true;" onclick="document.getElementById('par3').innerHTML='<b>Это абзац написанный жирным шрифтом.</b><br /><br /><i>Это абзац написанный курсивным шрифтом.</i>';">Выполнить mesg()</span>
+    <p class="result" id="par3"></p>
+
+</body>
+</html>

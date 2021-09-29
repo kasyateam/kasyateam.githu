@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main"><!-- ПОЧАТОК -->
+
+<h1 id="title">
+jQuery UI классы оформления
+</h1>
+
+<p>jQuery UI содержит набор предопределенных классов для создания оформления сайтов.</p>
+<p>Используя готовые классы Вы можете сэкономить время при создании оформления веб-страниц.</p>
+<p>Использование готовых классов также поможет стандартизировать оформление Вашего сайта.</p>
+<p>С помощью настройщика тем Вы можете настроить оформление предопределенных классов на Ваш вкус.</p>
+
+<pre class="brush: csharp;">
+http://jqueryui.com/themeroller/
+</pre>
+
+<h1 id="title">
+Виджет themeswitcher
+</h1>
+
+<p>Виджет themeswitcher позволяет переключатся между различными темами оформления не покидая страницы.</p>
+<p>Это бывает особенно полезно при подборе подходящего класса оформления.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+// Добавляем ссылку на плагин (данный код должен располагаться в секции body)
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://jqueryui.com/themeroller/themeswitchertool/&quot;&gt;
+&lt;/script&gt;
+
+//Создаем элемент который будет превращен в виджет
+&lt;div id=&quot;switcher&quot;&gt;&lt;/div&gt;
+
+/* В теге script задаем код, который превратит элемент в виджет (данный код должен располагаться в head)*/
+$("#switcher").themeswitcher();
+</pre>
+
+<p>Пример:</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#switcher").themeswitcher(
+{
+initialText:"Выбрать тему",
+buttonPreText:"Тема: "
+});
+});
+</pre>
+
+<h1 id="title">
+Оформление виджетов
+</h1>
+
+<p>С помощью класса <b>.ui-widget</b> Вы можете оформить внешний вид виджетов.</p>
+<p>Данный класс устанавливает одинаковый шрифт всем вложенным элементам тем самым стандартизируя вид содержимого виджета.</p>
+<p>С помощью класса <b>.ui-widget-header</b> Вы можете оформить заголовок, а с помощью <b>.ui-widget-content</b> содержимое виджетов.</p>
+
+<pre class="brush: csharp;">
+&lt;div id=&quot;widget1&quot; class=&quot;ui-widget&quot;&gt;
+&#x9;&lt;h2 style=&quot;text-align:center&quot; class=&quot;ui-widget-header&quot;&gt;....
+&#x9;&lt;p style=&quot;text-align:center&quot; class=&quot;ui-widget-content&quot; &gt;....
+&lt;/div&gt;
+</pre>
+
+<h1 id="title">
+Добавление сглаженных углов
+</h1>
+
+<p>С помощью предопределенных классов jQuery UI Вы можете сделать углы элементов сглаженными.</p>
+
+<table>
+<tr>
+<th>Класс</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>.ui-corner-all</td>
+<td>Позволяет сделать все углы элемента сглаженными.</td>
+</tr>
+<tr>
+<td>.ui-corner-tr</td>
+<td>Делает сглаженным верхний правый угол элемента.</td>
+</tr>
+<tr>
+<td>.ui-corner-tl</td>
+<td>Делает сглаженным верхний левый угол элемента.</td>
+</tr>
+<tr>
+<td>.ui-corner-top</td>
+<td>Делает сглаженными верхний левый и верхний правый углы элемента.</td>
+</tr>
+<tr>
+<td>.ui-corner-bl</td>
+<td>Делает сглаженным нижний левый угол элемента.</td>
+</tr>
+<tr>
+<td>.ui-corner-br</td>
+<td>Делает сглаженным нижний правый угол элемента.</td>
+</tr>
+<tr>
+<td>.ui-corner-bottom</td>
+<td>Делает сглаженными нижний правый и нижний левый углы элемента.</td>
+</tr>
+<tr>
+<td>.ui-corner-left</td>
+<td>Делает сглаженными верхний левый и нижний левый углы элемента.</td>
+</tr>
+<tr>
+<td>.ui-corner-right</td>
+<td>Делает сглаженными верхний правый и нижний правый углы элемента.</td>
+</tr>
+</table>
+
+<pre class="brush: csharp;">
+&lt;div id=&quot;container&quot; class=&quot;ui-widget ui-corner-all&quot;&gt;....
+&lt;div id=&quot;container&quot; class=&quot;ui-widget ui-corner-top&quot;&gt;....
+&lt;div id=&quot;container&quot; class=&quot;ui-widget ui-corner-tr&quot;&gt;....
+</pre>
+
+<h1 id="title">
+jQuery UI иконки
+</h1>
+
+<p>Иконки помогают создать интуитивно понятный пользовательский интерфейс.</p>
+<p>К примеру Вы можете добавить иконку в форме знака вопроса на кнопку, которая вызывает окно со справочной информацией, или добавить иконку в форме конверта на кнопку отправляющую письмо по электронной почте.</p>
+<p>jQuery UI предлагает для использования более 170 "встроенных" иконок.</p>
+<p>Для того, чтобы вставить иконку необходимо:</p>
+<p>1. Создать элемент, в котором будет отображена иконка;</p>
+<p>2. Добавить этому элементу класс ui-icon;</p>
+<p>3. Добавить элементу класс соответствующий желаемой иконке.</p>
+<p>Названия классов иконок в jQuery UI имеют следующий стандартный вид: .ui-icon-[название]-[дополнительное описание]-[направление].</p>
+<p>К примеру, иконка жирной стрелки направленной направо, имеет следующий класс: .ui-icon-arrowthick-1-e (arrowthick - "жирная стрелка", e = east - "восток").</p>
+
+<pre class="brush: csharp;">
+&lt;span class=&quot;ui-icon ui-icon-carat-1-n&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ui-icon ui-icon-carat-1-ne&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ui-icon ui-icon-carat-1-e&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ui-icon ui-icon-carat-1-se&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ui-icon ui-icon-carat-1-s&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ui-icon ui-icon-grip-solid-horizontal&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ui-icon ui-icon-gripsmall-diagonal-se&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;ui-icon ui-icon-grip-diagonal-se&quot;&gt;&lt;/span&gt;
+</pre>
+
+<h1 id="title">
+Таблица предопределенных классов
+</h1>
+
+<p>Таблица ниже содержит описание всех остальных существующих в jQuery UI предопределенных классов:</p>
+
+<table>
+<tr>
+<th>Класс</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>.ui-helper-hidden</td>
+<td>Применяет display:none к элементу.</td>
+</tr>
+<tr>
+<td>.ui-helper-reset</td>
+<td>Сбрасывает значения таких свойства как margin, padding, text-decoration и list-style.</td>
+</tr>
+<tr>
+<td>.ui-state-default</td>
+<td>Данный класс применяется к кнопкам, на которые не был наведен курсор мыши.</td>
+</tr>
+<tr>
+<td>.ui-state-hover</td>
+<td>Данный класс применяется к кнопкам, на которые был наведен курсор мыши.</td>
+</tr>
+<tr>
+<td>.ui-state-active</td>
+<td>Данный класс применяется к кнопкам во время щелчка мыши.</td>
+</tr>
+<tr>
+<td>.ui-state-highlight</td>
+<td>Данный класс применяется к элементам, на которые необходимо обратить внимание.</td>
+</tr>
+<tr>
+<td>.ui-state-error</td>
+<td>Данный класс применяется к элементам содержащим сообщения об ошибках.</td>
+</tr>
+<tr>
+<td>.ui-state-disabled</td>
+<td>Данный класс применяется к недоступным для использования элементам.</td>
+</tr>
+<tr>
+<td>.ui-priority-primary</td>
+<td>С помощью данного класса Вы можете выделить кнопку из группы кнопок как наиболее важную.</td>
+</tr>
+<tr>
+<td>.ui-priority-secondary</td>
+<td>С помощью данного класса Вы можете выделить кнопку из группы кнопок как наименее важную.</td>
+</tr>
+</table>
+
+<pre class="brush: csharp;">
+&lt;ul class=&quot;ui-helper-reset&quot;&gt;....
+&lt;button id=&quot;but1&quot; class=&quot;ui-state-default&quot;&gt;....
+&lt;p class=&quot;ui-state-highlight&quot;&gt;....
+&lt;p class=&quot;ui-state-error&quot;&gt;....
+&lt;button id=&quot;but2&quot; class=&quot;ui-state-disabled&quot;&gt;....
+&lt;button class=&quot;ui-priority-secondary&quot;&gt;....
+&lt;button class=&quot;ui-priority-primary&quot;&gt;....
+</pre>
+
+</body>
+</html>
+

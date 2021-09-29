@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+  
+</head>
+
+<body>
+  <div class="main" id="main">
+    <p>JavaScript был основан в 1995 году</p>
+    <div class="post"><a class="but" href="book/list.html">Учебник JavaScript</a></div>
+    <!--div class="post"><a class="but" href="obj/list.html">Объекты в JavaScript</a></div-->
+    <div class="post"><a class="but" href="bom/list.html">JavaScript BOM</a></div>
+    <!--div class="post"><a class="but" href="ref/list.html">Справочник JavaScript</a></div-->
+    <div class="post"><a class="but" href="ajax/list.html">Учебник Ajax</a></div>
+    <div class="post"><a class="but" href="jquery/list.html">Учебник jQuery</a></div>
+
+  </div>
+  <script>
+    var scrin = {}
+    scrin['width'] = window.screen.width;
+    scrin['height'] = window.screen.height;
+    document.getElementById('main').style.width = '' + scrin.width + 'px';
+    document.getElementById('main').style.height = '' + scrin.height + 'px'
+  </script>
+</body>
+
+</html>

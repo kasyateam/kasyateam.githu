@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+BOM объекты
+</h1>
+
+<p>С помощью объектной модели браузера (BOM) Вы можете управлять поведением браузера из JavaScript.</p>
+<p>BOM включает в себя несколько объектов.</p>
+<p><b>BOM объекты:</b></p>
+
+<img src="windowObjects.png" id="image" />
+
+<p>Объект window является корневым объектом JavaScript. Все объекты JavaScript, а также переменные и функции определяемые пользователем хранятся в объекте window.</p>
+<p>Если Вы знаете имя другого открытого окна Вы можете обращаться к объектам созданным в другом окне.</p>
+<p>Писать "window." при обращении к объектам и переменным необязательно так как JavaScript подставляет его автоматически.</p>
+
+<pre class="brush: csharp;">
+//Обратимся к объекту navigator 
+document.write(window.navigator.appName+'&lt;br /&gt;');
+
+//Теперь обратимся к объекту navigator опустив window
+document.write(navigator.appName); 
+
+//Создадим переменную a (то же самое что a=10)
+window.a=10; 
+
+//Выведим значение переменной a на экран
+document.write(a+'&lt;br /&gt;');
+document.write(window.a);
+</pre>
+
+<p>Результат выполнения кода:</p>
+
+    <span id="jsResultCode" ontouchstart="return true;" onclick="document.getElementById('par1').innerHTML='Netscape<br />Netscape10<hr />10<br />10';">Выполнить код</span>
+    <p class="result" id="par1"></p>
+
+<h1 id="title">
+Свойства объекта window
+</h1>
+
+<p>С помощью свойства length Вы можете узнать сколько фрэймов (включая iframes) присутствует в данном окне.</p>
+
+<pre class="brush: csharp;">
+//Узнаем количество фрэймов на странице
+document.write(window.length);
+</pre>
+
+<h1 id="title">
+Методы объекта window
+</h1>
+
+<p>С помощью метода alert() Вы можете вывести окно оповещения.</p>
+
+<pre class="brush: csharp;">
+//Выведем окно оповещения
+alert('Это окно оповещения');
+</pre>
+
+<p>С помощью метода open() Вы можете открыть новое окно.</p>
+
+<pre class="brush: csharp;">
+//Откроем новое пустое окно
+nw=open();
+
+//Выведем сообщение в новое окно
+nw.document.write('Этот текст был выведен с помощью JavaScript.');
+</pre>
+
+<p>С помощью метода close() Вы можете закрыть окно.</p>
+
+<pre class="brush: csharp;">
+&lt;script type=text/javascript&gt;
+//Откроем новое окно
+nw=open();
+
+//Выведем сообщение в новое окно
+nw.document.write('Этот текст был выведен с помощью JavaScript.');
+
+/* Создадим функцию cl() закрывающую окно nw которая будет вызываться после нажатия на кнопку */
+function cl()
+{
+   nw.close();
+}
+&lt;/script&gt;
+
+&lt;input type=&apos;button&apos; value=&apos;&Zcy;&acy;&kcy;&rcy;&ycy;&tcy;&softcy; &ocy;&kcy;&ncy;&ocy;&apos; onclick=&apos;cl()&apos; /&gt;
+</pre>
+
+<p>С помощью метода print() Вы можете распечатать содержимое окна на принтере.</p>
+
+<pre class="brush: csharp;">
+&lt;script type=text/javascript&gt;
+/* Создадим функцию pr() печатающую содержимое данного окна после нажатия на кнопку */
+function pr()
+{
+print();
+}
+&lt;/script&gt;
+
+&lt;form&gt;
+&#x9;&lt;input type=&apos;button&apos; value=&apos;&Ncy;&acy;&pcy;&iecy;&chcy;&acy;&tcy;&acy;&tcy;&softcy; &scy;&ocy;&dcy;&iecy;&rcy;&zhcy;&icy;&mcy;&ocy;&iecy; &dcy;&acy;&ncy;&ncy;&ocy;&jcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy;&apos; onclick=&apos;pr()&apos; /&gt;
+&lt;/form&gt;
+</pre>
+
+<p>Полный список свойств и методов данного объекта Вы можете найти в нашем JavaScript справочнике</p>
+
+</body>
+</html>

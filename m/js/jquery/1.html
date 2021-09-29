@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main"><!-- ПОЧАТОК -->
+
+<h1 id="title">
+Что такое jQuery?
+</h1>
+
+<p>jQuery - это библиотека, которая значительно упрощает и ускоряет написание JavaScript кода.</p>
+<p>Девиз jQuery "write less, do more" (пиши меньше, делай больше) отражает ее главное предназначение.</p>
+<p>jQuery позволяет создавать анимацию, обработчики событий, значительно облегчает выбор элементов в DOM и создание AJAX запросов.</p>
+<p>Данная библиотека работает со всеми браузерами (IE 6.0+, FF 2.0+, Safari 3.0+, Opera 9.0+, Chrome). Это значит, что Вам больше не нужно будет беспокоиться о кроссбраузерной совместимости JavaScript кода.</p>
+<p>Для jQuery написано огромное количество плагинов, которые позволяют расширить ее возможности еще больше.</p>
+
+<h1 id="title">
+Пример использования jQuery
+</h1>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$(":button").click(function()
+{
+$(":button").hide();
+$("#wrap1").addClass("add");
+$("#wrap1").animate({height:280},2000);
+$("#wrap1").animate({width:400},2000);
+
+$("#wrap1").animate({padding:20},2000,function()
+{
+$("#text1").hide(2000,function(){$("#text2").show(2000);});
+});
+});
+});
+</pre>
+
+<h1 id="title">
+Добавление jQuery на страницы
+</h1>
+
+<p>Для того, чтобы начать использовать jQuery необходимо:</p>
+<p>1) Скачать ее с официального сайта. Существуют две версии jQuery: для использования в готовых приложениях (production) и для разработки (development). Версия для разработки содержит комментарии и структурированный код. В сокращенной версии нет комментариев и код в ней не структурирован зато она занимает меньше места и поэтому страницы с ней будут загружаться быстрее. После того, как Вы выберите подходящую версию нажмите на кнопку "Download ( jQuery )"</p>
+
+<pre class="brush: csharp;">
+http://jquery.com/
+</pre>
+
+<p>2) Добавить ее на страницу. Для этого следующий код должен быть добавлен на страницу в секцию head:</p>
+
+<pre class="brush: csharp;">
+&lt;script type="text/javascript" src="путь_к_скачанному_файлу/jquery.js"&gt;
+&lt;/script&gt;
+</pre>
+
+<p>Для тех кто по каким-либо причинам не может (или не хочет) скачивать jQuery предусмотрен альтернативный способ удаленного использования библиотеки предоставленный компанией Google.</p>
+<p>Для того, чтобы использовать jQuery удаленно просто добавьте на страницу в секцию head следующий код:</p>
+
+<pre class="brush: csharp;">
+&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+</body>
+</html>
+

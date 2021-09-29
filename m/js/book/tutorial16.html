@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Оператор delete
+</h1>
+
+<p>С помощью оператора delete Вы можете удалить указанный элемент. Оператор возвращает true если удаление указанного элемента прошло успешно, и false если нет.</p>
+<p><b>Обратите внимание:</b> оператор delete не может удалить, переменную объявленную, с помощью var.</p>
+
+<pre class="brush: csharp;">
+//Создадим переменную x и присвоим ей значение 33
+x=33;
+
+//Удалим переменную x и выведем результат выполнение данной операции 
+document.write(delete x);
+document.write("&lt;br /&gt;");
+
+//Теперь попробуем удалить переменную объявленную с помощью var
+var y=100;
+document.write(delete y);
+document.write("&lt;br /&gt;");
+
+//Попробуем удалить предопределенное свойство PI объекта Math
+document.write(delete Math.PI);
+document.write("&lt;br /&gt;");
+
+//Создадим массив содержащий 4 элемента и выведем его содержимое
+g=new Array("Яблоко","Груша","Мешок с деньгами", "Лимон");
+document.write(g+"&lt;br /&gt;");
+
+//Удалим 3й элемент массива и выведем его содержимое после операции
+delete g[2];
+document.write(g);
+</pre>
+
+<h1 id="title">
+Оператор in
+</h1>
+
+<p>С помощью оператора in Вы можете узнать имеется ли произвольное свойство у указанного объекта или массива.</p>
+<p>Метод вернет true если указанное свойство имеется, и false, если нет.</p>
+
+<pre class="brush: csharp;">
+//Создадим массив содержащий 3 элемента и выведем его содержимое
+g=new Array("Яблоко","Груша", "Лимон");
+
+//Проверим имеется ли у массива 2ой элемент
+document.write(1 in g);
+document.write("&lt;br /&gt;");
+
+//Проверим имеется ли у массива 5ый элемент
+document.write(4 in g);
+document.write("&lt;br /&gt;");
+
+//Создадим объект содержащий 3 свойства
+var fio={familiya:"Васильев",imya:"Дмитрий",otchestvo:"Владимирович"};
+
+//Проверим имеет ли объект fio свойство imya
+document.write("imya" in fio);
+document.write("&lt;br /&gt;");
+
+//Проверим имеет ли объект fio свойство vozrast
+document.write("vozrast" in fio);
+</pre>
+
+<h1 id="title">
+Оператор instanceof
+</h1>
+
+<p>Оператор instanceof сверяет тип объекта с переданным значением. Если они совпадают, метод возвращает true, если нет false.</p>
+
+<pre class="brush: csharp;">
+//Создадим массив g
+g=new Array("Яблоко","Груша", "Лимон");
+
+//Создадим строку str
+var str=new String("Привет мир.");
+
+//Проверим является ли g массивом
+document.write(g instanceof Array);
+document.write("&lt;br /&gt;");
+
+//Проверим является ли str массивом
+document.write(str instanceof Array);
+document.write("&lt;br /&gt;");
+
+//Проверим является ли str строкой
+document.write(str instanceof String);
+document.write("&lt;br /&gt;");
+</pre>
+
+<h1 id="title">
+Оператор typeof
+</h1>
+
+<p>Оператор typeof возвращает тип указанного объекта.</p>
+
+<pre class="brush: csharp;">
+//Создадим объект fio
+var fio={familiya:'Васильев',imya:'Дмитрий',otchestvo:'Владимирович'};
+
+//Зададим функцию
+function test()
+{
+   return 0;
+}
+
+//Зададим число
+var g=120;
+
+//Выведем тип объекта fio на страницу
+document.write(typeof fio);
+document.write('&lt;br /&gt;');
+
+//Выведем тип объекта test на страницу
+document.write(typeof test);
+document.write('&lt;br /&gt;');
+
+//Выведем тип объекта g на страницу
+document.write(typeof g);
+document.write('&lt;br /&gt;');
+</pre>
+
+</body>
+</html>

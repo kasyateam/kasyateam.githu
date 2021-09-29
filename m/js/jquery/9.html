@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main"><!-- ПОЧАТОК -->
+
+<h1 id="title">
+jQuery UI
+</h1>
+
+<p>jQuery UI представляет собой группу плагинов jQuery облегчающих создание интерфейса веб-приложений.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#drag").draggable();
+$("#sortable").sortable();
+$("#sortable").disableSelection();
+$("#datepicker").datepicker({ monthNames:
+["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август",
+"Сентябрь","Октябрь","Ноябрь","Декабрь"],
+dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]});
+});
+</pre>
+
+<h1 id="title">
+Подключение jQuery UI
+</h1>
+
+<p>Для того, чтобы воспользоваться возможностями плагинов jQuery UI их необходимо вначале подключить к странице, на которой они будут использоваться.</p>
+<p>Существуют два варианта подключения jQuery UI:</p>
+<p>1. <b>Локальное подключение.</b> Данный способ требует скачивание специального файла с официального сайта;</p>
+<p>2. <b>Удаленное подключение.</b> Данный способ не требует скачивание файла, а вместо этого использует его удаленно (данная услуга предоставляется компанией Google).</p>
+
+<h1 id="title">
+Локальное подключение jQuery UI
+</h1>
+
+<p>На официальном сайте Вы можете или скачать стандартную комплектацию jQuery UI или собрать свою собственную.</p>
+<p>Стандартная комплектация jQuery UI включает в себя все существующие плагины и имеет стандартную тему оформления.</p>
+<p>Для того, чтобы скачать стандартную комплектацию просто перейдите на сайт jQuery UI и нажмите кнопку Download.</p>
+<p>Если Вы хотите собрать собственную комплектацию jQuery UI Вам необходимо перейти на сайт jQuery UI и выполнить шаги перечисленные ниже (пропустите эти шаги если Вы скачали стандартную комплектацию):</p>
+
+<pre class="brush: csharp;">
+http://jqueryui.com/download
+</pre>
+
+<p><b>Шаг 1: Выбрать необходимые компоненты</b></p>
+<p>По умолчанию в файл для скачивания включены все существующие плагины. Если какие-то из них не нужны Вы можете убрать галочку напротив их названия и сократить тем самым размер итогового файла (стандартная комплектация jQuery UI имеет размер ~1мб).</p>
+<p><b>Обратите внимание:</b> размер файла библиотеки влияет на скорость загрузки страницы, поэтому меньший размер всегда предпочтителен.</p>
+<p><b>Шаг 2: Выбрать оформление</b></p>
+<p>Выберите одну из стандартных тем оформления плагинов jQuery UI в поле Theme или создайте свою тему с помощью themeroller'а.</p>
+
+<pre class="brush: csharp;">
+http://jqueryui.com/themeroller/
+</pre>
+
+<p><b>Шаг 3: Выбрать версию</b></p>
+<p>Выберите версию jQuery UI в поле Version.</p>
+<p><b>Обратите внимание:</b> рекомендуем всегда выбирать последнюю доступную версию т.к. как более новые версии всегда содержат интересные нововведения.</p>
+<p><b>Шаг 4: Скачать jQuery UI</b></p>
+<p>Нажмите кнопку Download и сохраните файл в удобное для Вас место на жестком диске.</p>
+<p>Теперь (вне зависимости скачали ли Вы стандартную комплектацию или собрали свою собственную) необходимо подключить jQuery UI к скрипту. Для этого необходимо распаковать скаченный файл и указать пути к файлам jquery-ui-версия.custom.css и jquery-ui-версия.custom.min.js в секции head скрипта.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+&lt;!-- 1. Подключим библиотеку jQuery (без нее jQuery UI не будет работать) --&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- 2. Подключим jQuery UI --&gt;
+&lt;link type=&quot;text/css&quot; href=&quot;&pcy;&ucy;&tcy;&softcy;_&kcy;_&pcy;&acy;&pcy;&kcy;&iecy;/css/themename/jquery-ui-1.8.13.custom.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;&pcy;&ucy;&tcy;&softcy;_&kcy;_&pcy;&acy;&pcy;&kcy;&iecy;/js/jquery-ui-1.8.13.custom.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+
+<h1 id="title">
+Удаленное подключение jQuery UI
+</h1>
+
+<p>В этом варианте подключения Вы не можете настраивать комплектацию jQuery UI и можете использовать только ее стандартную версию.</p>
+<p>Для того, чтобы подключить библиотеку удаленно необходимо добавить следующие строчки в секцию head Вашей страницы:</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+&lt;!-- 1. Подключим библиотеку jQuery (без нее jQuery UI не будет работать) --&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- 2. Подключим jQuery UI --&gt;
+&lt;link href=&quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;/&gt;
+
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+</body>
+</html>
+

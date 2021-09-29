@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main"><!-- ПОЧАТОК -->
+
+<h1 id="title">
+Обработчики событий jQuery
+</h1>
+
+<p>Обработчики событий - это функции, код которых исполняется только после совершения определенных действий.</p>
+<p>Обработчики событий присутствовали и в JavaScript, но jQuery облегчает их использование и расширяет их функциональность.</p>
+<p>Примеры действий, после которых выполняются обработчики:</p>
+<p>- Курсор мыши наведен на элемент;</p>
+<p>- Веб-страница или картинка полностью загружена;</p>
+<p>- Изменено содержимое поля формы;</p>
+<p>- HTML форма отправлена;</p>
+<p>- Нажата клавиша на клавиатуре;</p>
+<p><b>Общий вид определения обработчиков jQuery:</b></p>
+
+<pre class="brush: csharp;">
+$(селектор).обработчик_события(function(){код_обработчика_события});
+</pre>
+
+<h1 id="title">
+Обработчики событий jQuery в действии
+</h1>
+
+<p>Код обработчика mouseover будет выполнен, когда курсор мыши будет наведен на элемент.</p>
+<p>Код обработчика mouseout будет выполнен, когда курсор мыши будет выведен из границ элемента.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("p").mouseover(function(){$("p").css("color","green")});
+$("p").mouseout(function(){$("p").css("color","black")});
+});
+</pre>
+
+<p>Код обработчика click будет выполнен после одинарного щелчка мыши на элементе.</p>
+<p>Код обработчика dblclick будет выполнен после двойного щелчка мыши на элементе.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#but1").click(function(){alert("Вы нажали один раз на первую кнопку!");});
+$("#but2").dblclick(function(){alert("Вы нажали два раза на вторую кнопку!");});
+});
+</pre>
+
+<p>Код обработчика focus() будет выполнен, когда элемент станет активным.</p>
+<p>Код обработчика blur() будет выполнен, когда элемент перестанет быть активным.</p>
+<p>Код обработчика change() будет выполнен, при изменении содержимого элемента.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#el1").focus(function(){$(this).attr("value","")});
+$("#el1").blur(function(){$(this).attr("value","Введите ФИО")});
+$("#el2").change(function(){ alert("Содержимое данного элемента было изменено.") });
+});
+</pre>
+
+<p>С помощью jQuery Вы можете также вызывать обработчики событий привязанные к элементу.</p>
+<p>Например: $('#test').blur() вызовет обработчик blur у элемента с id='test'.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+// Зададим обработчик события, который будет выводить сообщение при нажатии на кнопку с id=but1
+$("#but1").click(function(){alert("Вы нажали на кнопку с id=but1")});
+
+// Вызовем обработчик click у элемента с id='but1'
+$("#but1").click();
+});
+</pre>
+
+<h1 id="title">
+Объект event
+</h1>
+
+<p>Объект event содержит информацию о произошедшем событии.</p>
+<p>Объект event создается для каждого произошедшего события, но для того, чтобы иметь возможность обращаться к его свойствам и методам его необходимо явно передать в обработчик события.</p>
+<p>Синтаксис:</p>
+
+<pre class="brush: csharp;">
+$(селектор).событие(function(event){код_обработчика_события});
+</pre>
+
+<p>После того, как объект event был передан обработчику события, Вы можете обращаться к его свойствам и методам.</p>
+<p>В примере ниже с помощью объекта event мы будем выводить координаты, на которых находился курсор мыши во время того, как произошло событие.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#square").click(function(event)
+{
+$("#coord").css("display","block");
+$("#x").html(event.pageX);
+$("#y").html(event.pageY);
+});
+});
+</pre>
+
+<h1 id="title">
+Управление обработчиками событий
+</h1>
+
+<p>Метод jQuery one() позволяет создавать обработчики, которые могут быть вызваны лишь один раз.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#but1").one("click",function(){alert("Вы нажали на кнопку с id=but1")});
+});
+</pre>
+
+<p>Метод jQuery toggle() позволяет переключаться между различными обработчиками событий по щелчку мыши.</p>
+
+<pre class="brush: csharp;">
+$(document).ready(function()
+{
+$("#but1").click(function()
+{
+$("#par1").css("color","black");
+$("#par1").css("font-size","1em");
+});
+
+$("#par1").toggle(function()
+{
+$("#par1").css("color","green");
+$("#par1").css("font-size","10px");},function()
+{
+$("#par1").css("color","red");
+$("#par1").css("font-size","20px");},function()
+{
+$("#par1").css("color","blue");
+$("#par1").css("font-size","30px");},function()
+{
+$("#par1").css("color","black");
+$("#par1").css("font-size","1em");
+});
+});
+</pre>
+
+</body>
+</html>
+

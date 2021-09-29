@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Объект Screen
+</h1>
+
+<p>Объект Screen содержит информацию об экране пользователя.</p>
+<p>С помощью свойств данного объекта Вы можете узнать какое разрешение, а также какая глубина цвета установлена на экране пользователя.</p>
+<p>Свойство width определяет ширину экрана пользователя, а свойство height высоту.</p>
+
+<pre class="brush: csharp;">
+//Узнаем разрешение Вашего экрана и выведем его на на страницу
+document.write('Разрешение экрана: &lt;b&gt;&apos;+screen.width+&apos;X&apos;+ screen.height+&apos;&lt;/b&gt;&apos;);
+</pre>
+
+<p>С помощью свойства colorDepth Вы можете узнать глубину цвета (измеряется в битах на пиксель) установленную у пользователя:</p>
+
+<pre class="brush: csharp;">
+//Узнаем глубину цвета Вашего экрана и выведем ее на страницу
+document.write('Глубина цвета: ' + screen.colorDepth);
+</pre>
+
+
+</body>
+</html>

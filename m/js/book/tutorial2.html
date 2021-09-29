@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Добавление JavaScript на веб-страницы
+</h1>
+
+<p>JavaScript добавляется на веб-страницы с помощью тега &lt;script&gt;.</p>
+
+<pre class="brush: csharp;">
+&lt;script type=&quot;text/javascript&quot;&gt;
+document.write("Данный текст выведен на страницу с помощью JavaScript.");
+&lt;/script&gt;
+</pre>
+
+    <p>Результат выполнения кода:</p>
+
+    <p><span id="jsResultCode" ontouchstart="return true;" onclick="document.getElementById('par1').innerHTML='Данный текст выведен на страницу с помощью JavaScript.';">Выполнить код</span></p>
+    <p class="result"   id="par1">Тут будет выведен текст с  помощью JavaScript.</p>
+
+<p><b>Объяснение примера:</b></p>
+<p>- Атрибут type тега &lt;script&gt; указывает браузеру какой скриптовый язык мы встраиваем. В случае если это JavaScript атрибут type должен иметь значение text/javascript;</p>
+<p>- document.write() - это команда JavaScript позволяющая выводить произвольное содержимое на страницу;</p>
+<p>- Разместив document.write() между тегами &lt;script&gt; и &lt;/script&gt; мы сообщаем браузеру обрабатывать ее как команду JavaScript, поэтому после загрузки страницы браузер выведет: "Данный текст выведен на страницу с помощью JavaScript."</p>
+<p><b>Обратите внимание:</b> если команда document.write будет вставлена за пределами &lt;script&gt; она будет обрабатываться браузером как обычный текст.</p>
+
+<h1 id="title">
+Отладчики веб-страниц
+</h1>
+
+<p>Отладчики веб-страниц упрощают разработку веб-сайтов и написание JavaScript кода.</p>
+<p>Отладчики доступны для всех современных браузеров.</p>
+<p>В Chrome, Safari, Opera и Internet Explorer 8+ имеются встроенные отладчики, которые можно вызвать с помощью нажатия клавиши F12 (Chrome, Safari и IE) или Ctrl+Shift+I (Opera) при просмотре страниц.</p>
+<p>В последней версии Firefox был добавлен встроенный отладчик, который нам показался неудобным, так что мы рекомендуем Вам скачать Firebug (данный отладчик доступен в виде дополнения).</p>
+
+</body>
+</html>

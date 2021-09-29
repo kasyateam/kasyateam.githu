@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Проверка форм в JavaScript
+</h1>
+
+<p>Примеры проверок, которые возможно реализовать с помощью JavaScript:</p>
+<p>- Было ли данное поле заполнено;</p>
+<p>- В правильном ли формате пользователь указал свой адрес или email в соответствующем поле;</p>
+<p>- Совпадают ли значения введенные в два различных поля (часто используется для полей с паролем);</p>
+<p>- Не превышает ли значение введенное в поле максимально допустимую длину и т.д.</p>
+<p>Проверка форм в JavaScript возможна благодаря событию onSubmit.</p>
+<p>Если у тега form атрибут onsubmit="return true" форма будет отправлена на сервер, если же onsubmit="return false", то форма на сервер отправлена не будет.</p>
+
+<pre class="brush: csharp;">
+&lt;head&gt;
+&#x9;&lt;script type=&quot;text/javascript&quot;&gt;
+function validate()
+{
+   //Считаем значения из полей name и email в переменные x и y
+   var x=document.forms["form"]["name"].value;
+   var y=document.forms["form"]["email"].value;
+   
+   //Если поле name пустое выведем сообщение и предотвратим отправку формы
+   if (x.length==0)
+   {
+      document.getElementById("namef").innerHTML="*данное поле обязательно для заполнения";
+      return false;
+   }
+   
+   //Если поле email пустое выведем сообщение и предотвратим отправку формы
+   if (y.length==0)
+   {
+      document.getElementById("emailf").innerHTML="*данное поле обязательно для заполнения";
+      return false;
+   }
+   
+   //Проверим содержит ли значение введенное в поле email символы @ и .
+   at=y.indexOf("@");
+   dot=y.indexOf(".");
+   
+   //Если поле не содержит эти символы знач email введен не верно
+   if (at < 1 || dot < 1)
+   {
+      document.getElementById("emailf").innerHTML="*email введен не верно";
+      return false;
+   }
+}
+&#x9;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&#x9;&lt;form name=&quot;form&quot; onsubmit=&quot;return validate()&quot;&gt;
+Имя: &lt;input type="text" name="name"&gt; &lt;span style="color:red" id="namef"&gt;&lt;/span&gt;
+&lt;br /&gt;
+e-mail: &lt;input type="text" name="email"&gt; &lt;span style="color:red" id="emailf"&gt;&lt;/span&gt;
+&lt;br /&gt;
+&#x9;&#x9;&lt;input type="submit" value="Отправить форму"&gt;
+&#x9;&lt;/form&gt;
+&lt;/body&gt;
+</pre>
+
+</body>
+</html>

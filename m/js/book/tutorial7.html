@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Арифметические операторы JavaScript
+</h1>
+
+<p>Арифметические операторы используются для выполнения арифметических операций над переменными или значениями.</p>
+<p>В таблице ниже перечислены арифметические операторы доступные в JavaScript (предположим, что x=7).</p>
+
+<table>
+<tr>
+<th>Оператор</th>
+<th>Описание</th>
+<th>Пример</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td>+</td>
+<td>Выполняет сложение чисел</td>
+<td style="text-align: right;">y=x+10</td>
+<td style="text-align: right;">y=17</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Выполняет вычитание чисел</td>
+<td style="text-align: right;">y=x-3</td>
+<td style="text-align: right;">y=4</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Выполняет умножение чисел</td>
+<td style="text-align: right;">y=x*4</td>
+<td style="text-align: right;">y=28</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Выполняет деление чисел</td>
+<td style="text-align: right;">y=x/2</td>
+<td style="text-align: right;">y=3</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Вычисляет остаток от деления чисел</td>
+<td style="text-align: right;">y=x%2</td>
+<td style="text-align: right;">y=1</td>
+</tr>
+<tr>
+<td>++</td>
+<td>Увеличивает значение на 1 и возвращает новое значение<br /><br />Увеличивает значение на 1 и возвращает старое значение</td>
+<td style="text-align: right;">y=++x<br /><br />y=x++</td>
+<td style="text-align: right;">y=8, x=8<br /><br />y=7, x=8</td>
+</tr>
+<tr>
+<td>--</td>
+<td>Уменьшает значение на 1 и возвращает новое значение<br /><br />Уменьшает значение на 1 и возвращает старое значение</td>
+<td style="text-align: right;">y=--x<br /><br />y=x--</td>
+<td style="text-align: right;">y=6, x=6<br /><br />y=7, x=6</td>
+</tr>
+</table>
+
+<h1 id="title">
+Сокращенная запись арифметических операторов
+</h1>
+
+<p>Для того, чтобы уменьшить размер кода Вы можете использовать сокращенную запись арифметических операций.</p>
+<p>Условимся что x=4, а y=6:</p>
+
+<table>
+<tr>
+<th>Оператор</th>
+<th>Сокр</th>
+<th>Полная</th>
+<th>Результат</th>
+</tr>
+<tr>
+<td>+=</td>
+<td>y+=x</td>
+<td>y=y+x</td>
+<td>y=10</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>y-=x</td>
+<td>y=y-x</td>
+<td>y=2</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>y*=x</td>
+<td>y=y*x</td>
+<td>y=24</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>y/=x</td>
+<td>y=y/x</td>
+<td>y=1</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>y%=x</td>
+<td>y=y%x</td>
+<td>y=2</td>
+</tr>
+</table>
+
+<h1 id="title">
+Использование оператора + со строковыми переменными
+</h1>
+
+<p>Если оператор + используется со строковыми переменными он выполняет объединение строк хранящихся в них.</p>
+
+<pre class="brush: csharp;">
+//Запишем "Привет " в переменную ex1
+ex1="Привет ";
+
+//Запишем "всем" в переменную ex2
+ex2="всем";
+
+/* Соединим значения переменных ex1 и ex2, добавим к ним
+восклицательный знак и затем запишем результат в ex3 */
+
+ex3=ex1+ex2+"!";
+
+//Выведем содержимое переменной ex3
+document.write(ex3);
+</pre>
+
+<p>Результат выполнения кода:</p>
+
+    <span id="jsResultCode" ontouchstart="return true;" onclick="document.getElementById('par2').innerHTML='Привет всем!';">Выполнить код</span>
+    <p class="result" id="par2"></p>
+
+<p><b>Обратите внимание:</b> мы добавили пробел после 'Привет' не случайно. Если бы мы не сделали этого, то значение переменной ex3 было бы "Приветвсем!".</p>
+
+</body>
+</html>

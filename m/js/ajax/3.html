@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Отправление запроса на сервер
+</h1>
+
+<p>С помощью методов open() и send() объекта XMLHttpRequest Вы можете отправлять AJAX запросы.</p>
+<p><b>Синтаксис запроса:</b></p>
+
+<pre class="brush: csharp;">
+// Создаем объект XMLHttpRequest
+var xhttp=new XMLHttpRequest();
+
+// Запросим содержимое файла testfile.txt 
+xhttp.open('GET',testfile.txt,true);
+xhttp.send();
+</pre>
+
+<table>
+<tr>
+<th>Метод</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>open( тип_запроса, url, способ )</td>
+<td>Создает запрос.<br /><br />тип_запроса устанавливает тип запроса (GET или POST).<br /><br />url устанавливает путь к запрашиваемому файлу.<br /><br />способ устанавливает способ выполнения запроса.<br /><br />При значении true запрос будет выполнен асинхронно, при false синхронно.</td>
+</tr>
+<tr>
+<td>send( 'данные' )</td>
+<td>Позволяет передать данные на сервер.</td>
+</tr>
+</table>
+
+<h1 id="title">
+Запрос GET
+</h1>
+
+<p>Приведем пример простого GET запроса, который запрашивает содержимое файла testfile.txt и выводит его на страницу:</p>
+
+<pre class="brush: csharp;">
+xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+   if (xhttp.readyState==4 && xhttp.status==200)
+      document.getElementById("result").innerHTML=xhttp.responseText;
+}
+
+xhttp.open("GET","testfile.txt",true);
+xhttp.send();
+</pre>
+
+<h1 id="title">
+Передача данных
+</h1>
+
+<p>Вместе с AJAX запросом на сервер могут быть переданы различные данные.</p>
+<p>Рассмотрим передачу информации на примере простого калькулятора, который складывает числа.</p>
+
+<pre class="brush: csharp;">
+var x=document.getElementById('tf1').value;
+var y=document.getElementById('tf2').value;
+xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+  if (xhttp.readyState==4 && xhttp.status==200)
+    document.getElementById("ajax").innerHTML=xhttp.responseText;
+}
+
+xhttp.open("GET","add.php?x="+x+"&y="+y,true);
+xhttp.send();
+</pre>
+
+<h1 id="title">
+Запрос POST
+</h1>
+
+<p>Приведем пример простого POST запроса, который запрашивает содержимое файла testfile.txt и выводит его на страницу:</p>
+
+<pre class="brush: csharp;">
+xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+   if (xhttp.readyState==4 && xhttp.status==200)
+      document.getElementById("result").innerHTML=xhttp.responseText;
+}
+
+xhttp.open("POST","testfile.txt",true);
+xhttp.send();
+</pre>
+
+<p><b>Обратите внимание:</b> несмотря на то, что в результате выполнения POST и GET запросов мы получили одинаковый результат различия между ними имеются и мы рассмотрим их далее в данной главе.</p>
+<p>Метод POST как и метод GET позволяет передавать вместе с AJAX запросами различные данные.</p>
+<p>Данные, которые будут переданы на сервер должны быть указаны в качестве параметров метода send().</p>
+<p><b>Обратите внимание:</b> чтобы отправить данные в формате, в котором передаются данные с HTML форм необходимо задать соответствующий HTTP заголовок с помощью setRequestHeader.</p>
+
+<table>
+<tr>
+<th>Метод</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>setRequestHeader( заголовок, значение )</td>
+<td>Добавляет к запросу HTTP заголовок.<br /><br />заголовок имя HTTP заголовка.<br /><br />значение значение HTTP заголовка.</td>
+</tr>
+</table>
+
+<pre class="brush: csharp;">
+var x=document.getElementById('tf1').value;
+var y=document.getElementById('tf2').value;
+xhttp=new XMLHttpRequest();
+
+xhttp.onreadystatechange=function()
+{
+   if (xhttp.readyState==4 && xhttp.status==200)
+    document.getElementById('ajax').innerHTML=xhttp.responseText;
+}
+
+xhttp.open('POST','addpost.php',true);
+xhttp.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+var str='x='+x+'&y='+y;
+xhttp.send(str);
+</pre>
+
+<h1 id="title">
+Какой метод выбрать GET или POST?
+</h1>
+
+<p>Метод GET проще и быстрее при запросах, однако POST более надежный и безопасный.</p>
+<p>Тем не менее мы рекомендуем Вам всегда использовать GET если это возможно.</p>
+<p>Приведем несколько примеров где использование GET недопустимо:</p>
+<p>- Необходимо передать секретные данные (такие как логин и пароль пользователя);</p>
+<p>- Необходимо передать большое количество данных. GET имеет предел на количество передаваемых данных (2000 символов), а POST нет;</p>
+<p>- Необходимо получить некэшированный результат. Как можно избежать кэширования результата рассказано далее в этой главе.</p>
+
+<h1 id="title">
+Кэширование результата при GET запросах.
+</h1>
+
+<p>Часто ответ полученный в результате GET запроса не является "свежим" ответом, а является копией, которая была сохранена в кэше при предыдущем обращении к серверу.</p>
+<p>К счастью существует способ помогающий избежать этого. Необходимо, чтобы url при GET запросе всегда был уникальным.</p>
+<p>Передача при запросе в скрипт переменной со случайным значением исключит возможность получения кэшированного значения.</p>
+<p><b>Синтаксис:</b></p>
+
+<pre class="brush: csharp;">
+url?переменная="+Math.random()
+</pre>
+
+<pre class="brush: csharp;">
+xhttp=new XMLHttpRequest();
+xhttp.onreadystatechange=function()
+{
+if (xhttp.readyState==4 && xhttp.status==200)
+   document.getElementById("time").innerHTML=xhttp.responseText;
+}
+
+xhttp.open("GET","gettime.php?x="+Math.random(),true);
+xhttp.send();
+</pre>
+
+</body>
+</html>

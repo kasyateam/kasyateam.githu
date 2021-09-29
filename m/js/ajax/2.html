@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css"/>
+</head>
+
+<body>
+  <div class="main" id="main">
+<!-- ПОЧАТОК -->
+
+<h1 id="title">
+Создание объекта XMLHttpRequest
+</h1>
+
+<p>С помощью свойств и методов объекта XMLHttpRequest Вы можете совершать AJAX запросы.</p>
+<p>Для того, чтобы совершить запрос сначала необходимо создать экземпляр объекта XMLHttpRequest.</p>
+<p><b>Синтаксис для создания экземпляра объекта XMLHttpRequest:</b></p>
+
+<pre class="brush: csharp;">
+переменная = new XMLHttpRequest();
+</pre>
+
+<p><b>Обратите внимание:</b> IE6 использует ActiveXObject вместо XMLHttpRequest, поэтому синтаксис для создания экземпляра объекта для него будет отличатся от приведенного выше.</p>
+<p><b>Синтаксис для создания экземпляра XMLHttpRequest в IE6:</b></p>
+
+<pre class="brush: csharp;">
+переменная = new ActiveXObject("Microsoft.XMLHTTP");
+</pre>
+
+<p>Если Вы хотите, чтобы Ваш код работал во всех браузерах используйте следующую конструкцию:</p>
+
+<pre class="brush: csharp;">
+var xhttp;
+/* Если объект XMLHttpRequest существует, значит мы имеем дело с
+современным браузером Chrome, Firefox, Safari, Opera или IE7 и выше. */
+
+if (window.XMLHttpRequest)
+{
+   xhttp=new XMLHttpRequest();
+}
+/* Если же объект XMLHttpRequest не существует значит мы имеем дело с IE6
+и нам придется воспользоваться специальным синтаксисом */
+else
+{
+   xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+</pre>
+
+<h1 id="title">
+Свойства объекта XMLHttpRequest
+</h1>
+
+<p>Все свойства в таблице ниже будут подробно рассмотрены далее в этом учебнике.</p>
+
+<table>
+<tr>
+<th>Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>onreadystatechange</td>
+<td>Функция, код которой будет исполнен при изменении состояния готовности сервера.</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>Позволяет узнать состояние готовности сервера.</td>
+</tr>
+<tr>
+<td>responseText</td>
+<td>Хранит ответ сервера как строку символов.</td>
+</tr>
+<tr>
+<td>responseXML</td>
+<td>Хранит ответ сервера как XML файл.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Хранит код ответа сервера.</td>
+</tr>
+</table>
+
+<h1 id="title">
+Методы объекта XMLHttpRequest
+</h1>
+
+<p>Все методы в таблице ниже будут подробно рассмотрены далее в этом учебнике.</p>
+
+<table>
+<tr>
+<th>Метод</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>open( тип_запроса, url, способ )</td>
+<td>Создает запрос.<br /><br />тип_запроса устанавливает тип запроса (GET или POST).<br /><br />url устанавливает путь к запрашиваемому файлу.<br /><br />способ устанавливает способ выполнения запроса.<br /><br />При значении true запрос будет выполнен асинхронно, при false синхронно.</td>
+</tr>
+<tr>
+<td>send( 'данные' )</td>
+<td>Позволяет передать данные на сервер.</td>
+</tr>
+<tr>
+<td>setRequestHeader( заголовок, значение )</td>
+<td>Позволяет добавить HTTP заголовок к запросу.<br /><br />заголовок содержит имя заголовка<br /><br />значение содержит значение заголовка</td>
+</tr>
+</table>
+</body>
+</html>
