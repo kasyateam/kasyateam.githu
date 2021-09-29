@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main"><!-- ПОЧАТОК -->
+  <div class="header">
+    <p class="header-text">LESS</p>
+    <a href="#" class="header-info">Учебник LESS</a>
+  </div>
+<h1 id="title">
+Вложения в Less
+</h1>
+
+<p>CSS не зря расшифровывается как каскадные таблицы стилей, потому что одни элементы могут находиться внутри других и к ним последовательно применяются стилевые правила.</p>
+<p>Для наглядного представления структуры элементов в Less применяются вложения, которые затем преобразуются во вложенные селекторы.</p>
+<p>Например, в коде HTML у нас имеется следующая структура элементов, схематично показанная ниже.</p>
+
+<pre class="brush: csharp;">
+&lt;aside&gt;
+&#x9;&lt;div class=&quot;block&quot;&gt;
+&#x9;&#x9;&lt;ul&gt;
+&#x9;&#x9;&#x9;&lt;li&gt;...&lt;/li&gt;
+&#x9;&#x9;&#x9;&lt;li&gt;...&lt;/li&gt;
+&#x9;&#x9;&lt;/ul&gt;
+&#x9;&lt;/div&gt;
+&lt;/aside&gt;
+</pre>
+
+<p>Чтобы сохранить структуру в CSS мы вкладываем одни правила внутрь фигурных скобок родителя.</p>
+
+<pre class="brush: csharp;">
+aside
+{
+.block
+{
+  margin-bottom: 30px;
+  ul
+  {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    li
+    {
+      border-top: 1px solid #f4f4f4;
+      list-style: none;
+      color: #666;
+      padding: 3px 0;
+      position: relative;
+      &:first-child
+      {
+        border-top: none;
+      }
+    }
+  }
+}
+}
+</pre>
+
+<p>Для добавления псевдоклассов и псевдоэлементов применяется амперсанд (символ &), он говорит Less что надо взять и подставить вместо него родительский селектор, в данном случае li.</p>
+<p>В итоге получим такой стиль.</p>
+
+<pre class="brush: csharp;">
+aside .block
+{
+margin-bottom: 30px;
+}
+
+aside .block ul
+{
+margin: 0;
+padding: 0;
+font-size: 14px;
+}
+
+aside .block ul li
+{
+border-top: 1px solid #f4f4f4;
+list-style: none;
+color: #666;
+padding: 3px 0;
+position: relative;
+}
+
+aside .block ul li:first-child
+{
+border-top: none;
+}
+</pre>
+
+<p>Less полностью сохраняет структуру вложения и показывает её в именах селекторов.</p>
+<p>Для сложных комбинаций вроде родственных селекторов (A+B, A&gt;B, A~B) применяется амперсанд, а после него пишется соответствующий знак.</p>
+<p>В качестве примера рассмотрим поле для ввода чисел.</p>
+<p>Если введённое пользователем число меньше заранее установленного минимального или больше максимального значения, то выводим сообщение об ошибке.</p>
+<p>Для этого применяется псевдокласс :out-of-range и псевдоэлемент ::after.</p>
+<p>Код HTML для этого будет следующий:</p>
+
+<pre class="brush: csharp;">
+&lt;p&gt;
+&#x9;&lt;input type=&quot;number&quot; id=&quot;dec&quot; min=&quot;1&quot; max=&quot;10&quot; value=&quot;1&quot;&gt;
+&#x9;&lt;label for=&quot;dec&quot;&gt;&lt;/label&gt;
+&lt;/p&gt;
+</pre>
+
+<p>CSS:</p>
+
+<pre class="brush: csharp;">
+input[type="number"]:out-of-range
+{
+background: #f9c3d2;
+}
+
+input[type="number"]:out-of-range + label::after
+{
+content: 'Неверное число';
+color: #ec008c;
+margin-left: 0.5em;
+}
+</pre>
+
+<p>Поскольку у нас используется псевдокласс и псевдоэлемент, то активно применяется амперсанд и вложения одних стилевых правил в другие.</p>
+
+<pre class="brush: csharp;">
+input[type="number"]
+{
+&:out-of-range
+{
+  background: #f9c3d2;
+  & + label {
+    &::after {
+      content: 'Неверное число';
+      color: #ec008c;
+      margin-left: 0.5em;
+    }
+  }
+}
+}
+</pre>
+</body>
+</html>

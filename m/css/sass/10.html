@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+      <p class="header-text">SASS</p>
+      <a href="#" class="header-info">Учебник SASS</a>
+    </div>
+<h1 id="title">
+Вложения
+</h1>
+
+<p>В CSS несколько селекторов построены на вложениях элементов в друг друга.</p>
+<p>Например, вложенный селектор header h1 означает, что стиль следует применить к элементу &lt;h1&gt; который располагается внутри элемента &lt;header&gt;.</p>
+<p>При этом глубина вложения не играет роли.</p>
+<p>Также такой стиль не будет применяться ко всем другим элементам &lt;h1&gt; за пределами &lt;header&gt;.</p>
+<p>В CSS такие правила описываются следующим образом.</p>
+
+<pre class="brush: csharp;">
+.block
+{
+width: 200px;
+}
+
+.block h2
+{
+border-bottom: 1px solid red;
+}
+
+.block .content
+{
+padding-left: 10px;
+}
+</pre>
+
+<p>Sass делает написание таких команд более компактным и наглядным за счёт вложения.</p>
+
+<pre class="brush: csharp;">
+.block
+{
+width: 200px;
+
+h2
+{
+border-bottom: 1px solid red;
+}
+
+.content
+{
+padding-left: 10px;
+}
+}
+</pre>
+
+<p>Таким образом, мы просто пишем контекстные селекторы внутри фигурных скобок родительского селектора.</p>
+<p>Мы не обязаны ограничиваться только этим типом селекторов, подходят любые другие селекторы, например, соседние.</p>
+<p>В примере ниже показано их применение в Sass.</p>
+
+<pre class="brush: csharp;">
+label
+{
+width: 32px;
+height: 26px;
+display: block;
+position: relative;
+}
+
+input[type="checkbox"]
+{
++ span
+{
+position: absolute;
+left: 0; top: 0;
+width: 100%; height: 100%;
+background: url(images/switch.png) no-repeat;
+cursor: pointer;
+}
+}
+
+input[type="checkbox"]:checked
+{
++ span
+{
+background-position: 0 -26px;
+}
+}
+</pre>
+
+<p>На выходе мы получим следующий стиль.</p>
+
+<pre class="brush: csharp;">
+label
+{
+width: 32px;
+height: 26px;
+display: block;
+position: relative;
+}
+
+input[type="checkbox"] + span
+{
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: url(images/switch.png) no-repeat;
+cursor: pointer;
+}
+
+input[type="checkbox"]:checked + span
+{
+background-position: 0 -26px;
+}
+</pre>
+
+<p>Вложения удобно применять совместно с псевдоклассами или псевдоэлементами.</p>
+<p>Но чтобы Sass понял, что имеет дело не с вложенными селекторами, перед именем псевдокласса или псевдоэлемента следует поставить символ &, как показано в примере ниже.</p>
+
+<pre class="brush: csharp;">
+input
+{
+&::-webkit-input-placeholder
+{
+color: red;
+}
+
+&::-moz-placeholder
+{
+color: red;
+}
+
+&:-ms-input-placeholder
+{
+color: red;
+}
+}
+</pre>
+
+<p>Данный код будет преобразован в следующий стиль, который устанавливает цвет подсказывающего текста в текстовом поле.</p>
+
+<pre class="brush: csharp;">
+input::-webkit-input-placeholder
+{
+color: red;
+}
+
+input::-moz-placeholder
+{
+color: red;
+}
+
+input:-ms-input-placeholder
+{
+color: red;
+}
+</pre>
+</body>
+</html>
+

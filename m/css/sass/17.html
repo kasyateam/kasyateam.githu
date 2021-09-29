@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+        <p class="header-text">SASS</p>
+        <a href="#" class="header-info">Учебник SASS</a>
+      </div>
+<h1 id="title">
+Условные выражения
+</h1>
+
+<p>Практически ни один язык программирования не обходится без команды if, которая позволяет выполнять код если некоторое заданное условие истинно.</p>
+<p>Хотя Sass к языкам программирования и не относится, в нём также имеется команда @if, а также @else.</p>
+<p>Синтаксис следующий.</p>
+
+<pre class="brush: csharp;">
+@if (<условие 1>)
+{
+    // команды выполняются, если <условие 1> истинно
+}
+
+@else if (<условие 2>)
+{
+    // команды выполняются, если <условие 1> ложно, а <условие 2> истинно
+}
+
+@else
+{
+    // команды выполняются, если все условия выше ложные
+}
+</pre>
+
+<p>@else if, а также @else не являются обязательными и если в них нет нужды, просто их не пишем.</p>
+<p>Условия допустимо писать как в круглых скобках, так и без них.</p>
+<p>В условиях используются следующие операторы:</p>
+<p><b>==</b> равно;</p>
+<p><b>!=</b> не равно;</p>
+<p><b>&gt;</b> больше;</p>
+<p><b>&lt;</b> меньше;</p>
+<p><b>&gt;=</b> больше или равно;</p>
+<p><b>&lt;=</b> меньше или равно.</p>
+<p>Для примера, условие 10 &gt; 5 — истинно, а red == blue — нет.</p>
+<p>Условные выражения удобны для задания триггеров — так называется проверка на соответствие некоторым заданным условиям.</p>
+<p>Например, мы можем ввести переменную $prefix, которая будет сообщать, выводить свойства с браузерными префиксами или нет.</p>
+<p>Для этого создадим примесь с именем linear-gradient, одним из параметров которой будет значение префикса, и по умолчанию установим значение как true.</p>
+<p>Теперь при вызове примеси будет идти проверка, выводить вендорные свойства или нет.</p>
+
+<pre class="brush: csharp;">
+    @mixin linear-gradient($color1, $color2, $prefix:true)
+    {
+       @if $prefix
+       {
+           background-image: -webkit-linear-gradient($color1, $color2);
+           background-image: -moz-linear-gradient($color1, $color2);
+           background-image: -o-linear-gradient($color1, $color2);
+       }
+       background-image: linear-gradient($color1, $color2);
+    }
+
+   $prefix: false;
+
+    body
+    {
+        @include linear-gradient(#1e5799, #2989d8, $prefix);
+    }
+</pre>
+</body>
+</html>
+

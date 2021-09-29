@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+        <p class="header-text">SASS</p>
+        <a href="#" class="header-info">Учебник SASS</a>
+      </div>
+<h1 id="title">
+Переменные в Sass
+</h1>
+
+<p>В CSS часто возникает ситуация, когда одно и то же значение применяется несколько раз.</p>
+<p>Это может быть цвет, шрифт, размер, линия и др.</p>
+<p>Если потребуется повсеместно изменить, допустим, один цвет на другой, то придётся пользоваться поиском и заменой текста.</p>
+<p>Переменные же позволяют задать все необходимые значения в самом начале кода, а затем лишь ссылаться на них.</p>
+<p>Стоит отредактировать значение переменной, как оно автоматически подставится во всех местах, где стоит переменная.</p>
+<p>Любая переменная начинается с символа $, может содержать латинские буквы, дефис (-) и подчёркивание (_).</p>
+<p>По своему применению переменные похожи на свойства CSS.</p>
+<p>Мы можем задать переменной любое значение применяемое в CSS.</p>
+
+<pre class="brush: csharp;">
+    $text-color: #fc0;
+    $bg: url(img/bg.png) no-repeat;
+    $border: 1px solid red;
+    $basic-font: Arial, Tahoma, sans-serif;
+</pre>
+
+<p>Теперь для любого свойства вместо значения просто пишем имя переменной.</p>
+
+<pre class="brush: csharp;">
+.block
+{
+    background: $bg;
+    color: $text-color;
+}
+</pre>
+
+<p>В итоге это скомпилируется в следующий CSS-документ.</p>
+
+<pre class="brush: csharp;">
+.block
+{
+    background: url(img/bg.png) no-repeat;
+    color: #fc0;
+}
+</pre>
+
+<p>Как видите, просто происходит подстановка значений вместо имён переменных.</p>
+
+</body>
+</html>
+

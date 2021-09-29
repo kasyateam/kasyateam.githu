@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main"><!-- ПОЧАТОК -->
+    <div class="header">
+        <p class="header-text">LESS</p>
+        <a href="#" class="header-info">Учебник LESS</a>
+      </div>
+<h1 id="title">
+Примеси
+</h1>
+
+<p>Примеси (англ. mixin) позволяют добавлять существующие стилевые правила к другим селекторам.</p>
+<p>Это сокращает код, поскольку нам уже нет смысла повторять один и тот же фрагмент кода несколько раз, достаточно сослаться на него в нужном месте.</p>
+<p>Примеси в этом плане похожи на функции в языках программирования.</p>
+<p>Примеси в Less это обычные селекторы классов или идентификаторы.</p>
+<p>В примере ниже мы создаём два класса — <b>left-mixin</b> и <b>right-mixin</b> для выравнивания элементов, соотвественно, по левому или правому краю веб-страницы.</p>
+<p>Если нам требуется повторить свойства у другого селектора, то мы пишем имя класса с точкой впереди — .left-mixin или .left-mixin().</p>
+<p>Для идентификатора вызов будет как #left-mixin.</p>
+<p>Круглые скобки пишутся по желанию, они в данный момент не играют роли.</p>
+
+<pre class="brush: csharp;">
+.left-mixin
+{
+float: left;
+margin: 0 10px 10px 0;
+}
+
+.right-mixin
+{
+float: right;
+margin: 0 0 10px 10px;
+}
+
+.img-left
+{
+.left-mixin;
+background: #f0f0f0;
+padding: 10px;
+}
+
+.img-right
+{
+.righ-mixin;
+background: #f0f0f0;
+padding: 10px;
+}
+</pre>
+
+<p>На выходе мы получим такой стиль:</p>
+
+<pre class="brush: csharp;">
+.left-mixin
+{
+float: left;
+margin: 0 10px 10px 0;
+}
+
+.right-mixin
+{
+float: right;
+margin: 0 0 10px 10px;
+}
+
+.img-left
+{
+float: left;
+margin: 0 10px 10px 0;
+background: #f0f0f0;
+padding: 10px;
+}
+
+.img-right
+{
+float: right;
+margin: 0 0 10px 10px;
+background: #f0f0f0;
+padding: 10px;
+}
+</pre>
+
+<p>Заметьте, что повторяющиеся свойства не группируются по селекторам и в коде остались наши классы left-mixin и right-mixin.</p>
+<p>Если они сами по себе не требуются и нужны лишь для вызова в других местах, то их можно убрать из CSS, добавив к имени класса круглые скобки.</p>
+<p>В остальном никаких изменений нет.</p>
+
+<pre class="brush: csharp;">
+.left-mixin()
+{
+float: left;
+margin: 0 10px 10px 0;
+}
+
+.img-left
+{
+.left-mixin;
+background: #f0f0f0;
+padding: 10px;
+}
+</pre>
+
+<p>В CSS останется только следующее:</p>
+
+<pre class="brush: csharp;">
+.img-left
+{
+float: left;
+margin: 0 10px 10px 0;
+background: #f0f0f0;
+padding: 10px;
+}
+</pre>
+
+<p>Скобки в примесях нужны ещё и для передачи в них переменных, как показано ниже.</p>
+
+<pre class="brush: csharp;">
+.animation(@name, @time, @time-fun)
+{
+animation: @name @time @time-fun;
+-webkit-animation: @name @time @time-fun;
+}
+
+body
+{
+background: url(images/city.png) repeat-x 0 100% fixed,
+linear-gradient(to top, #5080b1, #004e8c) fixed;
+.animation(city, 30s, infinite);
+}
+</pre>
+
+<p>Мы используем примесь с именем <b>animation</b> и передаём ей три переменные, которые подставляются в качестве параметров свойств <b>animation</b> и <b>-webkit-animation</b>.</p>
+<p>На выходе получим следующий код CSS:</p>
+
+<pre class="brush: csharp;">
+body
+{
+background: url(images/city.png) repeat-x 0 100% fixed,
+linear-gradient(to top, #5080b1, #004e8c) fixed;
+animation: city 30s infinite;
+-webkit-animation: city 30s infinite;
+}
+</pre>
+
+<p>Таким образом, примеси удобно использовать для свойств, которые работают в браузерах с префиксами, вроде animation.</p>
+<p>Это позволяет избежать ошибок при копировании значений, т.к. они заменяются компилятором автоматически.</p>
+
+</body>
+</html>

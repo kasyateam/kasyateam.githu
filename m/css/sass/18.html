@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+        <p class="header-text">SASS</p>
+        <a href="#" class="header-info">Учебник SASS</a>
+      </div>
+<h1 id="title">
+Библиотека Bourbon
+</h1>
+
+<p>Bourbon (читается как бурбон, такой сорт виски) — библиотека примесей Sass распространяемая по лицензии MIT.</p>
+<p>Официальный сайт находится по адресу:</p>
+
+<pre class="brush: csharp;">
+bourbon.io
+</pre>
+
+<p>Bourbon хорош несколькими вещами.</p>
+<p>Во-первых, в библиотеке действительно много актуальных вещей упрощающих написание кода — анимация, работа с цветом, фоном, рамками, полями и др.</p>
+<p>Во-вторых, вы легко можете верстать колоночную адаптивную структуру страницы с помощью Neat — фреймворка для Sass и Bourbon от тех же авторов.</p>
+<p>И, в-третьих, вы можете не ограничиваться небольшими фрагментами кода, а вставлять на страницу уже готовые компоненты вроде навигации, вкладок, колонок, таблиц и др. с помощью Reffils.</p>
+<p>Так называется набор шаблонов и компонент построенный на Neat и Bourbon.</p>
+<p>Проще всего использовать Bourbon совместно с сайтом SassMeister.</p>
+<p>В первой строке добавляем импорт библиотеки.</p>
+
+<pre class="brush: csharp;">
+@import "bourbon/bourbon";
+</pre>
+
+<p>А далее вызываем любые примеси описанные в документации Bourbon.</p>
+<p>Вот пример Sass, который добавляет градиент и плавный поворот квадрата при наведении на него курсора.</p>
+
+<pre class="brush: csharp;">
+@import "bourbon/bourbon";
+
+.box
+{
+   border: 1px solid #2aa4b2;
+   height: 40px; width: 40px;
+   @include background-image(linear-gradient(#8fdce5, #3dc3d1));
+   @include transition(all 2.0s ease-in-out);
+   
+       &:hover
+   {
+       @include transform(rotate(90deg));
+   }
+}
+</pre>
+
+<p>В итоге получим следующий стиль.</p>
+
+<pre class="brush: csharp;">
+    .box
+    {
+       border: 1px solid #2aa4b2;
+       height: 40px;
+       width: 40px;
+       background-image: -webkit-linear-gradient(#8fdce5, #3dc3d1);
+       background-image: linear-gradient(#8fdce5, #3dc3d1);
+       -webkit-transition: all 2s ease-in-out;
+       -moz-transition: all 2s ease-in-out;
+       transition: all 2s ease-in-out;
+    }
+    
+    .box:hover
+    {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+</pre>
+
+</body>
+</html>
+

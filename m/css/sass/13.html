@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+      <p class="header-text">SASS</p>
+      <a href="#" class="header-info">Учебник SASS</a>
+    </div>
+<h1 id="title">
+Примеси
+</h1>
+
+<p>Примеси (или миксины, от англ. mixin) — одна из самых могучих штук в Sass и по своему действию напоминают функции в языках программирования.</p>
+<p>Иными словами, это фрагмент кода, который можно вставлять несколько раз.</p>
+<p>При этом примеси обладают рядом возможностей:</p>
+<p>- в качестве значений можно передавать переменные, что придаёт примесям гибкость;</p>
+<p>- существуют библиотеки примесей вроде Bourbon, в которых реализовано множество готовых типовых задач;</p>
+<p>- примеси можно вынести в отдельный файл и подгружать их по мере необходимости через команду @import.</p>
+<p>Код при этом сокращается и упрощается.</p>
+
+<h1 id="title">
+Использование примесей
+</h1>
+
+<p>Для создания примеси используется команда @mixin, после которой через пробел идёт произвольное имя.</p>
+<p>Внутри в фигурных скобках пишем стилевые правила.</p>
+<p>В том месте, куда нам надо вставить примесь, добавляем команду @include с её именем.</p>
+
+<pre class="brush: csharp;">
+@mixin my_opacity
+{
+-webkit-transition: opacity 1s ease-in;
+-moz-transition: opacity 1s ease-in;
+transition: opacity 1s ease-in;
+}
+
+.block
+{
+height: 100px;
+background: #fc0;
+}
+
+.block:hover
+{
+opacity: 0.5;
+@include my_opacity;
+}
+</pre>
+
+<p>На выходе получим следующий CSS.</p>
+
+<pre class="brush: csharp;">
+.block
+{
+height: 100px;
+background: #fc0;
+}
+
+.block:hover
+{
+opacity: 0.5;
+-webkit-transition: opacity 1s ease-in;
+-moz-transition: opacity 1s ease-in;
+transition: opacity 1s ease-in;
+}
+</pre>
+
+<h1 id="title">
+Переменные в примесях
+</h1>
+
+<p>Примеси хороши уже сами по себе, поскольку оптимизируют стилевой код.</p>
+<p>Но часто требуется вызывать несколько раз похожий фрагмент кода, который различается лишь одним-двумя значениями.</p>
+<p>Тогда нам опять помогут примеси, потому что они могут включать в себя параметры, а их значения подставляются в заданных местах кода.</p>
+<p>Получается, что написав один раз примесь, мы можем вызывать её неоднократно, лишь меняя значения параметров.</p>
+<p>В примере ниже мы создаём примесь с именем box, у которой три параметра с именами $width, $color и $bg.</p>
+<p>Для параметра $bg зададим также значение по умолчанию, тогда не придётся указывать его в обязательном порядке.</p>
+<p>Далее к селектору добавляем примесь через команду @include.</p>
+<p>Внутри скобок пишем желаемые значения, их может быть три или два, ведь цвет фона задан по умолчанию.</p>
+
+<pre class="brush: csharp;">
+@mixin box($width, $color, $bg: #f0f0f0)
+{
+border: $width solid $color;
+padding: 20px;
+background: $bg;
+}
+
+.block
+{
+@include box(2px, #333);
+}
+</pre>
+
+<p>На выходе мы получим следующий результат.</p>
+
+<pre class="brush: csharp;">
+.block
+{
+border: 2px solid #333;
+padding: 20px;
+background: #f0f0f0;
+}
+</pre>
+
+<p>Такого рода примеси удобно применять для вендорных свойств.</p>
+<p>Это свойства с префиксами -moz, -webkit, -ms работающие только в определённом браузере.</p>
+<p>Например, сделаем примесь, которая разбивает текст на заданное число колонок.</p>
+<p>Старые версии браузеров не понимают свойство columns, поэтому для них мы продублируем это свойство с префиксами, как показано ниже.</p>
+
+<pre class="brush: csharp;">
+@mixin column($count, $width)
+{
+-webkit-columns: $count $width;
+-moz-columns: $count $width;
+columns: $count $width;
+}
+
+.page
+{
+@include column(2, 200px);
+}
+</pre>
+
+<p>На выходе мы получим следующее.</p>
+
+<pre class="brush: csharp;">
+.page
+{
+-webkit-columns: 2 200px;
+-moz-columns: 2 200px;
+columns: 2 200px;
+}
+</pre>
+
+<p>Как видно, примеси позволяют хранить повторяющийся код в одном месте, легко редактировать его и при желании изменять параметры.</p>
+</body>
+</html>
+

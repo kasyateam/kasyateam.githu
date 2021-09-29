@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+      <p class="header-text">SASS</p>
+      <a href="#" class="header-info">Учебник SASS</a>
+    </div>
+<h1 id="title">
+Командная строка
+</h1>
+
+<p>Sass частично основан на языке программирования Ruby, поэтому для компиляции в CSS необходимо установить Ruby и выполнять компиляцию через командную строку.</p>
+<p>Способ установки зависит от того, какая у вас операционная система.</p>
+
+<h1 id="title">
+Установка Ruby
+</h1>
+
+<p><b>MacOS</b></p>
+<p>Считайте, что вам повезло.</p>
+<p>В OS X уже установлен Ruby, поэтому всё что вам требуется — это открыть приложение Terminal и перейти к следующему шагу.</p>
+<p><b>Windows</b></p>
+<p>Инсталлятор можно взять по адресу</p>
+
+<pre class="brush: csharp;">
+rubyinstaller.org/downloads
+</pre>
+
+<p>скачайте с сайта последнюю версию и установите её.</p>
+
+<h1 id="title">
+Установка Sass
+</h1>
+
+<p>Теперь нужно установить Sass.</p>
+<p>В MacOS откройте Terminal, в Windows нажмите Win+R и наберите cmd.</p>
+<p>В командной строке напишите:</p>
+
+<pre class="brush: csharp;">
+gem install sass
+</pre>
+
+<p>Подождите немного пока все необходимые файлы будут скачаны и установлены на ваш компьютер.</p>
+
+<h1 id="title">
+Компиляция
+</h1>
+
+<p>Теперь можно сообщить Sass следить за изменением выбранного файла и компилировать его в традиционный CSS.</p>
+<p>Перейдите в командной строке в папку проекта и наберите:</p>
+
+<pre class="brush: csharp;">
+sass --watch styles.scss:styles.css
+</pre>
+
+<p>Здесь: styles.scss — имя Sass-файла; styles.css — имя конечного CSS-файла.</p>
+<p>Сам стилевой файл не обязательно должен существовать, если его нет, то он будет создан автоматически.</p>
+<p>Чтобы прекратить слежение за редактированием, перейдите к командной строке и нажмите Ctrl+C.</p>
+<p>Для получения CSS из уже готового файла наберите следующее:</p>
+
+<pre class="brush: csharp;">
+sass style.scss style.css
+</pre>
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+      <p class="header-text">SASS</p>
+      <a href="#" class="header-info">Учебник SASS</a>
+    </div>
+<h1 id="title">
+Команда @extend
+</h1>
+
+<p>Некоторые селекторы используют одни и те же стилевые правила.</p>
+<p>Чтобы не повторять одинаковый код несколько раз в CSS применяется группирование для удобства представления и сокращения кода.</p>
+<p>В этом случае селекторы перечисляются друг за другом через запятую, при этом стиль применяется к каждому селектору в группе.</p>
+
+<pre class="brush: csharp;">
+.browser, .ie, .cr, .fx
+{
+min-height: 16px;
+padding-left: 20px;
+background-repeat: no-repeat;
+}
+</pre>
+
+<p>В Sass для этих целей применяется команда @extend, она автоматически группирует те селекторы, в которых добавляется @extend.</p>
+<p>Вначале мы пишем селектор, содержащий одинаковые стилевые правила для всей группы, затем к любому другому селектору добавляем @extend и через пробел имя первого селектора.</p>
+<p>В примере ниже показано применение этой команды на практике.</p>
+
+<pre class="brush: csharp;">
+.browser
+{
+min-height: 16px;
+padding-left: 20px;
+background-repeat: no-repeat;
+}
+
+.ie
+{
+@extend .browser;
+background-image: url(../img/browser_ie.png);
+}
+
+.cr
+{
+@extend .browser;
+background-image: url(../img/browser_cr.png);
+}
+
+.fx
+{
+@extend .browser;
+background-image: url(../img/browser_fx.png);
+}
+</pre>
+
+<p>Наши селекторы различаются только значением background-image, остальные стилевые правила у них общие.</p>
+<p>Поэтому мы добавляем @extend для группирования и вот что получим на выходе.</p>
+
+<pre class="brush: csharp;">
+.browser, .ie, .cr, .fx
+{
+min-height: 16px;
+padding-left: 20px;
+background-repeat: no-repeat;
+}
+
+.ie
+{
+background-image: url(../img/browser_ie.png);
+}
+
+.cr
+{
+background-image: url(../img/browser_cr.png);
+}
+
+.fx
+{
+background-image: url(../img/browser_fx.png);
+}
+</pre>
+
+<p>Важно, чтобы @extend ссылался на имя класса описанного выше.</p>
+<p>Во многих случаях надо просто вставить повторяющийся фрагмент кода в набор селекторов, без создания нового класса.</p>
+<p>Синтаксис при этом немного поменяется, мы определяем фрагмент кода, начиная его с символа %, как показано ниже.</p>
+
+<pre class="brush: csharp;">
+%browser
+{
+min-height: 16px;
+padding-left: 20px;
+background-repeat: no-repeat;
+}
+
+.ie
+{
+@extend %browser;
+background-image: url(../img/browser_ie.png);
+}
+
+.cr
+{
+@extend %browser;
+background-image: url(../img/browser_cr.png);
+}
+
+.fx
+{
+@extend %browser;
+background-image: url(../img/browser_fx.png);
+}
+</pre>
+
+<p>Теперь никакого класса browser нет и в помине.</p>
+
+</body>
+</html>
+

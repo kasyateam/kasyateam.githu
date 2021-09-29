@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+  
+  <div class="main" id="main">
+    <div class="header">
+        <p class="header-text">SASS</p>
+        <a href="#" class="header-info">Учебник SASS</a>
+      </div><h1 id="title">
+Команда @each
+</h1>
+
+<p>Команда @each позволяет пробегаться по списку значений и к каждому значению применять набор команд.</p>
+<p>Это, в какой-то мере является разновидностью цикла, но только мы имеем дело не с числовым счётчиком, а списком, значения которого формируем сами.</p>
+<p>Синтаксис следующий.</p>
+<p>Вначале пишется команда @each, затем имя переменной, которая последовательно принимает значения из списка, далее идёт ключевое слово in и список значений разделённый запятыми.</p>
+<p>Тело цикла пишется внутри фигурных скобок.</p>
+
+<pre class="brush: csharp;">
+@each $var in list1, list2...
+{
+    // тело цикла
+}
+</pre>
+
+<p>Чтобы воспользоваться текущим значением, обращаемся к нему как #{$var}.</p>
+<p>В качестве примера возьмём список популярных браузеров.</p>
+<p>Для каждого из них вводим отдельный класс и задаём соответствующую фоновую картинку.</p>
+<p>В Sass это всё запишется в компактной форме.</p>
+
+<pre class="brush: csharp;">
+@each $browser in ie, chrome, firefox, opera
+{
+    .#{$browser}
+    {
+       background: url(../img/#{$browser}.png) no-repeat;
+    }
+}
+</pre>
+
+<p>Здесь мы вводим переменную $browser и список значений: ie, chrome, firefox, opera.</p>
+<p>Внутри команды создаём класс как .#{$browser} с точкой впереди и к каждому классу добавляем фоновое изображение с уникальным именем графического файла.</p>
+<p>Вот что в итоге получится.</p>
+
+<pre class="brush: csharp;">
+.ie
+{
+    background: url(../img/ie.png) no-repeat;
+}
+
+.chrome
+{
+    background: url(../img/chrome.png) no-repeat;
+}
+
+.firefox
+{
+    background: url(../img/firefox.png) no-repeat;
+}
+
+.opera
+{
+    background: url(../img/opera.png) no-repeat;
+}
+</pre>
+</body>
+</html>
+
