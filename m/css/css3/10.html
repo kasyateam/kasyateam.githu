@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main">
+<!-- ПОЧАТОК -->
+<div class="header">
+    <p class="header-text">CSS3</p>
+    <a href="#" class="header-info">Учебник CSS3</a>
+  </div>
+<h1 id="title">
+CSS3 Переходы
+</h1>
+
+<p><b>Обратите внимание:</b> данное свойство поддерживается в браузерах IE 10+, Chrome, Firefox и Opera. Для браузера Safari требуется добавить префикс -webkit.</p>
+<p>С помощью нового CSS3 свойства <b>transition</b> Вы можете создавать эффекты перехода.</p>
+<p>Для создания переходов необходимо указать какое CSS свойство будет изменятся и скорость выполнения этих изменений в секундах.</p>
+
+<pre class="brush: csharp;">
+width: 200px;
+transition: width 4s;
+</pre>
+
+<p>Для того, чтобы добавить эффект перехода к нескольким свойствам просто перечислите их названия через запятую</p>
+
+<pre class="brush: csharp;">
+transition: color 4s, width 4s, background-color 4s;
+</pre>
+
+<h1 id="title">
+Функции смягчения
+</h1>
+
+<p>Плавность выполнения переходов контролируется с помощью функций смягчения. В CSS3 существуют несколько видов таких функций:</p>
+<p>linear</p>
+<p>ease (функция смягчения по умолчанию)</p>
+<p>ease-in</p>
+<p>ease-out</p>
+<p>ease-in-out</p>
+<p>cubic-bezier(x,x,x,x) (поведение функции контролируется переданными параметрами)</p>
+
+<h1 id="title">
+CSS3 свойства переходов
+</h1>
+
+<table>
+<tr>
+<th>Свойство</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>transition</td>
+<td>Позволяет задать значения четырех различных свойств перехода в одном определении.</td>
+</tr>
+<tr>
+<td>transition -property</td>
+<td>Позволяет указать имя CSS свойства, к которому будет применен эффект перехода.</td>
+</tr>
+<tr>
+<td>transition -duration</td>
+<td>Позволяет указать время выполнения перехода (по умолчанию имеет значение 0).</td>
+</tr>
+<tr>
+<td>transition -timing -function</td>
+<td>Позволяет задать функцию смягчения отвечающую за плавность выполнения перехода (по умолчанию имеет значение 'ease').</td>
+</tr>
+<tr>
+<td>transition -delay</td>
+<td>Позволяет задать задержку перед началом выполнения перехода (по умолчанию имеет значение 0).</td>
+</tr>
+</table>
+</body>
+</html>

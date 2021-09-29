@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main"><!-- ПОЧАТОК -->
+    <div class="header">
+        <p class="header-text">CSS3</p>
+        <a href="#" class="header-info">Учебник CSS3</a>
+      </div>
+<h1 id="title">
+CSS3 трансформирование
+</h1>
+
+<p><b>Обратите внимание:</b> свойства рассмотренные в данной главе работают во всех современных браузерах (IE9+, Safari, Chrome, Firefox, Opera), но для некоторых браузеров требуется добавления специальных префиксов. Для браузеров Chrome и Safari требуется префикс -webkit, для браузера IE версии 9 требуется префикс -ms (для IE10 данный префикс не требуется).</p>
+
+<p>С помощью CSS3 свойства <b>transform</b> Вы можете трансформировать элементы.</p>
+<p>В качестве значения данного свойства должна указываться одна из функций трансформирования.</p>
+<p>На данный момент в современных браузерах поддерживаются только 2D трансформации, но в будущем будут также доступны и 3D трансформации.</p>
+<p>С помощью функции <b>translate(x,y)</b> Вы можете сместить элемент на указанное количество пикселей по горизонтали и вертикали.</p>
+
+<pre class="brush: csharp;">
+transform: translate(180px, 180px);
+</pre>
+
+<p>С помощью функции <b>rotate(градусы)</b> Вы можете повернуть элемент на указанное количество градусов по часовой стрелке.</p>
+
+<pre class="brush: csharp;">
+transform: rotate(45deg);
+</pre>
+
+<p>С помощью метода <b>scale(x,y)</b> Вы можете растянуть элемент в ширину или высоту.</p>
+
+<pre class="brush: csharp;">
+transform: scale(1.3, 1);
+</pre>
+
+<p>С помощью метода <b>skew(x, y)</b> Вы можете скосить элемент на указанное количество градусов по горизонтали и вертикали.</p>
+
+<pre class="brush: csharp;">
+transform: skew(40deg, 20deg);
+</pre>
+
+<h1 id="title">
+CSS3 функции трансформирования
+</h1>
+
+<table>
+<tr>
+<th>Функция</th>
+<th>Описание</th>
+</tr>
+<tr>
+<td>translate(x,y)</td>
+<td>Смещает элемент от изначальной позиции по горизонтали и вертикали.</td>
+</tr>
+<tr>
+<td>translateX(x)</td>
+<td>Смещает элемент по горизонтали.</td>
+</tr>
+<tr>
+<td>translateY(y)</td>
+<td>Смещает элемент по вертикали.</td>
+</tr>
+<tr>
+<td>scale(x,y)</td>
+<td>Растягивает элемент по вертикали и горизонтали.</td>
+</tr>
+<tr>
+<td>scaleX(x)</td>
+<td>Растягивает элемент по горизонтали.</td>
+</tr>
+<tr>
+<td>scaleY(y)</td>
+<td>Растягивает элемент по вертикали.</td>
+</tr>
+<tr>
+<td>rotate(градусы)</td>
+<td>Поворачивает элемент по часовой стрелке.</td>
+</tr>
+<tr>
+<td>skew(x,y)</td>
+<td>Скашивает элемент по горизонтали и вертикали.</td>
+</tr>
+<tr>
+<td>skewX(x)</td>
+<td>Скашивает элемент по горизонтали.</td>
+</tr>
+<tr>
+<td>skewY(y)</td>
+<td>Скашивает элемент по вертикали.</td>
+</tr>
+<tr>
+<td>matrix(x,x,x,x,x,x)</td>
+<td>Совмещает все перечисленные выше методы в один.</td>
+</tr>
+</table>
+</body>
+</html>

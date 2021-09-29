@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main"><!-- ПОЧАТОК -->
+    <div class="header">
+        <p class="header-text">CSS3</p>
+        <a href="#" class="header-info">Учебник CSS3</a>
+      </div>
+<h1 id="title">
+Создание элементов со сглаженными углами
+</h1>
+
+<p>С помощью нового CSS3 свойства <b>border-radius</b> Вы можете делать углы элементов сглаженными.</p>
+
+<pre class="brush: csharp;">
+#cir1 { border-radius: 15px; }
+#cir2 { border-radius: 4px; }
+</pre>
+
+<div class="button">Результат работы кода:</div>
+
+<div class="result">
+<div style="border: 2px solid #000000; border-radius: 15px; height: 30px;"></div>
+<div style="border: 2px solid #000000; border-radius: 5px; height: 30px; margin-top: 10px;"></div>
+</div>
+
+<p>Данное свойство может применяться не ко всем углам элемента, а только к определенным:</p>
+<p>- <b>border-top-left-radius</b> делает сглаженным только верхний левый угол элемента;</p>
+<p>- <b>border-top-right-radius</b> делает сглаженным только верхний правый угол элемента;</p>
+<p>- <b>border-bottom-left-radius</b> делает сглаженным только нижний левый угол элемента;</p>
+<p>- <b>border-bottom-right-radius</b> делает сглаженным только нижний правый угол элемента.</p>
+
+<pre class="brush: csharp;">
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+</pre >
+<div class="result">
+<div style="border: 2px solid #000000; border-top-left-radius: 20px; border-bottom-right-radius: 20px; height: 30px;"></div>
+</div>
+<h1 id="title">
+Добавление к элементам тени
+</h1>
+
+<p>С помощью свойства <b>box-shadow</b> Вы можете добавлять к элементам страницы тени.</p>
+<p>Добавляя тени к элементам Вы делаете дизайн страницы более "естественным" (то есть имитирующим реальный мир так как объекты в нем отбрасывают тени).</p>
+<p>Тень может быть внешней и внутренней. Внешние тени создают эффект приподнятости элемента над остальным содержимым, а внутренние создают эффект вдавленности элемента.</p>
+
+<pre class="brush: csharp;">
+box-shadow: 6px 6px 6px 2px black;
+</pre>
+<div class="result">
+ <div  style="border: 2px solid #000000; box-shadow: 6px 6px 6px 2px black; height: 30px;"></div> 
+</div>
+
+<h1 id="title">
+Установка цвета границы
+</h1>
+
+<p><b>Обратите внимание:</b> данное свойство на данный момент поддерживается только браузером Mozilla Firefox.</p>
+<p>С помощью нового CSS3 свойства border-colors Вы можете регулировать цвет каждого пикселя границы.</p>
+
+<pre class="brush: csharp;">
+-moz-border-top-colors: #FF0000 #EB1010 #D22E2E #B03E3E;
+</pre>
+
+<h1 id="title">
+Вставка изображений в качестве границы
+</h1>
+
+<p>В CSS3 было добавлено новое свойство <b>border-image</b> позволяющее вставлять произвольные изображения в качестве границы элемента.</p>
+<p><b>Синтаксис:</b></p>
+
+<pre class="brush: csharp;">
+border-image: путь(1) отступ(2) ширина(3) повторение(4);
+</pre>
+
+<p>Для того, чтобы сделать это необходимо:</p>
+<p>1. Указать путь к изображению-границе;</p>
+<p>2. Указать величину отступа от каждого края изображения для того, чтобы разрезать изображения на 9 частей (верхний левый угол, верхняя сторона, верхний правый угол, левая сторона и т.д.); </p>
+<p><img src="imgslice.jpg" id="image" /></p>
+<p>В данном примере величина отступа установлена равной 30px с каждой стороны изображения (размер клетки равен 10x10 пикселей).</p>
+<p>Черными линиями проиллюстрировано как будет в итоге разрезано изображение.</p>
+<p>Углы и стороны специально выделены разными цветами, чтобы Вы легко могли опознать их в примере далее.</p>
+<p>3. Указать ширину границы в пикселях;</p>
+<p>4. Указать должно ли изображение повторяться (repeat), округляться (round) или растягиваться (stretch), чтобы заполнить границу элемента.</p>
+</body>
+</html>
