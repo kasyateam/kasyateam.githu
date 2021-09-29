@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main">  <div class="header">
+    <p class="header-text">CSS</p>
+    <a href="#" class="header-info">Учебник CSS</a>
+  </div>
+<h1>
+Стиль границ
+</h1>
+
+<p>CSS свойство <b>border-style</b> позволяет установить стиль для границ HTML элемента.</p>
+<p>Значения для установки стилей границ:</p>
+<p>- <b>solid</b> границы будут нарисованы сплошной линией;</p>
+<p>- <b>dashed</b> границы будут нарисованы пунктирной линией;</p>
+<p>- <b>dotted</b> границы будут нарисованы точками;</p>
+<p>- <b>double</b> границы будут нарисованы двойной сплошной линией.</p>
+
+<pre>
+.bor1
+{
+border-style: solid;
+}
+
+.bor2
+{
+border-style: dashed;
+}
+
+.bor3 
+{
+border-style: dotted;
+}
+</pre>
+
+<p><b>Обратите внимание:</b> по умолчанию граница элементов всегда невидима (значение none).</p>
+
+<h1>
+Цвет границы
+</h1>
+
+<p>С помощью CSS свойства <b>border-color</b> Вы можете задать цвет границы HTML элемента.</p>
+<p>Цвет может быть задан следующими способами:</p>
+<p>1. С помощью имени (например 'red' задаст красный цвет);</p>
+<p>2. С помощью RGB значения (например 'rgb(255,255,255)' задаст белый цвет);</p>
+<p>3. С помощью шестнадцатеричного значения (например '#00ff00' задаст зеленый цвет).</p>
+
+<pre>
+border-style: solid;
+border-color: red;
+</pre>
+
+<h1>
+Толщина границы
+</h1>
+
+<p>С помощью CSS свойства <b>border-width</b> Вы можете задать толщину границы HTML элемента.</p>
+<p>Толщина может быть указана либо в пикселях, либо с помощью предопределенных значений: thin, medium, thick (тонкая, средняя, толстая).</p>
+
+<pre>
+.bor1 
+{
+border-width: 4px;
+}
+</pre>
+
+<div>Результат работы кода:</div>
+<div class="result">
+<table style="border: 4px solid black;">
+<tr>
+<td>border-width = 4px</td>
+</tr>
+</table>
+</div>
+
+<h1>
+Задание стилей для отдельных сторон
+</h1>
+
+<p>Рассмотренные ранее свойства могут также применяться к отдельным сторонам границы.</p>
+<p>Их названия перечислены на рисунке ниже:</p>
+<div class="result">
+<img src="boxmodel1.jpg" id="image" />
+</div>
+<pre>
+border-left-style: solid;
+border-right-style: solid;
+border-width: 2px;
+</pre>
+
+<p>Существует способ быстрого задания стилей границ.</p>
+<p>Например в результате применения border-style: dashed double solid groove;</p>
+<p>К верхней границе будет применено dashed, к правой double, к нижней solid, а к левой groove.</p>
+<p>Если Вы укажете только два значения, например border-style: dashed double, то верхняя и нижняя граница будут оформлены как dashed, а левая и правая граница будут оформлены как double.</p>
+
+<h1>
+Стенографическое задание свойств
+</h1>
+
+<p>Для того чтобы сократить длину кода, в CSS предусмотрен стенографический способ записи.</p>
+<p>Стенографическая форма записи объединяет все свойства оформления границ в одном свойстве border.</p>
+
+<pre>
+border: 2px solid green;
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<table>
+<tr>
+<td style="border: 2px solid #23FF00;"> border = green</td>
+</tr>
+</table>
+</div>
+<p>Порядок следования свойств в стенографической форме записи:</p>
+<p>- border-width</p>
+<p>- border-style</p>
+<p>- border-color</p>
+<p><b>Обратите внимание:</b> Вы можете пропускать неиспользуемые свойства.</p>
+
+<h1>
+Внешняя граница
+</h1>
+
+<p>Помимо обычной границы элементы могут иметь еще и внешнюю границу, которая задается с помощью CSS свойства outline.</p>
+
+<pre>
+.out1
+{
+outline-style:dashed;
+outline-color:green;
+outline-width:4px; 
+border-style:solid; 
+}
+</pre>
+<div class="result">
+<table>
+<tr>
+<td style="outline-style:dashed;outline-color:green;outline-width:4px;border-style:solid;"> border = green</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

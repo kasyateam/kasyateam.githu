@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main">
+  <div class="header">
+    <p class="header-text">CSS</p>
+    <a href="#" class="header-info">Учебник CSS</a>
+  </div>
+<h1 class="title">
+Что такое CSS?
+</h1>
+
+<p>CSS расшифровывается Cascading Style Sheets (Каскадные Документы Стилей).</p>
+<p>С помощью CSS Вы можете оформлять HTML документы.</p>
+<p>CSS было представлено вместе с HTML 4.0 и создавалось для разрешения проблем с оформлением, возникающих в предыдущих версиях HTML.</p>
+
+<pre class="brush: csharp;">
+#css table
+{
+  border-collapse:collapse;
+  font-family:'arial';
+}
+
+#css th
+{
+  background-color:#DC63C2;
+  padding:7px;
+  font-size:1.1em;
+  border:1px black solid;
+  color:white;
+}
+
+#css td
+{
+  padding:7px;
+  border:1px solid;
+}
+</pre>
+
+<div>Результат работы кода:</div>
+<div class="result">
+<table style="border:1px solid; padding:7px;">
+<tr>
+<td style="background-color:#DC63C2; border:1px black solid; color:white;">Страна</td>
+<td style="background-color:#DC63C2; border:1px black solid; color:white;">Население</td>
+</tr>
+<tr>
+<td style="border:1px black solid;">Китай</td>
+<td style="border:1px black solid;">1347</td>
+</tr>
+</table>
+</div>
+<h1>
+Использование стилей разрешает множество проблем
+</h1>
+
+<p>Во время создания HTML в 1991 году не предполагалось, что он будет содержать теги, позволяющие оформлять документы.</p>
+<p>Изначально HTML был создан только для группировки текста:</p>
+
+<pre>
+&lt;h1&gt;Заголовок 1&lt;/h1&gt;
+&lt;p&gt;Какой-то текст&lt;/p&gt;
+&lt;h1&gt;Заголовок 2&lt;/h1&gt;
+&lt;p&gt;Какой-то текст&lt;/p&gt;
+</pre>
+
+<p>Когда в HTML 3.2 были добавлены такие теги как &lt;font&gt; (данный тег использовался для изменения шрифта элементов) оформление и разметка смешались в единое целое и оформление элементов стало занимать огромное количество времени.</p>
+<p>Для того, чтобы разрешить эту проблему в конце 1996 года W3C (Консорциум Всемирной Паутины - занимается разработкой веб-стандартов) представил CSS.</p>
+<p>CSS позволяет хранить информацию об оформлении HMTL документа в отдельном внешнем файле с расширением .css.</p>
+<p>Редактируя лишь один этот файл стало возможным изменение оформления целого веб-сайта.</p>
+<p>На данный момент CSS является стандартом оформления HTML документов и поддерживается всеми современными браузерами.</p>
+</body>
+</html>

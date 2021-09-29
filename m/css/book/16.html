@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main">  <div class="header">
+    <p class="header-text">CSS</p>
+    <a href="#" class="header-info">Учебник CSS</a>
+  </div>
+<h1>
+Центрирование с помощью margin
+</h1>
+
+<p>Блоковые элементы могут быть выравнены по центру установкой margin с левой и правой стороны значения auto.</p>
+<p><b>Обратите внимание:</b> если ширина блокового элемента будет равна 100%, то он не будет выравнен (т.к. доступного margin нет).</p>
+
+<pre>
+.ali1 
+{
+margin-left:auto;
+margin-right:auto;
+width:50%;
+}
+</pre>
+
+<div>Результат работы кода:</div>
+
+<div class="result">
+<p style="text-align: center;"> Данный абзац выравнен по центру. </p>
+</div>
+
+<h1>
+Выравнивание с помощью свойств позиционирования
+</h1>
+
+<p>Вы можете выравнивать элементы с помощью свойств позиционирования.</p>
+
+<pre>
+.pos
+{
+position: absolute;
+width: 400px;
+left: 0px;
+background-color: green;
+}
+</pre>
+
+<h1>
+Свойство float
+</h1>
+
+<p>Элементы в CSS также могут быть выравнены с помощью свойства float.</p>
+<p>Элемент выравненный с помощью float будет прижат к левой или правой границе родительского элемента (в зависимости от заданного значения) и заставит следующие за ним элементы "обтекать" его с противоположной стороны.</p>
+<p>Свойство float часто используют с картинками (как в примере ниже), но оно также бывает полезно при обычном выравнивании.</p>
+
+<pre>
+.fl1 
+{
+float: right;
+}
+</pre>
+
+<h1>
+Очищение элементов от float
+</h1>
+
+<p>HTML элементы следующие за элементом с заданным float будут его "обтекать", чтобы избежать этого используйте свойство clear.</p>
+<p>Значения переданные данному свойству (left или right) указывают с какой стороны находится элемент с float.</p>
+<p>Если Вы не уверены или элементы с float находятся с двух сторон воспользуйтесь свойством both.</p>
+
+<pre>
+.fl5 
+{
+clear: both;
+}
+</pre>
+</body>
+</html>

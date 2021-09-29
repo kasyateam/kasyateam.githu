@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main">  <div class="header">
+    <p class="header-text">CSS</p>
+    <a href="#" class="header-info">Учебник CSS</a>
+  </div>
+<h1>
+Проблемы совместимости
+</h1>
+
+<p>При создании сайта веб-разработчикам часто приходится сталкиваться с проблемами совместимости.</p>
+<p>Дело в том, что не все браузеры одинаково отображают одинаково оформленные страницы.</p>
+<p>Основные браузеры "доставляющие неудобства" это Internet Explorer 8 и Internet Explorer 7, доля использования которых на сегодняшний день достаточно велика.</p>
+
+<h1>
+Использование условных комментариев
+</h1>
+
+<p>Для того, чтобы избежать проблем с некорректным отображением страниц в браузерах веб-разработчики часто прибегают к использованию условных комментариев.</p>
+<p>Вы можете применять условные комментарии для выбора определенных версий Internet Explorer:</p>
+
+<pre>
+&lt;!--[if IE 8]&gt;&Scy;&tcy;&icy;&lcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&ncy;&ycy;&iecy; &zcy;&dcy;&iecy;&scy;&softcy; &bcy;&ucy;&dcy;&ucy;&tcy;
+&pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&ycy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &dcy;&lcy;&yacy; Internet Explorer 8
+&lt;![endif]--&gt;
+
+&lt;!--[if IE 7]&gt;&Scy;&tcy;&icy;&lcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&ncy;&ycy;&iecy; &zcy;&dcy;&iecy;&scy;&softcy; &bcy;&ucy;&dcy;&ucy;&tcy; 
+&pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&ycy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &dcy;&lcy;&yacy; Internet Explorer 7
+&lt;![endif]--&gt;
+</pre>
+
+<p>Или для выбора версий браузера удовлетворяющих определенным условиям:</p>
+
+<pre>
+&lt;!--[if lt IE 8]&gt; &Scy;&tcy;&icy;&lcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&ncy;&ycy;&iecy; &zcy;&dcy;&iecy;&scy;&softcy; &bcy;&ucy;&dcy;&ucy;&tcy; 
+&pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&ycy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &dcy;&lcy;&yacy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&ocy;&vcy;  Internet Explorer,
+&vcy;&iecy;&rcy;&scy;&icy;&yacy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy; &ncy;&icy;&zhcy;&iecy; 8 &lt;![endif]-- &gt;
+
+&lt;!--[if lte IE 8]&gt; &Scy;&tcy;&icy;&lcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&ncy;&ycy;&iecy; &zcy;&dcy;&iecy;&scy;&softcy; &bcy;&ucy;&dcy;&ucy;&tcy; 
+&pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&ycy; &dcy;&lcy;&yacy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&acy; Internet Explorer 8 &icy; 
+&bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&ocy;&vcy; IE, &vcy;&iecy;&rcy;&scy;&icy;&yacy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy; &ncy;&icy;&zhcy;&iecy; 8&lt;![endif]-- &gt;
+
+&lt;!--[if gt IE 8]&gt; &Scy;&tcy;&icy;&lcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&ncy;&ycy;&iecy; &zcy;&dcy;&iecy;&scy;&softcy;
+&bcy;&ucy;&dcy;&ucy;&tcy; &pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&ycy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &dcy;&lcy;&yacy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&ocy;&vcy;Internet 
+Explorer, &vcy;&iecy;&rcy;&scy;&icy;&yacy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy; &vcy;&ycy;&shcy;&iecy; 8 &lt;![endif]-- &gt;
+
+&lt;!--[if gte IE 8]&gt; &Scy;&tcy;&icy;&lcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&ncy;&ycy;&iecy; &zcy;&dcy;&iecy;&scy;&softcy; &bcy;&ucy;&dcy;&ucy;&tcy; 
+&pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&ycy; &dcy;&lcy;&yacy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&acy;  Internet Explorer 8 &icy; 
+&bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&ocy;&vcy; IE, &vcy;&iecy;&rcy;&scy;&icy;&yacy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&khcy; &vcy;&ycy;&shcy;&iecy; 8&lt;![endif]-- &gt;
+</pre>
+
+<h1>
+Примеры использования условных комментариев
+</h1>
+
+<p>Обычно для избежания проблем с оформлением разработчики создают три внешних CSS файла с различным оформлением для:</p>
+<p>1. Internet Explorer 8 (ie8.css)</p>
+<p>2. Internet Explorer 7 (ie7.css)</p>
+<p>3. Для всех остальных браузеров Firefox, IE8+, Opera, Safari, Chrome (all.css)</p>
+<p>Далее эти внешние файлы включаются в HTML следующим образом:</p>
+
+<pre>
+&lt;!--[if IE 8]&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; 
+href=&quot;ie8.css&quot; /&gt; &lt;![endif]-- &gt;
+
+&lt;!--[if IE 7]&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; 
+href=&quot;ie7.css&quot; /&gt; &lt;![endif]-- &gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; 
+href=&quot;all.css&quot;&gt;
+</pre>
+
+<p>Если пользователь использует IE8, то для оформления страницы будет использован файл ie8.css.</p>
+<p>Если пользователь использует IE7, то для оформления страницы будет использован ie7.css, если пользователь использует другой браузер, то для оформления будет использован all.css.</p>
+<p><b>Обратите внимание:</b> данный код должен располагаться в секции head.</p>
+
+<h1>
+Добавлять ли поддержку IE7?
+</h1>
+
+<p>Так как доля использования этого браузера среди пользователей заметно упала (его используют ~2.8%) и продолжает стремительно падать, возникает справедливый вопрос:</p>
+<p>- А стоит ли вообще добавлять его поддержку на сайт?</p>
+<p>Мы считаем, что конечный выбор Вы должны совершать исходя из личных соображений и анализа трафика сайта.</p>
+<p>Если доля использования IE7 среди посетителей Вашего сайта мала, то можно отказаться от его поддержки.</p>
+<p>Проанализировав лог посещений тестового сайта мы решили отказаться от поддержки IE7 т.к. доля посетителей с данным браузером меньше 0.3%.</p>
+<p>Низкая доля посетителей объясняется в основном тематикой сайта.</p>
+<p>Некоторые веб-разработчики сейчас прибегают к побудительным мерам, которые призывают пользователей со старыми версиями браузеров обновить их.</p>
+<p>C помощью, например, PHP определяется версия браузера, и если это IE7 (или любой другой устаревший браузер) пользователю вместо запрашиваемой страницы выдается страница, на которой его просят обновить браузер и приводят ссылки на соответствующие ресурсы.</p>
+
+<pre>
+&lt;?php
+if (stristr($_SERVER['HTTP_USER_AGENT'],'MSIE 6.0')
+{
+header("Location: ссылка и просьба обновления");
+}
+?&gt;
+</pre>
+</body>
+</html>

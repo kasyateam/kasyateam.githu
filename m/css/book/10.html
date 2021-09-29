@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main">  <div class="header">
+    <p class="header-text">CSS</p>
+    <a href="#" class="header-info">Учебник CSS</a>
+  </div>
+<h1>
+Пример оформления таблицы
+</h1>
+<pre>
+table, th, td
+{
+border-style: solid;
+border-width: 1px;
+border-collapse: collapse;
+padding: 2px;
+}
+
+th 
+{
+height: 28px;
+background-color: #f892dc;
+color: white;
+border-color: black;
+}
+
+.ts1 
+{
+background-color: #ffeffb;
+}
+</pre>
+
+<h1>
+Ширина и Высота таблицы
+</h1>
+
+<p>С помощью CSS свойства width Вы можете устанавливать ширину таблицы.</p>
+<p>В основном ширина устанавливается в пикселях или %, но можно также использовать cm и em.</p>
+
+<pre>
+.tab1 
+{
+width:100%;
+}
+
+.tab2
+{
+width:70%;
+}
+
+.tab3
+{
+width:300px;
+}
+</pre>
+
+<p>CSS свойство height позволяет установить высоту таблицы.</p>
+<p>Высота в основном указывается в пикселях, но можно также использовать cm и em.</p>
+
+<pre>
+height: 7cm;
+</pre>
+
+<h1>
+Оформление границ
+</h1>
+
+<p>Для оформления табличных границ в CSS используется свойство border.</p>
+
+<pre>
+table, th, td 
+{
+border-style: solid;
+border-color: green;
+border-width: 1px;
+}
+</pre>
+
+<p><b>Обратите внимание:</b> свойство border не является уникальным свойством таблиц оно может использоваться с любыми элементами. Данное свойство будет подробно рассмотрено далее в данном учебнике.</p>
+
+<h1>
+Свойство border-collapse
+</h1>
+
+<p>Таблица в примере выше имеет двойную границу, потому что и сама таблица и ее ячейки (элементы th и td) имеют собственные границы.</p>
+<p>Свойство <b>border-collapse</b> позволяет соединить границы таблицы и ячеек.</p>
+<p>Соединенные границы обычно смотрятся более аккуратно и красиво.</p>
+
+<pre>
+border-collapse: collapse;
+</pre>
+
+<h1>
+Выравнивание табличного текста
+</h1>
+
+<p>С помощью свойства text-align Вы можете выравнивать текст табличных ячеек по горизонтали.</p>
+<p>Текст может быть выравнен:</p>
+<p>- По левому краю (значение left)</p>
+<p>- По правому краю (right)</p>
+<p>- По центру (center)</p>
+
+<pre>
+text-align: center;
+</pre>
+
+<p>С помощью свойства vertical-align Вы можете выравнивать текст табличных ячеек по вертикали.</p>
+<p>Текст может быть выравнен:</p>
+<p>- По верхней границе (top)</p>
+<p>- По центру (middle)</p>
+<p>- По нижней границе (bottom)</p>
+
+<pre>
+vertical-align: top;
+</pre>
+
+<h1>
+Свойство padding
+</h1>
+
+<p>С помощью свойства padding Вы можете устанавливать величину отступа между границей ячейки и ее содержимым.</p>
+
+<pre>
+#tab1 td
+{
+padding: 10px;
+}
+</pre>
+</body>
+</html>

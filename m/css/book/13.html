@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://kasyateam.ga/m/kmp/style-1.css">
+
+</head>
+
+<body>
+ <div class="main" id="main">  <div class="header">
+    <p class="header-text">CSS</p>
+    <a href="#" class="header-info">Учебник CSS</a>
+  </div>
+<h1>
+CSS Padding
+</h1>
+
+<p>В CSS существует два вида отступов: <b>внутренние и внешние</b>.</p>
+<p>Внутренний отступ - это расстояние между содержимым элемента и его границей.</p>
+<p>Внешний отступ - это расстояние отступаемое с внешней стороны границы элемента.</p>
+<p>Величина отступов может определяться в пикселях (px), сантиметрах (cm), процентах (%), em.</p>
+<p>CSS свойство padding позволяет установить величину внутреннего отступа.</p>
+
+<pre>
+.pad1
+{
+padding:20px;
+}
+
+.pad2
+{
+padding: 0px;
+}
+</pre>
+
+<div>Результат работы кода:</div>
+<div class="result">
+<table>
+<tr>
+<td style="border: 1px solid black; padding: 20px;"> padding = 20px</td>
+</tr>
+<tr>
+<td style="border: 1px solid black; padding: 0px;">padding = 0px</td>
+</tr>
+</table>
+</div>
+<p>Величина отступа может быть независимо определена для каждой стороны элемента:</p>
+
+<div class="result">
+<img src="тян.jpg" id="image" />
+</div>
+<pre>
+/* Отступ от содержимого элемента
+до его верхней границы равен 30,
+до левой 20, 
+до нижней 10 
+и до правой 40 пикс. */
+
+.pad1
+{
+padding-top:30px;
+padding-left:20px;
+padding-bottom:10px;
+padding-right:40px;
+}
+</pre>
+
+<h1>
+CSS Margin
+</h1>
+
+<p>С помощью CSS свойства margin Вы можете задать величину внешнего отступа.</p>
+
+<pre>
+.div2 { margin: 10px; }
+</pre>
+
+<div>Результат работы кода:</div>
+<div class="result">
+<div style="border: 1px solid black;"> div1 </div>
+<div style="border: 1px solid black; margin: 10px;"> div2 </div>
+</div>
+<h1>
+Краткая форма записи
+</h1>
+
+<p>Для того, чтобы сократить размер кода Вы можете определять величину отступа для каждой стороны элемента используя краткую форму записи свойств.</p>
+
+<pre>
+/* Отступ от содержимого до границы элемента
+сверху будет равен 60, 
+справа 20,
+снизу 40,
+а слева 50 пикселям */
+
+.stl
+{
+padding: 60px 20px 40px 50px;
+}
+
+/* Внешний отступ сверху элемента
+будет равен 50, справа 20,
+снизу 40 и слева 50 пикселям */
+
+.mar1
+{
+margin: 50px 20px 40px 50px;
+}
+</pre>
+</body>
+</html>
