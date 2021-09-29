@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,18 +7,27 @@
      <script type="text/javascript" src="FileSaver.js"></script>
     <style>
 
+@font-face {
+  font-family: "font";
+  src: url("https://kasyateam.ga/m/comfortaa.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 body{
+    font-family: "font";
 background-color: #212121;
 color: seashell;
 }
 main{
+    font-family: "font";
     padding: 5px;
     max-width: 550px;
     margin-left: auto;
     margin-right: auto;
 }
 textarea{
+    font-family: "font";
     border-radius: 10px;
     border: solid 2px;
     border-color: #363636;
@@ -31,6 +40,7 @@ textarea{
     resize: none; 
 }
 .button{
+    font-family: "font";
     background-color: #8048f8;
     border-radius: 10px;
     border: none;
@@ -42,17 +52,33 @@ textarea{
     outline: none;
 }
 .code{
+    font-family: "font";
     box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     width: max-content;
     box-sizing: border-box;
     border-radius: 10px;
 }
+hr{
+
+background: #AEAEAE;
+border: 1px #AEAEAE solid;
+border-radius: 50px;
+width: 92%;
+margin-bottom: 20px;
+box-sizing: border-box;
+}
+.info{
+background: #7038f2;
+color:#fff;
+padding: 8px;
+border-radius:10px;
+margin: 8px;
+box-sizing: border-box;
 
 
-     </style>
+}
+</style>
     <title></title>
-    <style>
-    </style>
 </head>
 <body>
 <main>
@@ -78,12 +104,15 @@ textarea{
 <div id="result"></div>
 
 <div id="createPNGButton">
+    <hr>
  <button class="button" onclick="downloadImage()">Скачать QR-Code</button>        
 </div>
-
+<div class="info">
+    <h3>Это Kasya UI!</h3>
+    <p>Ознакомьтесь с новым UI для мобильного приложения</p>
+    <p>Здравствуйте, мы демонстрируем свой UI для наших приложений. Более подробно о Kasya UI вы можете узнать в нашем сообществе ВКонтакте. </p>
+  </div>
 </main>
-
-
 
 
 
