@@ -1,5 +1,51 @@
-<style>
-       body{
-         background: #212121
-  }
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main">
+  
+<div class="header">
+  <p class="header-text">Kasya ID</p>
+  <a onclick="reg()" class="header-info">Регистрация</a>
+  <a onclick="res()" class="header-info">Сброс</a>
+</div>
+  
+  <div class="post">
+    <div class="post-avtor">Kasya ID</div>
+    <div class="post-info">Kasya ID - это ваш персонализованный ключ для авторизации в экосистеме Kasya</div>
+    <div class="post-info" id="kasyaid">Выберите раздел</div>
+    <div class="post-time">kasyateam</div>
+  </div>
+
+<hr>
+<div class="end">connect.kasyateam.tk</div>
+  <div class="info">
+    <h3>Это Kasya UI!</h3>
+    <p>Ознакомьтесь с новым UI для мобильного приложения</p>
+    <p>Здравствуйте, мы демонстрируем свой UI для наших приложений. Более подробно о Kasya UI вы можете узнать в нашем сообществе ВКонтакте. </p>
+  </div>
+  </div>
+  
+  <script>
+    function reg() {
+      document.getElementById('kasyaid').innerHTML = 'Для создания ключа, используется электронная почта и пароль. <br><br> Учтите, что мы можем удалить ваш аккаунт, если он выглядит подозрительно. Но перед этим, он будет заморожен. Если вы заметили, что ваш аккаунт не совершает вход и нарушена работа сервиса при совершенном входе, то сообщите в поддержку. <br/><br/>Обратите внимание, что для подтверждения пользователя, перед процессом восстановления, мы сбросим пароль, отправив на электронную почту сброс-ссылку.'
+    }
+    function res() {
+      
+      
+     document.getElementById('kasyaid').innerHTML = 'Что делать, если вы забыли пароль? <br/><br/>При такой ситуации, так же обратитесь в поддержку, если вход не совершен. <br/><br/>Если у вас совершен вход, но чувствуете, что забыли пароль, то перейдите в раздел "Kasya ID", где можете запросить сброс-ссылку.'
+      
+      
+      
+    }
+  </script>
+</body>
+
+</html>
