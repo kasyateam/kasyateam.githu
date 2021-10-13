@@ -1,4 +1,4 @@
-var on = 0
+var on = 1
 
 //автопостройка шапки
 document.head.innerHTML = '<meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title></title><link rel="stylesheet" href="style.css">'
