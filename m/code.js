@@ -5,8 +5,8 @@ document.head.innerHTML = '<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
 // Уведомления
 if (on == 1){
-    document.getElementById('info-1').innerHTML = 'Это Kasya UI!';
-    document.getElementById('info-2').innerHTML = 'Ознакомьтесь с новым UI для мобильного приложения<br/>Здравствуйте, мы демонстрируем свой UI для наших приложений. Более подробно о Kasya UI вы можете узнать в нашем сообществе ВКонтакте.';    
+    document.getElementById('info-1').innerHTML = 'Нововведения!';
+    document.getElementById('info-2').innerHTML = 'Мы встраиваем новые функции перепостроения JavaScript';    
 }else{
     document.getElementById('info-1').innerHTML = 'На сегодня ничего...';
 }
