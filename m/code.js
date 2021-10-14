@@ -1,14 +1,14 @@
 //Та самая панель переключения
 
-var on = 0 //Включение уведомлений
+var on = 1 //Включение уведомлений
 
 
 //Тестовое окно
 var title = ''
 var post_info = ''
 var head = ''
-var u_title = 'Глобальные настройки'
-var text_info = 'Скоро всй будет'
+var u_title = ''
+var text_info = ''
 var head = ''
 
 //Элементы
