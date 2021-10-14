@@ -95,7 +95,7 @@ if (window.location.pathname == '/index'){
 
 //Исключение откл элементов:
 
-/*/Заголовок
+/*Заголовок
 if(document.getElementById('header-text').innerHTML ==''){
     document.getElementById('header').remove();
 }
@@ -107,4 +107,4 @@ if(document.getElementById('post-info').innerHTML ==''){
 //Уведомление
 if(document.getElementById('text_info').innerHTML =='' && document.getElementById('').innerHTML =='var u_title' == ''){
     document.getElementById('post').remove();
-}
+}*/
