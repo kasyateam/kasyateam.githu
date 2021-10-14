@@ -7,8 +7,8 @@ var on = 1 //Включение уведомлений
 var title = ''
 var post_info = ''
 var head = ''
-var u_title = ''
-var text_info = ''
+var u_title = 'Обновление'
+var text_info = 'Создание динамического контента и обновление Kasya UI'
 var head = ''
 
 //Элементы
@@ -86,6 +86,7 @@ if (window.location.pathname == '/m/index'){
 
 }else if(window.location.pathname == '/m/kmp'){
 
+    var head = 'Курсы программирования'
     document.title = 'K.Feed | Курсы';
     document.body.innerHTML = '<main><div class="post"><div class="post-avtor">HTML</div><div class="post-info">HTML курс <br/><a href="https://kasyateam.github.io/m/html/start.html">Перейти</a></div><div class="post-time"></div></div><div class="post"><div class="post-avtor">CSS</div><div class="post-info">CSS курс <br/><a href="https://kasyateam.github.io/m/css/start.html">Перейти</a></div><div class="post-time"></div></div><div class="post"><div class="post-avtor">JavaScript</div><div class="post-info">JavaScript курс <br/><a href="https://kasyateam.github.io/m/js/start.html">Перейти</a></div><div class="post-time"></div></div></main>'
 }else{
