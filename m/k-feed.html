@@ -1,42 +1,30 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ru">
 
-  <title>HTML</title>
-  <link rel="stylesheet" href="style.css">
+<head>
+  <style>
+@font-face {
+  font-family: "font";
+  src: url("comfortaa.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+body{
+  font-family: "font";
+  background: #212121;
+  color:#fff;
+  font-size: 15pt;
+  margin-top: 60px;
+  padding-top: 25px;
+  box-sizing: border-box;
+}
+</style>
 </head>
-<body>
-<div class="main">
-  
 
-  
-  <div class="post">
-    <div class="post-avtor"></div>
-    <div class="post-info"></div><center>
-<img style="width: 40%" src="https://kasyateam.github.io/assets/img/kasya_stick.png" alt="K.Feed">
+<body onload="ok()">
+<div id="load" class="load">Загрузка</div>
+<script src="code.js"></script>
 
-<img style="width: 60%; border-radius: 20px;" src="https://kasyateam.github.io/assets/img/QR-download.png" alt="K.Feed">
+</body>
 
-
-</center>
-    
-    
-    <div class="post-time"></div>
-  </div>
-
-<hr>
-<div class="end"></div>
-  
-<div id="info-all" class="info">
-  <h3 id="info-1"></h3>
-  <p id="info-2"></p>
-</div>
-  </div>
-  
-  
-
-
-  <script src="code.js"></script>
-</body></html>
+</html>
