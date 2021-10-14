@@ -1,49 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title></title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+@font-face {
+  font-family: "font";
+  src: url("comfortaa.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+body{
+  font-family: "font";
+  background: #212121;
+  color:#fff;
+  font-size: 15pt;
+  margin-top: 60px;
+  padding-top: 25px;
+  box-sizing: border-box;
+}
+</style>
 </head>
 
-<body>
-  
-<main>
-  
-<div class="header">
-  <p class="header-text">Курсы программирования</p>
-</div>
+<body onload="ok()">
+<div id="load" class="load">Загрузка</div>
 
-  <div class="post">
-    <div class="post-avtor">HTML</div>
-    <div class="post-info">HTML курс <br/><a href="https://kasyateam.github.io/m/html/start.html">Перейти</a></div>
-    <div class="post-time"></div>
-  </div>
-    <div class="post">
-    <div class="post-avtor">CSS</div>
-    <div class="post-info">CSS курс <br/><a href="https://kasyateam.github.io/m/css/start.html">Перейти</a></div>
-    <div class="post-time"></div>
-  </div>
-    <div class="post">
-    <div class="post-avtor">JavaScript</div>
-    <div class="post-info">JavaScript курс <br/><a href="https://kasyateam.github.io/m/js/start.html">Перейти</a></div>
-    <div class="post-time"></div>
-  </div>
-  
-<hr>
-<div class="end">Больше ничего нет :(</div>
 
-<div id="info-all" class="info">
-  <h3 id="info-1"></h3>
-  <p id="info-2"></p>
-</div>
 
-  </main>
 
-  <script src="code.js"></script>
+<script src="code.js"></script>
+
 </body>
 
 </html>
