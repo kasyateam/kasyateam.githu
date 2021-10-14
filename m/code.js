@@ -100,12 +100,12 @@ if (window.location.pathname == '/index'){
 //Исключение откл элементов:
 
 //Заголовок
-if(document.getElementById('header-text').innerHTML =='{head}'){
+if(document.getElementById('header-text').innerHTML ==''){
     document.getElementById('header').remove();
 }
 
 //Постинг
-if(document.getElementById('post-info').innerHTML =='{post-info}'){
+if(document.getElementById('post-info').innerHTML ==''){
     document.getElementById('post').remove();
 }
 //Уведомление
