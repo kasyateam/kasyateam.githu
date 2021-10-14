@@ -95,7 +95,7 @@ if (window.location.pathname == '/index'){
 
 //Исключение откл элементов:
 
-//Заголовок
+/*/Заголовок
 if(document.getElementById('header-text').innerHTML ==''){
     document.getElementById('header').remove();
 }
