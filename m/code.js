@@ -32,10 +32,10 @@ document.body.innerHTML = '<main>'+head+post+del+uved+'</main>'
 
 // Уведомления
 if (on == 1){
-    document.getElementById('info-1').innerHTML = 'Это Kasya UI!';
-    document.getElementById('info-2').innerHTML = 'Ознакомьтесь с новым UI для мобильного приложения<br/>Здравствуйте, мы демонстрируем свой UI для наших приложений. Более подробно о Kasya UI вы можете узнать в нашем сообществе ВКонтакте.';    
+    document.getElementById('info-1').innerHTML = 'Обновление';
+    document.getElementById('info-2').innerHTML = 'Создание динамического контента и обновление Kasya UI';    
 }else{
-   // document.getElementById('info-1').remove()
+    document.getElementById('info-1').remove()
 }
 
 
@@ -73,7 +73,7 @@ if (window.location.pathname == '/m/index'){
 }else if(window.location.pathname == '/m/kasya-id'){
 
     document.title = 'K.Feed | Kasya ID';
-
+    document.body.innerHTML = '<main>'+head+post+del+uved+'</main>'    
 
 
     document.getElementById('reg').onclick = function(){
