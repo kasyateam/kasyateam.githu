@@ -45,7 +45,7 @@ if (on == 1){
 
 
 //Для K.Feed m
-if (window.location.pathname == '/index'){
+if (window.location.pathname == '/m/index'){
 
     document.title = 'K.Feed | Главная';
     document.getElementById('index-date').innerHTML = 'Добро пожаловать';
@@ -53,14 +53,14 @@ if (window.location.pathname == '/index'){
 
 
 
-}else if(window.location.pathname == '/feed'){
+}else if(window.location.pathname == '/m/feed'){
 
     document.title = 'K.Feed | Новости';
 
 
 
 
-}else if(window.location.pathname == '/k-feed'){
+}else if(window.location.pathname == '/m/k-feed'){
 
     var post_info = '<center><img style="width: 40%" src="https://kasyateam.github.io/assets/img/kasya_stick.png" alt="K.Feed"><img style="width: 60%; border-radius: 20px;" src="https://kasyateam.github.io/assets/img/QR-download.png" alt="K.Feed"></center>'
     document.title = 'K.Feed';
@@ -70,7 +70,7 @@ if (window.location.pathname == '/index'){
 
 
 
-}else if(window.location.pathname == '/kasya-id'){
+}else if(window.location.pathname == '/m/kasya-id'){
 
     document.title = 'K.Feed | Kasya ID';
 
@@ -84,7 +84,7 @@ if (window.location.pathname == '/index'){
         document.getElementById('kasyaid').innerHTML = 'Что делать, если вы забыли пароль? <br/><br/>При такой ситуации, так же обратитесь в поддержку, если вход не совершен. <br/><br/>Если у вас совершен вход, но чувствуете, что забыли пароль, то перейдите в раздел "Kasya ID", где можете запросить сброс-ссылку.'
     }
 
-}else if(window.location.pathname == '/kmp'){
+}else if(window.location.pathname == '/m/kmp'){
 
     document.title = 'K.Feed | Курсы';
     document.body.innerHTML = '<main><div class="post"><div class="post-avtor">HTML</div><div class="post-info">HTML курс <br/><a href="https://kasyateam.github.io/m/html/start.html">Перейти</a></div><div class="post-time"></div></div><div class="post"><div class="post-avtor">CSS</div><div class="post-info">CSS курс <br/><a href="https://kasyateam.github.io/m/css/start.html">Перейти</a></div><div class="post-time"></div></div><div class="post"><div class="post-avtor">JavaScript</div><div class="post-info">JavaScript курс <br/><a href="https://kasyateam.github.io/m/js/start.html">Перейти</a></div><div class="post-time"></div></div></main>'
