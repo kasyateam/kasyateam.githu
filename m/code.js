@@ -66,10 +66,11 @@ if (window.location.pathname == '/index'){
 
 }else if(window.location.pathname == '/k-feed'){
 
+    var post_info = '<center><img style="width: 40%" src="https://kasyateam.github.io/assets/img/kasya_stick.png" alt="K.Feed"><img style="width: 60%; border-radius: 20px;" src="https://kasyateam.github.io/assets/img/QR-download.png" alt="K.Feed"></center>'
     document.title = 'K.Feed';
     document.getElementById('info-1').innerHTML = 'Это важно';
     document.getElementById('info-2').innerHTML = 'Данный раздел доступен только в мобильной версии<br/> Наведите камеру на QR код и скачайте K.Feed!';
-
+    document.body.innerHTML = '<main>'+head+post+del+uved+'</main>'
 
 
 
