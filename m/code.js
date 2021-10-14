@@ -1,6 +1,6 @@
 //Та самая панель переключения
 
-var on = 0 //Включение уведомлений
+var on = 1 //Включение уведомлений
 
 
 //Тестовое окно
@@ -87,7 +87,7 @@ if (window.location.pathname == '/index'){
 }else if(window.location.pathname == '/kmp'){
 
     document.title = 'K.Feed | Курсы';
-
+    document.body.innerHTML = '<main><div class="post"><div class="post-avtor">HTML</div><div class="post-info">HTML курс <br/><a href="https://kasyateam.github.io/m/html/start.html">Перейти</a></div><div class="post-time"></div></div><div class="post"><div class="post-avtor">CSS</div><div class="post-info">CSS курс <br/><a href="https://kasyateam.github.io/m/css/start.html">Перейти</a></div><div class="post-time"></div></div><div class="post"><div class="post-avtor">JavaScript</div><div class="post-info">JavaScript курс <br/><a href="https://kasyateam.github.io/m/js/start.html">Перейти</a></div><div class="post-time"></div></div></main>'
 }else{
 
 }
