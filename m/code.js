@@ -7,13 +7,9 @@ var on = 0 //Включение уведомлений
 var title = ''
 var post_info = ''
 var head = ''
-var u_title = ''
-var text_info = ''
+var u_title = 'Глобальные настройки'
+var text_info = 'Скоро всй будет'
 var head = ''
-
-function ok(){
-    document.getElementById('load').remove()
-}
 
 //Элементы
 var uved = '<div id="info-all" class="info"><h3 id="info-1">'+u_title+'</h3><p id="info-2">'+text_info+'</p></div>'
