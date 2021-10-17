@@ -1,27 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-  <link rel="stylesheet" type="text/css" href="https://kasyateam.github.io/m/kmp/style-1.css">
-  <script src="https://kasyateam.github.io/assets/kasyateam/js/kasya.js"></script>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="kasya_UI.css"></link>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@font-face {
+    font-family: "font";
+    src: url("comfortaa.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+</style>
 </head>
 
-<body>
-<main>
-  <div class="header">
-    <p class="header-text"></p>
-    <a href="#" class="header-info">Выберите курс</a>
-  </div>
-<div class="post">
-      HTML <a class="but" href="https://kasyateam.github.io/m/html/start.html">Перейти</a>
- </div>
-<div class="post">
-      CSS <a class="but" href="https://kasyateam.github.io/m/css/start.html">Перейти</a>
-  </div>
-<div class="post">
-    JavaScript <a class="but" href="https://kasyateam.github.io/m/js/start.html">Перейти</a>
-  </div>
+<body onload="ok()">
+<div id="load"><div id="load_1"><img id="load_2" src="load.gif">
+    <script src="kasya_UI.js"></script>
+    <script>
+function error(){
+    document.getElementById('load_1').innerHTML = document.getElementById('load_1').innerHTML+'<br>Загрузка дольше, чем обычно..'
+}
+setTimeout(error, 8000)
+    </script>
+</body>
 
-</main>
-
-</body></html>
+</html>
